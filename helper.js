@@ -28,11 +28,11 @@ function polararc(r1, r2, deg1, deg2, p) {
         polar(r1, deg2, p)
     ];
     return [
-        "<path d=\"M" + points[0],
-        "L" + points[1],
+        "<path d=\"M" + points[1],
         "A" + r2 + "," + r2 + ",0,0,0," + points[2],
         "L" + points[3],
-        "A" + r1 + "," + r1 + ",0,0,1," + points[0] + "\" />"
+        "A" + r1 + "," + r1 + ",0,0,1," + points[0],
+        "Z\" />"
     ].join(" ");
 }
 
