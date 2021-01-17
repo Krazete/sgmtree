@@ -366,7 +366,6 @@
 		<image class="cool10" href="icon/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
 	</g>
 
-
 	<script>
 		var tree = {
 			"ca": {
@@ -691,6 +690,24 @@
 			}
 		}
 
+		function prev(id) {
+			var previds = [];
+			for (var previd in tree) {
+				if (tree[previd].next.indexOf(id) >= 0) {
+					previds.push(previd);
+				}
+			}
+			return previds;
+		}
+
+		function forPrev(id, f) { /* unused */
+			for (var previd in tree) {
+				if (tree[previd].next.indexOf(id) >= 0) {
+					f(previd);
+				}
+			}
+		}
+
 		function uncheck(id) {
 			var node = document.getElementById(id);
 			node.classList.remove("checked");
@@ -704,10 +721,15 @@
 			var node = document.getElementById(id);
 			node.classList.add("checked");
 			tree[id].checked = true;
-			for (var previd in tree) {
-				if (tree[previd].next.indexOf(id) >= 0) {
-					check(previd);
+
+			var previds = prev(id);
+			for (var previd of previds) {
+				if (tree[previd].checked) {
+					return;
 				}
+			}
+			if (previds.length) {
+				check(previds[0]);
 			}
 		}
 
