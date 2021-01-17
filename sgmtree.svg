@@ -87,7 +87,7 @@
 			window.parent.postMessage(json, window.parent.origin);
 		}
 		function updateTree(e) {
-			if (e.target.tagName.toLowerCase() == "rect") {
+			if (e.target.tagName.toLowerCase() == "polygon") {
 				postMessage();
 			}
 		}
