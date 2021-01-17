@@ -4,6 +4,7 @@
 			stroke: #ffffff;
 			stroke-width: 0.2;
 			stroke-linejoin: round;
+			cursor: pointer;
 		}
 		#branch g {
 			<!-- fill: #808080; -->
@@ -15,11 +16,10 @@
 		path {
 			opacity: 0.5;
 		}
-		path:hover {
+		path.checked {
 			<!-- fill: #000000; -->
 			opacity: 1;
 		}
-
 
 		#ability {
 			fill: magenta;
@@ -150,307 +150,538 @@
 	</g>
 
 	<g id="line">
-		<line x1="50" y1="50" x2="50" y2="35" />
-		<line x1="50" y1="35" x2="50" y2="25" />
-		<line x1="60.168416" y1="27.161364" x2="50" y2="25" />
-		<line x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
-		<line x1="60.168416" y1="27.161364" x2="50" y2="15" />
-		<line x1="50" y1="25" x2="39.831584" y2="27.161364" />
-		<line x1="39.831584" y1="27.161364" x2="50" y2="15" />
-		<line x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
-		<line x1="50" y1="15" x2="68.303149" y2="8.890454" />
-		<line x1="68.303149" y1="8.890454" x2="50" y2="5" />
-		<line x1="50" y1="5" x2="31.696851" y2="8.890454" />
+		<line class="ca" x1="50" y1="50" x2="50" y2="35" />
+		<line class="ca sa2" x1="50" y1="35" x2="50" y2="25" />
+		<line class="sa1 sa2" x1="60.168416" y1="27.161364" x2="50" y2="25" />
+		<line class="sa1 sa3" x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
+		<line class="sa1 sa4" x1="60.168416" y1="27.161364" x2="50" y2="15" />
+		<line class="sa2 combo" x1="50" y1="25" x2="39.831584" y2="27.161364" />
+		<line class="combo sa4" x1="39.831584" y1="27.161364" x2="50" y2="15" />
+		<line class="combo juggle" x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
+		<line class="sa4 sa5" x1="50" y1="15" x2="68.303149" y2="8.890454" />
+		<line class="sa5 sa6" x1="68.303149" y1="8.890454" x2="50" y2="5" />
+		<line class="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
 
-		<line x1="50" y1="50" x2="35.734152" y2="45.364745" />
-		<line x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
-		<line x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
-		<line x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
-		<line x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
-		<line x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
-		<line x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
-		<line x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
-		<line x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
-		<line x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
-		<line x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
-		<line x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
-		<line x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
-		<line x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
-		<line x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
+		<line class="atk1" x1="50" y1="50" x2="35.734152" y2="45.364745" />
+		<line class="atk1 atk3" x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
+		<line class="atk2 atk3" x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
+		<line class="atk2 atk5" x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
+		<line class="atk3 atk4" x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
+		<line class="atk4 atk7" x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
+		<line class="dmg1 atk5" x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
+		<line class="dmg1 atk8" x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
+		<line class="atk5 atk6" x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
+		<line class="atk6 atk7" x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
+		<line class="atk6 atk9" x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
+		<line class="atk7 rate1" x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
+		<line class="rate1 atk10" x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
+		<line class="dmg2 atk9" x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
+		<line class="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
 
-		<line x1="50" y1="50" x2="41.183221" y2="62.135255" />
-		<line x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
-		<line x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
-		<line x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
-		<line x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
-		<line x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
-		<line x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
-		<line x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
-		<line x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
-		<line x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
-		<line x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
-		<line x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
-		<line x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
+		<line class="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
+		<line class="slot1 slot2" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
+		<line class="slot2 gear1" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
+		<line class="slot2 slot3" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
+		<line class="gear1 gear2" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
+		<line class="slot3 gear3" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
+		<line class="slot3 slot4" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
+		<line class="gear3 gear4" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
+		<line class="gear4 gear5" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
+		<line class="slot4 gear6" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
+		<line class="gear6 gear7" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
+		<line class="gear7 gear8" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
+		<line class="gear8 gear9" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
 
-		<line x1="50" y1="50" x2="58.816779" y2="62.135255" />
-		<line x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
-		<line x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
-		<line x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
-		<line x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
-		<line x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
-		<line x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
-		<line x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
-		<line x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
-		<line x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
-		<line x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
-		<line x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
-		<line x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
-		<line x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
+		<line class="hp1" x1="50" y1="50" x2="58.816779" y2="62.135255" />
+		<line class="hp1 hp3" x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
+		<line class="hp2 hp3" x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
+		<line class="hp2 hp5" x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
+		<line class="hp3 hp4" x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
+		<line class="hp3 hp6" x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
+		<line class="hp4 hp7" x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
+		<line class="hp5 block1" x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
+		<line class="block1 hp8" x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
+		<line class="hp6 hp9" x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
+		<line class="def1 hp7" x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
+		<line class="def1 hp10" x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
+		<line class="def2 hp8" x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
+		<line class="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
 
-		<line x1="50" y1="50" x2="64.265848" y2="45.364745" />
-		<line x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
-		<line x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
-		<line x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
-		<line x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
-		<line x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
-		<line x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
-		<line x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
-		<line x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
-		<line x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
-		<line x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
-		<line x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
-		<line x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
-		<line x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
-		<line x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
+		<line class="cool1" x1="50" y1="50" x2="64.265848" y2="45.364745" />
+		<line class="cool1 cool2" x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
+		<line class="cool1 cool4" x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
+		<line class="cool2 cool3" x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
+		<line class="cool2 cool5" x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
+		<line class="cool3 cool4" x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
+		<line class="cool3 tag1" x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
+		<line class="cool4 sm1" x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
+		<line class="cool5 cool8" x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
+		<line class="cool6 sm2" x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
+		<line class="cool6 tag1" x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
+		<line class="tag1 cool9" x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
+		<line class="cool7 sm1" x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
+		<line class="cool7 tag2" x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
+		<line class="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
 	</g>
 	<g id="icon">
-		<image href="icon/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
-		<image href="icon/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
-		<image href="icon/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
+		<image class="ca" href="icon/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
+		<image class="sa1" href="icon/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
+		<image class="sa2" href="icon/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
+		<image class="combo" href="icon/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
+		<image class="sa3" href="icon/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
+		<image class="sa4" href="icon/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
+		<image class="juggle" href="icon/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
+		<image class="sa5" href="icon/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
+		<image class="sa6" href="icon/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
+		<image class="charge" href="icon/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
 
-		<image href="icon/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
-		<image href="icon/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
-		<image href="icon/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
-		<image href="icon/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
-		<image href="icon/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
+		<image class="atk1" href="icon/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
+		<image class="atk2" href="icon/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
+		<image class="atk3" href="icon/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
+		<image class="atk4" href="icon/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
+		<image class="dmg1" href="icon/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
+		<image class="atk5" href="icon/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
+		<image class="atk6" href="icon/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
+		<image class="atk7" href="icon/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
+		<image class="rate1" href="icon/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
+		<image class="atk8" href="icon/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
+		<image class="dmg2" href="icon/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
+		<image class="atk9" href="icon/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
+		<image class="rate2" href="icon/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
+		<image class="atk10" href="icon/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
 
-		<image href="icon/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearSlotUnlock.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
-		<image href="icon/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
+		<image class="slot1" href="icon/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
+		<image class="slot2" href="icon/GearSlotUnlock.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
+		<image class="gear1" href="icon/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
+		<image class="gear2" href="icon/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
+		<image class="slot3" href="icon/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
+		<image class="gear3" href="icon/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
+		<image class="gear4" href="icon/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
+		<image class="gear5" href="icon/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
+		<image class="slot4" href="icon/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
+		<image class="gear6" href="icon/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
+		<image class="gear7" href="icon/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
+		<image class="gear8" href="icon/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
+		<image class="gear9" href="icon/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
 
-		<image href="icon/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
-		<image href="icon/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
-		<image href="icon/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
-		<image href="icon/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
-		<image href="icon/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
-		<image href="icon/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
+		<image class="hp1" href="icon/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
+		<image class="hp2" href="icon/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
+		<image class="hp3" href="icon/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
+		<image class="hp4" href="icon/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
+		<image class="hp5" href="icon/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
+		<image class="block1" href="icon/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
+		<image class="hp6" href="icon/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
+		<image class="def1" href="icon/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
+		<image class="hp7" href="icon/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
+		<image class="def2" href="icon/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
+		<image class="hp8" href="icon/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
+		<image class="hp9" href="icon/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
+		<image class="hp10" href="icon/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
+		<image class="block2" href="icon/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
 
-		<image href="icon/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
-		<image href="icon/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
-		<image href="icon/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
-		<image href="icon/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
-		<image href="icon/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
-		<image href="icon/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
+		<image class="cool1" href="icon/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
+		<image class="cool2" href="icon/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
+		<image class="cool3" href="icon/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
+		<image class="cool4" href="icon/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
+		<image class="cool5" href="icon/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
+		<image class="cool6" href="icon/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
+		<image class="tag1" href="icon/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
+		<image class="cool7" href="icon/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
+		<image class="sm1" href="icon/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
+		<image class="cool8" href="icon/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
+		<image class="sm2" href="icon/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
+		<image class="cool9" href="icon/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
+		<image class="tag2" href="icon/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
+		<image class="cool10" href="icon/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
 	</g>
 	<g id="frame">
-		<image href="icon/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
-		<image href="icon/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
-		<image href="icon/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
-		<image href="icon/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
-		<image href="icon/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
+		<image class="ca" href="icon/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
+		<image class="sa1" href="icon/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
+		<image class="sa2" href="icon/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
+		<image class="combo" href="icon/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
+		<image class="sa3" href="icon/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
+		<image class="sa4" href="icon/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
+		<image class="juggle" href="icon/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
+		<image class="sa5" href="icon/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
+		<image class="sa6" href="icon/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
+		<image class="charge" href="icon/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
 
-		<image href="icon/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
+		<image class="atk1" href="icon/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
+		<image class="atk2" href="icon/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
+		<image class="atk3" href="icon/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
+		<image class="atk4" href="icon/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
+		<image class="dmg1" href="icon/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
+		<image class="atk5" href="icon/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
+		<image class="atk6" href="icon/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
+		<image class="atk7" href="icon/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
+		<image class="rate1" href="icon/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
+		<image class="atk8" href="icon/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
+		<image class="dmg2" href="icon/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
+		<image class="atk9" href="icon/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
+		<image class="rate2" href="icon/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
+		<image class="atk10" href="icon/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
 
-		<image href="icon/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
+		<image class="slot1" href="icon/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
+		<image class="slot2" href="icon/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
+		<image class="gear1" href="icon/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
+		<image class="gear2" href="icon/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
+		<image class="slot3" href="icon/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
+		<image class="gear3" href="icon/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
+		<image class="gear4" href="icon/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
+		<image class="gear5" href="icon/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
+		<image class="slot4" href="icon/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
+		<image class="gear6" href="icon/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
+		<image class="gear7" href="icon/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
+		<image class="gear8" href="icon/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
+		<image class="gear9" href="icon/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
 
-		<image href="icon/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
+		<image class="hp1" href="icon/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
+		<image class="hp2" href="icon/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
+		<image class="hp3" href="icon/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
+		<image class="hp4" href="icon/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
+		<image class="hp5" href="icon/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
+		<image class="block1" href="icon/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
+		<image class="hp6" href="icon/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
+		<image class="def1" href="icon/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
+		<image class="hp7" href="icon/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
+		<image class="def2" href="icon/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
+		<image class="hp8" href="icon/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
+		<image class="hp9" href="icon/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
+		<image class="hp10" href="icon/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
+		<image class="block2" href="icon/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
 
-		<image href="icon/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
-		<image href="icon/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
+		<image class="cool1" href="icon/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
+		<image class="cool2" href="icon/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
+		<image class="cool3" href="icon/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
+		<image class="cool4" href="icon/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
+		<image class="cool5" href="icon/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
+		<image class="cool6" href="icon/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
+		<image class="tag1" href="icon/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
+		<image class="cool7" href="icon/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
+		<image class="sm1" href="icon/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
+		<image class="cool8" href="icon/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
+		<image class="sm2" href="icon/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
+		<image class="cool9" href="icon/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
+		<image class="tag2" href="icon/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
+		<image class="cool10" href="icon/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
 	</g>
 
 
 	<script>
 		var tree = {
-			"ca": ["sa2"],
-			"sa1": ["sa3", "sa4"],
-			"sa2": ["sa1, combo"],
-			"combo": ["sa4", "juggle"],
-			"sa3": [],
-			"sa4": ["sa5"],
-			"juggle": [],
-			"sa5": ["sa6"],
-			"sa6": ["charge"],
-			"charge": [],
+			"ca": {
+				"checked": false,
+				"next": ["sa2"]
+			},
+			"sa1": {
+				"checked": false,
+				"next": ["sa3", "sa4"]
+			},
+			"sa2": {
+				"checked": false,
+				"next": ["sa1", "combo"]
+			},
+			"combo": {
+				"checked": false,
+				"next": ["sa4", "juggle"]
+			},
+			"sa3": {
+				"checked": false,
+				"next": []
+			},
+			"sa4": {
+				"checked": false,
+				"next": ["sa5"]
+			},
+			"juggle": {
+				"checked": false,
+				"next": []
+			},
+			"sa5": {
+				"checked": false,
+				"next": ["sa6"]
+			},
+			"sa6": {
+				"checked": false,
+				"next": ["charge"]
+			},
+			"charge": {
+				"checked": false,
+				"next": []
+			},
 
-			"atk1": ["atk3"],
-			"atk2": ["atk5"],
-			"atk3": ["atk2", "atk4"],
-			"atk4": ["atk7"],
-			"dmg1": ["atk8"],
-			"atk5": ["dmg1", "atk6"],
-			"atk6": ["atk9"],
-			"atk7": ["atk6", "rate1"],
-			"rate1": ["atk10"],
-			"atk8": [],
-			"dmg2": [],
-			"atk9": ["dmg2", "rate2"],
-			"rate2": [],
-			"atk10": [],
+			"atk1": {
+				"checked": false,
+				"next": ["atk3"]
+			},
+			"atk2": {
+				"checked": false,
+				"next": ["atk5"]
+			},
+			"atk3": {
+				"checked": false,
+				"next": ["atk2", "atk4"]
+			},
+			"atk4": {
+				"checked": false,
+				"next": ["atk7"]
+			},
+			"dmg1": {
+				"checked": false,
+				"next": ["atk8"]
+			},
+			"atk5": {
+				"checked": false,
+				"next": ["dmg1", "atk6"]
+			},
+			"atk6": {
+				"checked": false,
+				"next": ["atk9"]
+			},
+			"atk7": {
+				"checked": false,
+				"next": ["atk6", "rate1"]
+			},
+			"rate1": {
+				"checked": false,
+				"next": ["atk10"]
+			},
+			"atk8": {
+				"checked": false,
+				"next": []
+			},
+			"dmg2": {
+				"checked": false,
+				"next": []
+			},
+			"atk9": {
+				"checked": false,
+				"next": ["dmg2", "rate2"]
+			},
+			"rate2": {
+				"checked": false,
+				"next": []
+			},
+			"atk10": {
+				"checked": false,
+				"next": []
+			},
 
-			"slot1": ["slot2"],
-			"slot2": ["gear1", "slot3"],
-			"gear1": ["gear2"],
-			"gear2": [],
-			"slot3": ["gear3", "slot4"],
-			"gear3": ["gear4"],
-			"gear4": ["gear5"],
-			"gear5": [],
-			"slot4": ["gear6"],
-			"gear6": ["gear7"],
-			"gear7": ["gear8"],
-			"gear8": ["gear9"],
-			"gear9": [],
+			"slot1": {
+				"checked": false,
+				"next": ["slot2"]
+			},
+			"slot2": {
+				"checked": false,
+				"next": ["gear1", "slot3"]
+			},
+			"gear1": {
+				"checked": false,
+				"next": ["gear2"]
+			},
+			"gear2": {
+				"checked": false,
+				"next": []
+			},
+			"slot3": {
+				"checked": false,
+				"next": ["gear3", "slot4"]
+			},
+			"gear3": {
+				"checked": false,
+				"next": ["gear4"]
+			},
+			"gear4": {
+				"checked": false,
+				"next": ["gear5"]
+			},
+			"gear5": {
+				"checked": false,
+				"next": []
+			},
+			"slot4": {
+				"checked": false,
+				"next": ["gear6"]
+			},
+			"gear6": {
+				"checked": false,
+				"next": ["gear7"]
+			},
+			"gear7": {
+				"checked": false,
+				"next": ["gear8"]
+			},
+			"gear8": {
+				"checked": false,
+				"next": ["gear9"]
+			},
+			"gear9": {
+				"checked": false,
+				"next": []
+			},
 
-			"hp1": ["hp3"],
-			"hp2": ["hp5"],
-			"hp3": ["hp6"],
-			"hp4": ["hp7"],
-			"hp5": ["block1"],
-			"block1": ["hp8"],
-			"hp6": ["hp9"],
-			"def1": ["hp10"],
-			"hp7": ["def1"],
-			"def2": [],
-			"hp8": ["def2"],
-			"hp9": [],
-			"hp10": ["block2"],
-			"block2": [],
+			"hp1": {
+				"checked": false,
+				"next": ["hp3"]
+			},
+			"hp2": {
+				"checked": false,
+				"next": ["hp5"]
+			},
+			"hp3": {
+				"checked": false,
+				"next": ["hp2", "hp4", "hp6"]
+			},
+			"hp4": {
+				"checked": false,
+				"next": ["hp7"]
+			},
+			"hp5": {
+				"checked": false,
+				"next": ["block1"]
+			},
+			"block1": {
+				"checked": false,
+				"next": ["hp8"]
+			},
+			"hp6": {
+				"checked": false,
+				"next": ["hp9"]
+			},
+			"def1": {
+				"checked": false,
+				"next": ["hp10"]
+			},
+			"hp7": {
+				"checked": false,
+				"next": ["def1"]
+			},
+			"def2": {
+				"checked": false,
+				"next": []
+			},
+			"hp8": {
+				"checked": false,
+				"next": ["def2"]
+			},
+			"hp9": {
+				"checked": false,
+				"next": []
+			},
+			"hp10": {
+				"checked": false,
+				"next": ["block2"]
+			},
+			"block2": {
+				"checked": false,
+				"next": []
+			},
 
-			"cool1": ["cool2", "cool4"],
-			"cool2": ["cool3", "cool5"],
-			"cool3": ["tag1"],
-			"cool4": ["sm1"],
-			"cool5": ["cool8"],
-			"cool6": ["sm2"],
-			"tag1": ["cool6", "cool9"],
-			"cool7": ["tag2"],
-			"sm1": ["cool7"],
-			"cool8": [],
-			"sm2": [],
-			"cool9": [],
-			"tag2": ["cool10"],
-			"cool10": [],
+			"cool1": {
+				"checked": false,
+				"next": ["cool2", "cool4"]
+			},
+			"cool2": {
+				"checked": false,
+				"next": ["cool3", "cool5"]
+			},
+			"cool3": {
+				"checked": false,
+				"next": ["tag1"]
+			},
+			"cool4": {
+				"checked": false,
+				"next": ["sm1"]
+			},
+			"cool5": {
+				"checked": false,
+				"next": ["cool8"]
+			},
+			"cool6": {
+				"checked": false,
+				"next": ["sm2"]
+			},
+			"tag1": {
+				"checked": false,
+				"next": ["cool6", "cool9"]
+			},
+			"cool7": {
+				"checked": false,
+				"next": ["tag2"]
+			},
+			"sm1": {
+				"checked": false,
+				"next": ["cool7"]
+			},
+			"cool8": {
+				"checked": false,
+				"next": []
+			},
+			"sm2": {
+				"checked": false,
+				"next": []
+			},
+			"cool9": {
+				"checked": false,
+				"next": []
+			},
+			"tag2": {
+				"checked": false,
+				"next": ["cool10"]
+			},
+			"cool10": {
+				"checked": false,
+				"next": []
+			},
 
-			"ma0": ["ma1"],
-			"ma1": ["ma2"],
-			"ma2": ["ma3"],
-			"ma3": ["ma4"],
-			"ma4": ["ma5"],
-			"ma5": ["ma6"],
-			"ma6": ["ma7"],
-			"ma7": ["ma8"],
-			"ma8": ["ma9"],
-			"ma9": ["ma10"],
-			"ma10": ["ma11"],
-			"ma11": []
+			"ma0": {
+				"checked": false,
+				"next": ["ma1"]
+			},
+			"ma1": {
+				"checked": false,
+				"next": ["ma2"]
+			},
+			"ma2": {
+				"checked": false,
+				"next": ["ma3"]
+			},
+			"ma3": {
+				"checked": false,
+				"next": ["ma4"]
+			},
+			"ma4": {
+				"checked": false,
+				"next": ["ma5"]
+			},
+			"ma5": {
+				"checked": false,
+				"next": ["ma6"]
+			},
+			"ma6": {
+				"checked": false,
+				"next": ["ma7"]
+			},
+			"ma7": {
+				"checked": false,
+				"next": ["ma8"]
+			},
+			"ma8": {
+				"checked": false,
+				"next": ["ma9"]
+			},
+			"ma9": {
+				"checked": false,
+				"next": ["ma10"]
+			},
+			"ma10": {
+				"checked": false,
+				"next": ["ma11"]
+			},
+			"ma11": {
+				"checked": false,
+				"next": []
+			}
 		};
 
 		function postMessage() {
@@ -460,14 +691,35 @@
 			}
 		}
 
+		function uncheck(id) {
+			var node = document.getElementById(id);
+			node.classList.remove("checked");
+			tree[id].checked = false;
+			for (var nextid of tree[id].next) {
+				uncheck(nextid);
+			}
+		}
+
+		function check(id) {
+			var node = document.getElementById(id);
+			node.classList.add("checked");
+			tree[id].checked = true;
+			for (var previd in tree) {
+				if (tree[previd].next.indexOf(id) >= 0) {
+					check(previd);
+				}
+			}
+		}
+
 		function updateTree(e) {
 			if (e.target.tagName.toLowerCase() == "path") {
 				var id = e.target.id;
-				if (unchecked) {
-					uncheckForwards();
+				var node = document.getElementById(id);
+				if (node.classList.contains("checked")) {
+					uncheck(id);
 				}
-				else if (checked) {
-					checkBackwards();
+				else {
+					check(id);
 				}
 				postMessage();
 			}
