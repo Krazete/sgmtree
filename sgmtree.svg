@@ -67,6 +67,7 @@
 	</filter>
 	<filter id="filter2">
 		<feColorMatrix type="saturate" values="0.6" />
+	</filter>
 	<g id="ability">
 		<g class="node">
 			<path id="ca" d="M61.755705,33.81966 A20,20,0,0,0,38.244295,33.81966 L44.122147,41.90983 A10,10,0,0,1,55.877853,41.90983 Z" />
