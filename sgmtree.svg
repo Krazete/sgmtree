@@ -412,6 +412,7 @@
 	</g>
 
 	<script>
+	// <![CDATA[
 		var tree = {
 			"ca": {
 				"checked": false,
@@ -435,7 +436,7 @@
 			},
 			"sa4": {
 				"checked": false,
-				"next": ["sa5"]
+				"next": ["sa1", "combo", "sa5"]
 			},
 			"juggle": {
 				"checked": false,
@@ -476,15 +477,15 @@
 			},
 			"atk5": {
 				"checked": false,
-				"next": ["dmg1", "atk6"]
+				"next": ["atk2", "dmg1", "atk6"]
 			},
 			"atk6": {
 				"checked": false,
-				"next": ["atk9"]
+				"next": ["atk5", "atk7", "atk9"]
 			},
 			"atk7": {
 				"checked": false,
-				"next": ["atk6", "rate1"]
+				"next": ["atk4", "atk6", "rate1"]
 			},
 			"rate1": {
 				"checked": false,
@@ -631,7 +632,7 @@
 			},
 			"cool3": {
 				"checked": false,
-				"next": ["tag1"]
+				"next": ["cool2", "cool4", "tag1"]
 			},
 			"cool4": {
 				"checked": false,
@@ -745,14 +746,6 @@
 			return previds;
 		}
 
-		function forPrev(id, f) { /* unused */
-			for (var previd in tree) {
-				if (tree[previd].next.indexOf(id) >= 0) {
-					f(previd);
-				}
-			}
-		}
-
 		function uncheck(id) {
 			var node = document.getElementById(id);
 			node.classList.remove("checked");
@@ -819,5 +812,6 @@
 		}
 
 		window.addEventListener("click", updatePaths);
+	// ]]>
 	</script>
 </svg>
