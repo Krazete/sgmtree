@@ -1,72 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 	<style type="text/css">
-		path {
-			stroke: #ffffff;
-			stroke-width: 0.2;
-			stroke-linejoin: round;
-			cursor: pointer;
-			filter: url(#filter1);
+		#ability {
+			stroke: #5f2f5f;
+			fill: #5f2f5f;
 		}
+		#attack {
+			stroke: #df0f0f;
+			fill: #df0f0f;
+		}
+		#move {
+			stroke: #0f6fcf;
+			fill: #0f6fcf;
+		}
+		#health {
+			stroke: #0f8f2f;
+			fill: #0f8f2f;
+		}
+		#energy {
+			stroke: #efcf5f;
+			fill: #efcf5f;
+		}
+		#marquee {
+			stroke: #8f8f8f;
+			fill: #8f8f8f;
+		}
+
 		@media (pointer: fine) {
-			g:hover path {
-				filter: url(#filter2);
+			g:hover path, g:hover image {
+				filter: url(#dim);
 			}
 		}
 
-		#ability {
-			fill: magenta;
+		path {
+			stroke-width: 0.2;
+			stroke-linejoin: round;
+			filter: url(#dark);
+			cursor: pointer;
 		}
-		#attack {
-			fill: red;
-		}
-		#move {
-			fill: blue;
-		}
-		#health {
-			fill: green;
-		}
-		#energy {
-			fill: orange;
-		}
-		#marquee {
-			fill: #d0d0d0;
-		}
-
 		g path.checked {
 			filter: none;
 		}
-		line.checked {
-			stroke: #000000;
-		}
 
 		line {
-			stroke: #ffffff;
+			stroke: #000000;
 			stroke-width: 0.5;
 			stroke-linecap: round;
 			pointer-events: none;
 		}
+		line.checked {
+			stroke: #ffffff;
+		}
+
+		image {
+			filter: url(#dark);
+			pointer-events: none;
+		}
+		g image.checked {
+			filter: none;
+		}
 		.icon image {
 			width: 7%;
 			height: 7%;
-			pointer-events: none;
 		}
 		.frame image {
 			width: 8%;
 			height: 8%;
-			pointer-events: none;
-		}
-		image {
-			opacity: 0.5;
-		}
-		image.checked {
-			opacity: 1;
 		}
 	</style>
-	<filter id="filter1">
-		<feColorMatrix type="saturate" values="0.2" />
+	<filter id="dim">
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="0.3" />
+			<feFuncG type="linear" slope="0.3" />
+			<feFuncB type="linear" slope="0.3" />
+		</feComponentTransfer>
 	</filter>
-	<filter id="filter2">
-		<feColorMatrix type="saturate" values="0.6" />
+	<filter id="dark">
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="0.1" />
+			<feFuncG type="linear" slope="0.1" />
+			<feFuncB type="linear" slope="0.1" />
+		</feComponentTransfer>
 	</filter>
 	<g id="ability">
 		<g class="node">
