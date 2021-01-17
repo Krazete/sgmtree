@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<style type="text/css">
+		* {
+			fill: #808080;
+			stroke: #ffffff;
+			stroke-width: 0.2;
+			stroke-linejoin: round;
+		}
+		.checked, :hover {
+			fill: #000000;
+		}
+	</style>
+	<g id="ability">
+	</g>
+	<g id="attack">
+	</g>
+	<g id="health">
+	</g>
+	<g id="energy">
+	</g>
+	<g id="move">
+	</g>
+	<g id="marquee">
+	</g>
+	<polygon points="50,50 79.389,9.549 60.396,1.093 " />
+	<polygon points="50,50 60.396,1.093 39.604,1.093 " />
+	<polygon points="50,50 39.604,1.093 20.611,9.549 " />
+	<polygon points="50,50 20.611,9.549 6.699,25 " />
+	<polygon points="50,50 6.699,25 0.274,44.774 " />
+	<polygon points="50,50 0.274,44.774 2.447,65.451 " />
+	<polygon points="50,50 2.447,65.451 12.843,83.457 " />
+	<polygon points="50,50 12.843,83.457 29.663,95.677 " />
+	<polygon points="50,50 29.663,95.677 50,100 " />
+	<polygon points="50,50 50,100 70.337,95.677 " />
+	<polygon points="50,50 73.511,17.639 58.316,10.874 " />
+	<polygon points="50,50 58.316,10.874 41.684,10.874 " />
+	<polygon points="50,50 41.684,10.874 26.489,17.639 " />
+	<polygon points="50,50 26.489,17.639 15.359,30 " />
+	<polygon points="50,50 15.359,30 10.219,45.819 " />
+	<polygon points="50,50 10.219,45.819 11.958,62.361 " />
+	<polygon points="50,50 11.958,62.361 20.274,76.765 " />
+	<polygon points="50,50 20.274,76.765 33.731,86.542 " />
+	<polygon points="50,50 33.731,86.542 50,90 " />
+	<polygon points="50,50 50,90 66.269,86.542 " />
+	<polygon points="50,50 67.634,25.729 56.237,20.656 " />
+	<polygon points="50,50 56.237,20.656 43.763,20.656 " />
+	<polygon points="50,50 43.763,20.656 32.366,25.729 " />
+	<polygon points="50,50 32.366,25.729 24.019,35 " />
+	<polygon points="50,50 24.019,35 20.164,46.864 " />
+	<polygon points="50,50 20.164,46.864 21.468,59.271 " />
+	<polygon points="50,50 21.468,59.271 27.706,70.074 " />
+	<polygon points="50,50 27.706,70.074 37.798,77.406 " />
+	<polygon points="50,50 37.798,77.406 50,80 " />
+	<polygon points="50,50 50,80 62.202,77.406 " />
+	<polygon points="50,50 61.756,33.82 54.158,30.437 " />
+	<polygon points="50,50 54.158,30.437 45.842,30.437 " />
+	<polygon points="50,50 45.842,30.437 38.244,33.82 " />
+	<polygon points="50,50 38.244,33.82 32.679,40 " />
+	<polygon points="50,50 32.679,40 30.11,47.909 " />
+	<polygon points="50,50 30.11,47.909 30.979,56.18 " />
+	<polygon points="50,50 30.979,56.18 35.137,63.383 " />
+	<polygon points="50,50 35.137,63.383 41.865,68.271 " />
+	<polygon points="50,50 41.865,68.271 50,70 " />
+	<polygon points="50,50 50,70 58.135,68.271 " />
+	<polygon points="50,50 55.878,41.91 52.079,40.219 " />
+	<polygon points="50,50 52.079,40.219 47.921,40.219 " />
+	<polygon points="50,50 47.921,40.219 44.122,41.91 " />
+	<polygon points="50,50 44.122,41.91 41.34,45 " />
+	<polygon points="50,50 41.34,45 40.055,48.955 " />
+	<polygon points="50,50 40.055,48.955 40.489,53.09 " />
+	<polygon points="50,50 40.489,53.09 42.569,56.691 " />
+	<polygon points="50,50 42.569,56.691 45.933,59.135 " />
+	<polygon points="50,50 45.933,59.135 50,60 " />
+	<polygon points="50,50 50,60 54.067,59.135 " />
+
+"<polygon points="56.42787609686539,42.33955556881022 62.85575219373079,34.67911113762044 68.79385241571816,43.15959713348663 59.39692620785908,46.579798566743314" />"
+
+	<script>
+		var data = {
+			"sp": 10,
+			"coins": 10,
+			"theonite": 10,
+			"fsboost": 10
+		};
+		function postMessage() {
+			var json = JSON.stringify(data);
+			window.parent.postMessage(json, window.parent.origin);
+		}
+		function updateTree(e) {
+			if (e.target.tagName.toLowerCase() == "rect") {
+				postMessage();
+			}
+		}
+		window.addEventListener("click", updateTree);
+	</script>
+</svg>
