@@ -588,7 +588,7 @@
 			},
 			"cool4": {
 				"checked": false,
-				"next": ["sm1"]
+				"next": ["cool3", "sm1"]
 			},
 			"cool5": {
 				"checked": false,
