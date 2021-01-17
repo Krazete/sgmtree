@@ -7,17 +7,15 @@
 			cursor: pointer;
 		}
 		#branch g {
-			<!-- fill: #808080; -->
-			opacity: 0.5;
+			opacity: 0.8;
 		}
 		#branch g:hover {
 			opacity: 1;
 		}
 		path {
-			opacity: 0.5;
+			opacity: 0.2;
 		}
 		path.checked {
-			<!-- fill: #000000; -->
 			opacity: 1;
 		}
 
@@ -713,7 +711,12 @@
 			node.classList.remove("checked");
 			tree[id].checked = false;
 			for (var nextid of tree[id].next) {
-				uncheck(nextid);
+				var siblings = prev(nextid);
+				if (!siblings.some(function (sibling) {
+					return tree[sibling].checked;
+				})) {
+					uncheck(nextid);
+				}
 			}
 		}
 
