@@ -5,21 +5,12 @@
 			stroke-width: 0.2;
 			stroke-linejoin: round;
 			cursor: pointer;
+			filter: url(#filter1);
 		}
-		#branch g {
-			opacity: 0.8;
-		}
-		#branch g:hover {
-			opacity: 1;
-		}
-		path {
-			opacity: 0.2;
-		}
-		path.checked {
-			opacity: 1;
-		}
-		line.checked {
-			stroke: #000000;
+		@media (pointer: fine) {
+			g:hover path {
+				filter: url(#filter2);
+			}
 		}
 
 		#ability {
@@ -41,6 +32,13 @@
 			fill: #d0d0d0;
 		}
 
+		g path.checked {
+			filter: none;
+		}
+		line.checked {
+			stroke: #000000;
+		}
+
 		line {
 			stroke: #ffffff;
 			stroke-width: 0.5;
@@ -57,7 +55,18 @@
 			height: 8%;
 			pointer-events: none;
 		}
+		image {
+			opacity: 0.5;
+		}
+		image.checked {
+			opacity: 1;
+		}
 	</style>
+	<filter id="filter1">
+		<feColorMatrix type="saturate" values="0.2" />
+	</filter>
+	<filter id="filter2">
+		<feColorMatrix type="saturate" values="0.6" />
 	<g id="ability">
 		<g class="node">
 			<path id="ca" d="M61.755705,33.81966 A20,20,0,0,0,38.244295,33.81966 L44.122147,41.90983 A10,10,0,0,1,55.877853,41.90983 Z" />
@@ -733,7 +742,11 @@
 		function uncheck(id) {
 			var node = document.getElementById(id);
 			node.classList.remove("checked");
+			for (var e of document.getElementsByClassName(id)) {
+				e.classList.remove("checked");
+			}
 			tree[id].checked = false;
+
 			for (var nextid of tree[id].next) {
 				var siblings = prev(nextid);
 				if (!siblings.some(function (sibling) {
@@ -747,6 +760,9 @@
 		function check(id) {
 			var node = document.getElementById(id);
 			node.classList.add("checked");
+			for (var e of document.getElementsByClassName(id)) {
+				e.classList.add("checked");
+			}
 			tree[id].checked = true;
 
 			var previds = prev(id);
@@ -775,10 +791,9 @@
 		}
 
 		function updatePaths(e) {
-			if (e.target.tagName.toLowerCase() == "path") {
+			if (e.target.id in tree) {
 				var id = e.target.id;
-				var node = document.getElementById(id);
-				if (node.classList.contains("checked")) {
+				if (tree[id].checked) {
 					uncheck(id);
 				}
 				else {
