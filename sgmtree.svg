@@ -858,6 +858,7 @@
 		}
 
 		window.addEventListener("click", updatePaths);
+		window.addEventListener("touchstart", function(){});
 	// ]]>
 	</script>
 </svg>
