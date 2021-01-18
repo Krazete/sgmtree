@@ -72,23 +72,23 @@
 	</style>
 	<filter id="faint">
 		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.5" />
-			<feFuncG type="linear" slope="0.5" />
-			<feFuncB type="linear" slope="0.5" />
+			<feFuncR type="linear" slope="0.6" />
+			<feFuncG type="linear" slope="0.6" />
+			<feFuncB type="linear" slope="0.6" />
 		</feComponentTransfer>
 	</filter>
 	<filter id="dim">
 		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.3" />
-			<feFuncG type="linear" slope="0.3" />
-			<feFuncB type="linear" slope="0.3" />
+			<feFuncR type="linear" slope="0.4" />
+			<feFuncG type="linear" slope="0.4" />
+			<feFuncB type="linear" slope="0.4" />
 		</feComponentTransfer>
 	</filter>
 	<filter id="dark">
 		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.1" />
-			<feFuncG type="linear" slope="0.1" />
-			<feFuncB type="linear" slope="0.1" />
+			<feFuncR type="linear" slope="0.2" />
+			<feFuncG type="linear" slope="0.2" />
+			<feFuncB type="linear" slope="0.2" />
 		</feComponentTransfer>
 	</filter>
 	<g id="ability">
