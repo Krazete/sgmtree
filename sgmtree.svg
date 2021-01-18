@@ -29,6 +29,9 @@
 			g:hover path, g:hover image {
 				filter: url(#dim);
 			}
+			g path:hover {
+				filter: url(#faint);
+			}
 		}
 
 		path {
@@ -67,6 +70,13 @@
 			height: 8%;
 		}
 	</style>
+	<filter id="faint">
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="0.5" />
+			<feFuncG type="linear" slope="0.5" />
+			<feFuncB type="linear" slope="0.5" />
+		</feComponentTransfer>
+	</filter>
 	<filter id="dim">
 		<feComponentTransfer>
 			<feFuncR type="linear" slope="0.3" />
