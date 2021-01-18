@@ -746,6 +746,8 @@
 			return previds;
 		}
 
+		var visited;
+
 		function uncheck(id) {
 			var node = document.getElementById(id);
 			node.classList.remove("checked");
@@ -764,23 +766,31 @@
 			}
 		}
 
-		function check(id) {
+		function check(id, substep) {
+			if (!substep) {
+				visited = [];
+			}
+			visited.push(id);
+
+			var previds = prev(id);
+			for (var previd of previds) {
+				if (tree[previd].checked) {
+					previds = [];
+				}
+			}
+			for (var previd of previds) {
+				if (visited.indexOf(previd) < 0) { 
+					check(previd, true);
+					break;
+				}
+			}
+
 			var node = document.getElementById(id);
 			node.classList.add("checked");
 			for (var e of document.getElementsByClassName(id)) {
 				e.classList.add("checked");
 			}
 			tree[id].checked = true;
-
-			var previds = prev(id);
-			for (var previd of previds) {
-				if (tree[previd].checked) {
-					return;
-				}
-			}
-			if (previds.length) {
-				check(previds[0]);
-			}
 		}
 
 		function updateLines() {
