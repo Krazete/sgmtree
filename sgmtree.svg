@@ -746,71 +746,78 @@
 			return previds;
 		}
 
-		var visited, visited2;
-
-		function anchored(id, substep) {
-			if (!substep) {
-				visited2 = [];
-			}
-			visited2.push(id);
-
-			var previds = prev(id);
-			for (var previd of previds) {
-				if (visited2.indexOf(previd) < 0 && tree[previd].checked) {
-					return anchored(previd, true);
+		var anchored = (function() {
+			var visited;
+			return function(id, substep) {
+				if (!substep) {
+					visited = [];
 				}
-			}
-			return !previds.length;
-		}
+				visited.push(id);
 
-		function uncheck(id, substep) {
-			if (!substep) {
-				visited = [];
-			}
-			visited.push(id);
-
-			var node = document.getElementById(id);
-			node.classList.remove("checked");
-			for (var e of document.getElementsByClassName(id)) {
-				e.classList.remove("checked");
-			}
-			tree[id].checked = false;
-
-			for (var nextid of tree[id].next) {
-				if (visited.indexOf(nextid) < 0 && tree[nextid].checked) {
-					if (!anchored(nextid)) {
-						uncheck(nextid, true);
+				var previds = prev(id);
+				for (var previd of previds) {
+					if (visited.indexOf(previd) < 0 && tree[previd].checked) {
+						return anchored(previd, true);
 					}
 				}
-			}
-		}
+				return !previds.length;
+			};
+		})();
 
-		function check(id, substep) {
-			if (!substep) {
-				visited = [];
-			}
-			visited.push(id);
-
-			var previds = prev(id);
-			for (var previd of previds) {
-				if (tree[previd].checked) {
-					previds = [];
+		var uncheck = (function() {
+			var visited;
+			return function(id, substep) {
+				if (!substep) {
+					visited = [];
 				}
-			}
-			for (var previd of previds) {
-				if (visited.indexOf(previd) < 0) { 
-					check(previd, true);
-					break;
-				}
-			}
+				visited.push(id);
 
-			var node = document.getElementById(id);
-			node.classList.add("checked");
-			for (var e of document.getElementsByClassName(id)) {
-				e.classList.add("checked");
-			}
-			tree[id].checked = true;
-		}
+				var node = document.getElementById(id);
+				node.classList.remove("checked");
+				for (var e of document.getElementsByClassName(id)) {
+					e.classList.remove("checked");
+				}
+				tree[id].checked = false;
+
+				for (var nextid of tree[id].next) {
+					if (visited.indexOf(nextid) < 0 && tree[nextid].checked) {
+						if (!anchored(nextid)) {
+							uncheck(nextid, true);
+						}
+					}
+				}
+			};
+		})();
+
+		var check = (function() {
+			var visited;
+			return function(id, substep) {
+				if (!substep) {
+					visited = [];
+				}
+				visited.push(id);
+
+				var previds = prev(id);
+				for (var previd of previds) {
+					if (tree[previd].checked) {
+						previds = [];
+					}
+				}
+				for (var previd of previds) {
+					if (visited.indexOf(previd) < 0) { 
+						check(previd, true);
+						break;
+					}
+				}
+
+				var node = document.getElementById(id);
+				node.classList.add("checked");
+				for (var e of document.getElementsByClassName(id)) {
+					e.classList.add("checked");
+				}
+				tree[id].checked = true;
+			};
+		})();
 
 		function updateLines() {
 			for (var line of document.getElementsByTagName("line")) {
