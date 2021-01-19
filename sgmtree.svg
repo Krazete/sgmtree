@@ -63,8 +63,8 @@
 			height: 7%;
 		}
 		#marquee .icon image {
-			width: 10%;
-			height: 10%;
+			width: 12%;
+			height: 12%;
 		}
 		.frame image {
 			width: 8%;
@@ -434,7 +434,7 @@
 			<text class="ma11" x="53.75" y="56.49519052838329">11</text>
 		</g>
 		<g class="icon">
-			<image class="ma" href="icon/Super.png" x="50" y="50" transform="translate(-5,-5)" />
+			<image class="ma" href="icon/Super.png" x="50" y="50" transform="translate(-6,-6)" />
 		</g>
 	</g>
 	<script>
