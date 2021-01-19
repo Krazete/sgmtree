@@ -1084,7 +1084,6 @@
 					if (maxtree) {
 						toggle("ma0", true);
 						ma.classList.add("checked");
-						tree.ma0.checked = true;
 					}
 				}
 				pruneLines();
