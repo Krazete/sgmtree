@@ -451,86 +451,86 @@
 		var tree = {
 			"ca": {
 				"cost": price.ability[0],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["sa2"]
 			},
 			"sa1": {
 				"cost": price.ability[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["sa3", "sa4"]
 			},
 			"sa2": {
 				"cost": price.ability[1],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["sa1", "combo"]
 			},
 			"combo": {
 				"cost": price.ability[1],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["sa4", "juggle"]
 			},
 			"sa3": {
 				"cost": price.ability[2],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": []
 			},
 			"sa4": {
 				"cost": price.ability[2],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["sa1", "combo", "sa5"]
 			},
 			"juggle": {
 				"cost": price.ability[2],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": []
 			},
 			"sa5": {
 				"cost": price.ability[3],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["sa6"]
 			},
 			"sa6": {
 				"cost": price.ability[3],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["charge"]
 			},
 			"charge": {
 				"cost": price.ability[3],
-				"boost": 0,
+				"boost": 4,
 				"checked": false,
 				"next": []
 			},
 
 			"atk1": {
 				"cost": price.default[0],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["atk3"]
 			},
 			"atk2": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["atk5"]
 			},
 			"atk3": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["atk2", "atk4"]
 			},
 			"atk4": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["atk7"]
 			},
@@ -542,19 +542,19 @@
 			},
 			"atk5": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["atk2", "dmg1", "atk6"]
 			},
 			"atk6": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["atk5", "atk7", "atk9"]
 			},
 			"atk7": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["atk4", "atk6", "rate1"]
 			},
@@ -566,7 +566,7 @@
 			},
 			"atk8": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": []
 			},
@@ -578,7 +578,7 @@
 			},
 			"atk9": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": ["dmg2", "rate2"]
 			},
@@ -590,117 +590,117 @@
 			},
 			"atk10": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": []
 			},
 
 			"slot1": {
 				"cost": price.move[0],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["slot2"]
 			},
 			"slot2": {
 				"cost": price.move[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear1", "slot3"]
 			},
 			"gear1": {
 				"cost": price.move[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear2"]
 			},
 			"gear2": {
 				"cost": price.move[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": []
 			},
 			"slot3": {
 				"cost": price.move[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["gear3", "slot4"]
 			},
 			"gear3": {
 				"cost": price.move[2],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear4"]
 			},
 			"gear4": {
 				"cost": price.move[2],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear5"]
 			},
 			"gear5": {
 				"cost": price.move[2],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": []
 			},
 			"slot4": {
 				"cost": price.move[3],
-				"boost": 0,
+				"boost": 7,
 				"checked": false,
 				"next": ["gear6"]
 			},
 			"gear6": {
 				"cost": price.move[3],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear7"]
 			},
 			"gear7": {
 				"cost": price.move[3],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear8"]
 			},
 			"gear8": {
 				"cost": price.move[3],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["gear9"]
 			},
 			"gear9": {
 				"cost": price.move[3],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": []
 			},
 
 			"hp1": {
 				"cost": price.default[0],
-				"boost": 0,
+				"boost": 2,
 				"checked": false,
 				"next": ["hp3"]
 			},
 			"hp2": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["hp5"]
 			},
 			"hp3": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["hp2", "hp4", "hp6"]
 			},
 			"hp4": {
 				"cost": price.default[1],
-				"boost": 0,
+				"boost": 3,
 				"checked": false,
 				"next": ["hp7"]
 			},
 			"hp5": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["block1"]
 			},
@@ -712,7 +712,7 @@
 			},
 			"hp6": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["hp9"]
 			},
@@ -724,7 +724,7 @@
 			},
 			"hp7": {
 				"cost": price.default[2],
-				"boost": 0,
+				"boost": 5,
 				"checked": false,
 				"next": ["def1"]
 			},
@@ -736,19 +736,19 @@
 			},
 			"hp8": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": ["def2"]
 			},
 			"hp9": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": []
 			},
 			"hp10": {
 				"cost": price.default[3],
-				"boost": 0,
+				"boost": 8,
 				"checked": false,
 				"next": ["block2"]
 			},
@@ -850,67 +850,67 @@
 			},
 			"ma1": {
 				"cost": price.marquee[0],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma2"]
 			},
 			"ma2": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma3"]
 			},
 			"ma3": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma4"]
 			},
 			"ma4": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma5"]
 			},
 			"ma5": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma6"]
 			},
 			"ma6": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma7"]
 			},
 			"ma7": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma8"]
 			},
 			"ma8": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma9"]
 			},
 			"ma9": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma10"]
 			},
 			"ma10": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": ["ma11"]
 			},
 			"ma11": {
 				"cost": price.marquee[1],
-				"boost": 0,
+				"boost": 1,
 				"checked": false,
 				"next": []
 			}
