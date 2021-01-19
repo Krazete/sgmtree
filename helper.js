@@ -5,7 +5,7 @@ function polar(r, deg, p) {
         var dp = Math.pow(10, p);
         return Math.round(dp * x) / dp + "," + Math.round(dp * y) / dp;
     }
-    return x + " " + y;
+    return x + "," + y;
 }
 
 /* Node Areas */
