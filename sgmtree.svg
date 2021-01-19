@@ -214,63 +214,63 @@
 	<g id="move">
 		<g class="node">
 			<path id="slot1" d="M30.97887,56.18034 A20,20,0,0,0,50,70 L50,60 A10,10,0,0,1,40.489435,53.09017 Z" />
-			<path id="slot2" d="M21.468305,59.27051 A30,30,0,0,0,27.705655,70.073918 L35.137103,63.382612 A20,20,0,0,1,30.97887,56.18034 Z" />
-			<path id="gear1" d="M27.705655,70.073918 A30,30,0,0,0,37.797901,77.406364 L41.865267,68.270909 A20,20,0,0,1,35.137103,63.382612 Z" />
-			<path id="gear2" d="M37.797901,77.406364 A30,30,0,0,0,50,80 L50,70 A20,20,0,0,1,41.865267,68.270909 Z" />
-			<path id="slot3" d="M11.957739,62.36068 A40,40,0,0,0,17.63932,73.51141 L25.72949,67.633558 A30,30,0,0,1,21.468305,59.27051 Z" />
-			<path id="gear3" d="M17.63932,73.51141 A40,40,0,0,0,26.48859,82.36068 L32.366442,74.27051 A30,30,0,0,1,25.72949,67.633558 Z" />
-			<path id="gear4" d="M26.48859,82.36068 A40,40,0,0,0,37.63932,88.042261 L40.72949,78.531695 A30,30,0,0,1,32.366442,74.27051 Z" />
-			<path id="gear5" d="M37.63932,88.042261 A40,40,0,0,0,50,90 L50,80 A30,30,0,0,1,40.72949,78.531695 Z" />
-			<path id="slot4" d="M2.447174,65.45085 A50,50,0,0,0,7.783604,76.79134 L16.226883,71.433072 A40,40,0,0,1,11.957739,62.36068 Z" />
-			<path id="gear6" d="M7.783604,76.79134 A50,50,0,0,0,15.772645,86.448431 L22.618116,79.158745 A40,40,0,0,1,16.226883,71.433072 Z" />
-			<path id="gear7" d="M15.772645,86.448431 A50,50,0,0,0,25.912316,93.815334 L30.729853,85.052267 A40,40,0,0,1,22.618116,79.158745 Z" />
-			<path id="gear8" d="M25.912316,93.815334 A50,50,0,0,0,37.565506,98.429158 L40.052405,88.743326 A40,40,0,0,1,30.729853,85.052267 Z" />
-			<path id="gear9" d="M37.565506,98.429158 A50,50,0,0,0,50,100 L50,90 A40,40,0,0,1,40.052405,88.743326 Z" />
+			<path id="gear1" d="M21.468305,59.27051 A30,30,0,0,0,27.705655,70.073918 L35.137103,63.382612 A20,20,0,0,1,30.97887,56.18034 Z" />
+			<path id="gear2" d="M27.705655,70.073918 A30,30,0,0,0,37.797901,77.406364 L41.865267,68.270909 A20,20,0,0,1,35.137103,63.382612 Z" />
+			<path id="gear3" d="M37.797901,77.406364 A30,30,0,0,0,50,80 L50,70 A20,20,0,0,1,41.865267,68.270909 Z" />
+			<path id="slot2" d="M11.957739,62.36068 A40,40,0,0,0,17.63932,73.51141 L25.72949,67.633558 A30,30,0,0,1,21.468305,59.27051 Z" />
+			<path id="gear4" d="M17.63932,73.51141 A40,40,0,0,0,26.48859,82.36068 L32.366442,74.27051 A30,30,0,0,1,25.72949,67.633558 Z" />
+			<path id="gear5" d="M26.48859,82.36068 A40,40,0,0,0,37.63932,88.042261 L40.72949,78.531695 A30,30,0,0,1,32.366442,74.27051 Z" />
+			<path id="gear6" d="M37.63932,88.042261 A40,40,0,0,0,50,90 L50,80 A30,30,0,0,1,40.72949,78.531695 Z" />
+			<path id="slot3" d="M2.447174,65.45085 A50,50,0,0,0,7.783604,76.79134 L16.226883,71.433072 A40,40,0,0,1,11.957739,62.36068 Z" />
+			<path id="gear7" d="M7.783604,76.79134 A50,50,0,0,0,15.772645,86.448431 L22.618116,79.158745 A40,40,0,0,1,16.226883,71.433072 Z" />
+			<path id="gear8" d="M15.772645,86.448431 A50,50,0,0,0,25.912316,93.815334 L30.729853,85.052267 A40,40,0,0,1,22.618116,79.158745 Z" />
+			<path id="gear9" d="M25.912316,93.815334 A50,50,0,0,0,37.565506,98.429158 L40.052405,88.743326 A40,40,0,0,1,30.729853,85.052267 Z" />
+			<path id="gear10" d="M37.565506,98.429158 A50,50,0,0,0,50,100 L50,90 A40,40,0,0,1,40.052405,88.743326 Z" />
 		</g>
 		<g class="line">
 			<line data-ids="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
-			<line data-ids="slot1 slot2" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
-			<line data-ids="slot2 gear1" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
-			<line data-ids="slot2 slot3" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
-			<line data-ids="gear1 gear2" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
-			<line data-ids="slot3 gear3" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
-			<line data-ids="slot3 slot4" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
-			<line data-ids="gear3 gear4" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
-			<line data-ids="gear4 gear5" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
-			<line data-ids="slot4 gear6" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
-			<line data-ids="gear6 gear7" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
-			<line data-ids="gear7 gear8" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
-			<line data-ids="gear8 gear9" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
+			<line data-ids="slot1 gear1" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
+			<line data-ids="gear1 gear2" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
+			<line data-ids="gear1 slot2" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
+			<line data-ids="gear2 gear3" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
+			<line data-ids="slot2 gear4" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
+			<line data-ids="slot2 slot3" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
+			<line data-ids="gear4 gear5" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
+			<line data-ids="gear5 gear6" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
+			<line data-ids="slot3 gear7" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
+			<line data-ids="gear7 gear8" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
+			<line data-ids="gear8 gear9" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
+			<line data-ids="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
 		</g>
 		<g class="icon">
 			<image class="slot1" href="icon/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
-			<image class="slot2" href="icon/GearSlotUnlock.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
-			<image class="gear1" href="icon/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
-			<image class="gear2" href="icon/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
-			<image class="slot3" href="icon/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
-			<image class="gear3" href="icon/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
-			<image class="gear4" href="icon/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
-			<image class="gear5" href="icon/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
-			<image class="slot4" href="icon/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
-			<image class="gear6" href="icon/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
-			<image class="gear7" href="icon/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
-			<image class="gear8" href="icon/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
-			<image class="gear9" href="icon/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
+			<image class="gear1" href="icon/GearIncrease.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
+			<image class="gear2" href="icon/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
+			<image class="gear3" href="icon/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
+			<image class="slot2" href="icon/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
+			<image class="gear4" href="icon/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
+			<image class="gear5" href="icon/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
+			<image class="gear6" href="icon/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
+			<image class="slot3" href="icon/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
+			<image class="gear7" href="icon/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
+			<image class="gear8" href="icon/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
+			<image class="gear9" href="icon/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
+			<image class="gear10" href="icon/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
 			<image class="slot1" href="icon/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
-			<image class="slot2" href="icon/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
-			<image class="gear1" href="icon/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
-			<image class="gear2" href="icon/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
-			<image class="slot3" href="icon/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
-			<image class="gear3" href="icon/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
-			<image class="gear4" href="icon/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
-			<image class="gear5" href="icon/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
-			<image class="slot4" href="icon/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
-			<image class="gear6" href="icon/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
-			<image class="gear7" href="icon/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
-			<image class="gear8" href="icon/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
-			<image class="gear9" href="icon/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
+			<image class="gear1" href="icon/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
+			<image class="gear2" href="icon/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
+			<image class="gear3" href="icon/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
+			<image class="slot2" href="icon/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
+			<image class="gear4" href="icon/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
+			<image class="gear5" href="icon/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
+			<image class="gear6" href="icon/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
+			<image class="slot3" href="icon/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
+			<image class="gear7" href="icon/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
+			<image class="gear8" href="icon/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
+			<image class="gear9" href="icon/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
+			<image class="gear10" href="icon/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="health">
@@ -599,37 +599,31 @@
 				"cost": price.move[0],
 				"boost": 3,
 				"checked": false,
-				"next": ["slot2"]
-			},
-			"slot2": {
-				"cost": price.move[1],
-				"boost": 1,
-				"checked": false,
-				"next": ["gear1", "slot3"]
+				"next": ["gear1"]
 			},
 			"gear1": {
 				"cost": price.move[1],
 				"boost": 1,
 				"checked": false,
-				"next": ["gear2"]
+				"next": ["gear2", "slot2"]
 			},
 			"gear2": {
 				"cost": price.move[1],
 				"boost": 1,
 				"checked": false,
+				"next": ["gear3"]
+			},
+			"gear3": {
+				"cost": price.move[1],
+				"boost": 1,
+				"checked": false,
 				"next": []
 			},
-			"slot3": {
+			"slot2": {
 				"cost": price.move[2],
 				"boost": 5,
 				"checked": false,
-				"next": ["gear3", "slot4"]
-			},
-			"gear3": {
-				"cost": price.move[2],
-				"boost": 1,
-				"checked": false,
-				"next": ["gear4"]
+				"next": ["gear4", "slot3"]
 			},
 			"gear4": {
 				"cost": price.move[2],
@@ -641,17 +635,17 @@
 				"cost": price.move[2],
 				"boost": 1,
 				"checked": false,
-				"next": []
-			},
-			"slot4": {
-				"cost": price.move[3],
-				"boost": 7,
-				"checked": false,
 				"next": ["gear6"]
 			},
 			"gear6": {
-				"cost": price.move[3],
+				"cost": price.move[2],
 				"boost": 1,
+				"checked": false,
+				"next": []
+			},
+			"slot3": {
+				"cost": price.move[3],
+				"boost": 7,
 				"checked": false,
 				"next": ["gear7"]
 			},
@@ -668,6 +662,12 @@
 				"next": ["gear9"]
 			},
 			"gear9": {
+				"cost": price.move[3],
+				"boost": 1,
+				"checked": false,
+				"next": ["gear10"]
+			},
+			"gear10": {
 				"cost": price.move[3],
 				"boost": 1,
 				"checked": false,
