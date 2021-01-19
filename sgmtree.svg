@@ -1082,8 +1082,7 @@
 						}
 					}
 					if (maxtree) {
-						var ma0 = document.getElementById("ma0");
-						ma0.classList.add("checked");
+						toggle("ma0", true);
 						ma.classList.add("checked");
 						tree.ma0.checked = true;
 					}
