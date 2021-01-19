@@ -72,10 +72,14 @@
 		}
 
 		text {
+			fill: #000000;
 			font: 3px monospace;
 			text-anchor: middle;
 			alignment-baseline: central;
 			pointer-events: none;
+		}
+		text.checked {
+			fill: #ffffff;
 		}
 	</style>
 	<defs>
@@ -416,18 +420,18 @@
 			<path id="ma11" d="M52.58819,59.659258 A10,10,0,0,0,57.071068,57.071068 L50,50 Z" />
 		</g>
 		<g class="text">
-			<text x="50" y="57.5">0</text>
-			<text x="46.25" y="56.49519052838329">1</text>
-			<text x="43.50480947161671" y="53.75">2</text>
-			<text x="42.5" y="50">3</text>
-			<text x="43.50480947161671" y="46.25">4</text>
-			<text x="46.25" y="43.50480947161671">5</text>
-			<text x="50" y="42.5">6</text>
-			<text x="53.75" y="43.50480947161671">7</text>
-			<text x="56.49519052838329" y="46.25">8</text>
-			<text x="57.5" y="50">9</text>
-			<text x="56.49519052838329" y="53.75">10</text>
-			<text x="53.75" y="56.49519052838329">11</text>
+			<text class="ma0" x="50" y="57.5">0</text>
+			<text class="ma1" x="46.25" y="56.49519052838329">1</text>
+			<text class="ma2" x="43.50480947161671" y="53.75">2</text>
+			<text class="ma3" x="42.5" y="50">3</text>
+			<text class="ma4" x="43.50480947161671" y="46.25">4</text>
+			<text class="ma5" x="46.25" y="43.50480947161671">5</text>
+			<text class="ma6" x="50" y="42.5">6</text>
+			<text class="ma7" x="53.75" y="43.50480947161671">7</text>
+			<text class="ma8" x="56.49519052838329" y="46.25">8</text>
+			<text class="ma9" x="57.5" y="50">9</text>
+			<text class="ma10" x="56.49519052838329" y="53.75">10</text>
+			<text class="ma11" x="53.75" y="56.49519052838329">11</text>
 		</g>
 		<g class="icon">
 			<image class="ma" href="icon/Super.png" x="50" y="50" transform="translate(-5,-5)" />
