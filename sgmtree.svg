@@ -861,9 +861,8 @@
 				"boost": 0,
 				"checked": false,
 				"next": []
-			}
-		};
-		var matree = {
+			},
+
 			"ma0": {
 				"checked": false,
 				"next": ["ma1"]
@@ -935,13 +934,7 @@
 				"next": []
 			}
 		};
-
-		function postMessage() {
-			if (window.parent != window) {
-				var json = JSON.stringify({});
-				window.parent.postMessage(json, window.parent.origin);
-			}
-		}
+		var maids = ["ma0", "ma1", "ma2", "ma3", "ma4", "ma5", "ma6", "ma7", "ma8", "ma9", "ma10", "ma11"];
 
 		function prev(id) {
 			var previds = [];
@@ -1035,10 +1028,6 @@
 			};
 		})();
 
-		function isChecked(id) {
-			return tree[id].checked;
-		}
-
 		function pruneLines() {
 			for (var id in tree) {
 				if (!tree[id].checked) {
@@ -1050,34 +1039,48 @@
 			}
 		}
 
+		function postMessage() {
+			if (window.parent != window) {
+				var json = JSON.stringify({});
+				window.parent.postMessage(json, window.parent.origin);
+			}
+		}
+
 		function updatePaths(e) {
 			if (e.target.id in tree) {
 				var id = e.target.id;
-				if (tree[id].checked) {
+				if (maids.indexOf(id) >= 0) {
+					for (var id2 in tree) {
+						if (maids.indexOf(id2) < 0) {
+							toggle(id2, true);
+						}
+						else {
+							toggle(id2, false);
+						}
+					}
+					check(id);
+				}
+				else if (tree[id].checked) {
 					uncheck(id);
-					for (var id2 in matree) {
-						document.getElementById(id2).classList.remove("checked");
-						matree[id2].checked = false;
+					for (var maid of maids) {
+						toggle(maid, false);
 					}
 				}
 				else {
 					check(id);
-					var ids = Object.keys(tree);
-					if (ids.every(isChecked)) {
+					var maxtree = true;
+					for (var id2 in tree) {
+						if (maids.indexOf(id2) < 0 && !tree[id2].checked) {
+							maxtree = false;
+						}
+					}
+					if (maxtree) {
 						document.getElementById("ma0").classList.add("checked");
-						matree.ma0.checked = true;
+						tree.ma0.checked = true;
 					}
 				}
 				pruneLines();
 				postMessage();
-			}
-			else if (e.target.id in matree) {
-				var id = e.target.id;
-				for (var id2 in matree) {
-				}
-				for (var id2 in tree) {
-					toggle(id2, true);
-				}
 			}
 		}
 
