@@ -73,8 +73,7 @@
 
 		text {
 			fill: #000000;
-			font-family: Courier, monospace;
-			font-size: 3px;
+			font: 3px monospace;
 			text-anchor: middle;
 			alignment-baseline: central;
 			pointer-events: none;
