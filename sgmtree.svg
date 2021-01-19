@@ -26,7 +26,7 @@
 		}
 
 		@media (pointer: fine) {
-			g:hover path, g:hover image {
+			g:hover path {
 				filter: url(#dim);
 			}
 			g path:hover {
@@ -58,7 +58,7 @@
 			filter: url(#dark);
 			pointer-events: none;
 		}
-		g image.checked {
+		image.checked {
 			filter: none;
 		}
 		.icon image {
@@ -70,27 +70,29 @@
 			height: 8%;
 		}
 	</style>
-	<filter id="faint">
-		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.6" />
-			<feFuncG type="linear" slope="0.6" />
-			<feFuncB type="linear" slope="0.6" />
-		</feComponentTransfer>
-	</filter>
-	<filter id="dim">
-		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.4" />
-			<feFuncG type="linear" slope="0.4" />
-			<feFuncB type="linear" slope="0.4" />
-		</feComponentTransfer>
-	</filter>
-	<filter id="dark">
-		<feComponentTransfer>
-			<feFuncR type="linear" slope="0.2" />
-			<feFuncG type="linear" slope="0.2" />
-			<feFuncB type="linear" slope="0.2" />
-		</feComponentTransfer>
-	</filter>
+	<defs>
+		<filter id="faint">
+			<feComponentTransfer>
+				<feFuncR type="linear" slope="0.6" />
+				<feFuncG type="linear" slope="0.6" />
+				<feFuncB type="linear" slope="0.6" />
+			</feComponentTransfer>
+		</filter>
+		<filter id="dim">
+			<feComponentTransfer>
+				<feFuncR type="linear" slope="0.4" />
+				<feFuncG type="linear" slope="0.4" />
+				<feFuncB type="linear" slope="0.4" />
+			</feComponentTransfer>
+		</filter>
+		<filter id="dark">
+			<feComponentTransfer>
+				<feFuncR type="linear" slope="0.2" />
+				<feFuncG type="linear" slope="0.2" />
+				<feFuncB type="linear" slope="0.2" />
+			</feComponentTransfer>
+		</filter>
+	</defs>
 	<g id="ability">
 		<g class="node">
 			<path id="ca" d="M61.755705,33.81966 A20,20,0,0,0,38.244295,33.81966 L44.122147,41.90983 A10,10,0,0,1,55.877853,41.90983 Z" />
@@ -420,7 +422,6 @@
 			<path id="ma11" d="M59.659258,52.58819 A10,10,0,0,0,59.659258,47.41181 L50,50 Z" />
 		</g>
 	</g>
-
 	<script>
 	// <![CDATA[
 		var tree = {
