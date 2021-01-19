@@ -1075,6 +1075,7 @@
 				}
 				else {
 					check(id);
+					pruneLines();
 					var maxtree = true;
 					for (var id2 in tree) {
 						if (maids.indexOf(id2) < 0 && !tree[id2].checked) {
@@ -1086,7 +1087,6 @@
 						ma.classList.add("checked");
 					}
 				}
-				pruneLines();
 				postMessage();
 			}
 		}
