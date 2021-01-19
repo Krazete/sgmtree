@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 	<style type="text/css">
-		#ability {
+		#ability path {
 			stroke: #5f2f5f;
 			fill: #5f2f5f;
 		}
-		#attack {
+		#attack path {
 			stroke: #df0f0f;
 			fill: #df0f0f;
 		}
-		#move {
+		#move path {
 			stroke: #0f6fcf;
 			fill: #0f6fcf;
 		}
-		#health {
+		#health path {
 			stroke: #0f8f2f;
 			fill: #0f8f2f;
 		}
-		#energy {
+		#energy path {
 			stroke: #efcf5f;
 			fill: #efcf5f;
 		}
-		#marquee {
+		#marquee path {
 			stroke: #8f8f8f;
 			fill: #8f8f8f;
 		}
@@ -72,9 +72,9 @@
 		}
 
 		text {
-			font: 4px sans-serif;
+			font: 3px monospace;
 			text-anchor: middle;
-			alignment-baseline: middle;
+			alignment-baseline: central;
 			pointer-events: none;
 		}
 	</style>
