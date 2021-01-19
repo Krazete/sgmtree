@@ -29,6 +29,9 @@
 			g:hover image {
 				filter: none;
 			}
+			g:hover text {
+				fill: #808080;
+			}
 		}
 
 		path {
@@ -79,7 +82,7 @@
 			alignment-baseline: central;
 			pointer-events: none;
 		}
-		text.checked {
+		g text.checked {
 			fill: #ffffff;
 		}
 	</style>
@@ -106,17 +109,17 @@
 			<path id="charge" d="M39.604415,1.09262 A50,50,0,0,0,20.610737,9.54915 L26.48859,17.63932 A40,40,0,0,1,41.683532,10.874096 Z" />
 		</g>
 		<g class="line">
-			<line data-ids="ca" x1="50" y1="50" x2="50" y2="35" />
-			<line data-ids="ca sa2" x1="50" y1="35" x2="50" y2="25" />
-			<line data-ids="sa1 sa2" x1="60.168416" y1="27.161364" x2="50" y2="25" />
-			<line data-ids="sa1 sa3" x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
-			<line data-ids="sa1 sa4" x1="60.168416" y1="27.161364" x2="50" y2="15" />
-			<line data-ids="sa2 combo" x1="50" y1="25" x2="39.831584" y2="27.161364" />
-			<line data-ids="combo sa4" x1="39.831584" y1="27.161364" x2="50" y2="15" />
-			<line data-ids="combo juggle" x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
-			<line data-ids="sa4 sa5" x1="50" y1="15" x2="68.303149" y2="8.890454" />
-			<line data-ids="sa5 sa6" x1="68.303149" y1="8.890454" x2="50" y2="5" />
-			<line data-ids="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
+			<line class="ca" x1="50" y1="50" x2="50" y2="35" />
+			<line class="ca sa2" x1="50" y1="35" x2="50" y2="25" />
+			<line class="sa1 sa2" x1="60.168416" y1="27.161364" x2="50" y2="25" />
+			<line class="sa1 sa3" x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
+			<line class="sa1 sa4" x1="60.168416" y1="27.161364" x2="50" y2="15" />
+			<line class="sa2 combo" x1="50" y1="25" x2="39.831584" y2="27.161364" />
+			<line class="combo sa4" x1="39.831584" y1="27.161364" x2="50" y2="15" />
+			<line class="combo juggle" x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
+			<line class="sa4 sa5" x1="50" y1="15" x2="68.303149" y2="8.890454" />
+			<line class="sa5 sa6" x1="68.303149" y1="8.890454" x2="50" y2="5" />
+			<line class="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
 		</g>
 		<g class="icon">
 			<image class="ca" href="icon/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
@@ -161,21 +164,21 @@
 			<path id="atk10" d="M0.098664,53.139526 A50,50,0,0,0,2.447174,65.45085 L11.957739,62.36068 A40,40,0,0,1,10.078931,52.511621 Z" />
 		</g>
 		<g class="line">
-			<line data-ids="atk1" x1="50" y1="50" x2="35.734152" y2="45.364745" />
-			<line data-ids="atk1 atk3" x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
-			<line data-ids="atk2 atk3" x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
-			<line data-ids="atk2 atk5" x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
-			<line data-ids="atk3 atk4" x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
-			<line data-ids="atk4 atk7" x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
-			<line data-ids="dmg1 atk5" x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
-			<line data-ids="dmg1 atk8" x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
-			<line data-ids="atk5 atk6" x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
-			<line data-ids="atk6 atk7" x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
-			<line data-ids="atk6 atk9" x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
-			<line data-ids="atk7 rate1" x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
-			<line data-ids="rate1 atk10" x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
-			<line data-ids="dmg2 atk9" x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
-			<line data-ids="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
+			<line class="atk1" x1="50" y1="50" x2="35.734152" y2="45.364745" />
+			<line class="atk1 atk3" x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
+			<line class="atk2 atk3" x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
+			<line class="atk2 atk5" x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
+			<line class="atk3 atk4" x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
+			<line class="atk4 atk7" x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
+			<line class="dmg1 atk5" x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
+			<line class="dmg1 atk8" x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
+			<line class="atk5 atk6" x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
+			<line class="atk6 atk7" x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
+			<line class="atk6 atk9" x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
+			<line class="atk7 rate1" x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
+			<line class="rate1 atk10" x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
+			<line class="dmg2 atk9" x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
+			<line class="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
 		</g>
 		<g class="icon">
 			<image class="atk1" href="icon/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
@@ -227,19 +230,19 @@
 			<path id="gear10" d="M37.565506,98.429158 A50,50,0,0,0,50,100 L50,90 A40,40,0,0,1,40.052405,88.743326 Z" />
 		</g>
 		<g class="line">
-			<line data-ids="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
-			<line data-ids="slot1 gear1" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
-			<line data-ids="gear1 gear2" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
-			<line data-ids="gear1 slot2" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
-			<line data-ids="gear2 gear3" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
-			<line data-ids="slot2 gear4" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
-			<line data-ids="slot2 slot3" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
-			<line data-ids="gear4 gear5" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
-			<line data-ids="gear5 gear6" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
-			<line data-ids="slot3 gear7" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
-			<line data-ids="gear7 gear8" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
-			<line data-ids="gear8 gear9" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
-			<line data-ids="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
+			<line class="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
+			<line class="slot1 gear1" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
+			<line class="gear1 gear2" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
+			<line class="gear1 slot2" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
+			<line class="gear2 gear3" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
+			<line class="slot2 gear4" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
+			<line class="slot2 slot3" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
+			<line class="gear4 gear5" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
+			<line class="gear5 gear6" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
+			<line class="slot3 gear7" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
+			<line class="gear7 gear8" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
+			<line class="gear8 gear9" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
+			<line class="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
 		</g>
 		<g class="icon">
 			<image class="slot1" href="icon/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
@@ -290,20 +293,20 @@
 			<path id="block2" d="M92.216396,76.79134 A50,50,0,0,0,97.552826,65.45085 L88.042261,62.36068 A40,40,0,0,1,83.773117,71.433072 Z" />
 		</g>
 		<g class="line">
-			<line data-ids="hp1" x1="50" y1="50" x2="58.816779" y2="62.135255" />
-			<line data-ids="hp1 hp3" x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
-			<line data-ids="hp2 hp3" x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
-			<line data-ids="hp2 hp5" x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
-			<line data-ids="hp3 hp4" x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
-			<line data-ids="hp3 hp6" x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
-			<line data-ids="hp4 hp7" x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
-			<line data-ids="hp5 block1" x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
-			<line data-ids="block1 hp8" x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
-			<line data-ids="hp6 hp9" x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
-			<line data-ids="def1 hp7" x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
-			<line data-ids="def1 hp10" x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
-			<line data-ids="def2 hp8" x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
-			<line data-ids="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
+			<line class="hp1" x1="50" y1="50" x2="58.816779" y2="62.135255" />
+			<line class="hp1 hp3" x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
+			<line class="hp2 hp3" x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
+			<line class="hp2 hp5" x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
+			<line class="hp3 hp4" x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
+			<line class="hp3 hp6" x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
+			<line class="hp4 hp7" x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
+			<line class="hp5 block1" x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
+			<line class="block1 hp8" x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
+			<line class="hp6 hp9" x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
+			<line class="def1 hp7" x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
+			<line class="def1 hp10" x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
+			<line class="def2 hp8" x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
+			<line class="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
 		</g>
 		<g class="icon">
 			<image class="hp1" href="icon/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
@@ -356,21 +359,21 @@
 			<path id="cool10" d="M88.525662,18.128801 A50,50,0,0,0,79.389263,9.54915 L73.51141,17.63932 A40,40,0,0,1,80.82053,24.50304 Z" />
 		</g>
 		<g class="line">
-			<line data-ids="cool1" x1="50" y1="50" x2="64.265848" y2="45.364745" />
-			<line data-ids="cool1 cool2" x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
-			<line data-ids="cool1 cool4" x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
-			<line data-ids="cool2 cool3" x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
-			<line data-ids="cool2 cool5" x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
-			<line data-ids="cool3 cool4" x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
-			<line data-ids="cool3 tag1" x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
-			<line data-ids="cool4 sm1" x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
-			<line data-ids="cool5 cool8" x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
-			<line data-ids="cool6 tag1" x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
-			<line data-ids="cool6 sm2" x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
-			<line data-ids="tag1 cool9" x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
-			<line data-ids="cool7 sm1" x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
-			<line data-ids="cool7 tag2" x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
-			<line data-ids="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
+			<line class="cool1" x1="50" y1="50" x2="64.265848" y2="45.364745" />
+			<line class="cool1 cool2" x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
+			<line class="cool1 cool4" x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
+			<line class="cool2 cool3" x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
+			<line class="cool2 cool5" x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
+			<line class="cool3 cool4" x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
+			<line class="cool3 tag1" x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
+			<line class="cool4 sm1" x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
+			<line class="cool5 cool8" x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
+			<line class="cool6 tag1" x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
+			<line class="cool6 sm2" x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
+			<line class="tag1 cool9" x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
+			<line class="cool7 sm1" x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
+			<line class="cool7 tag2" x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
+			<line class="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
 		</g>
 		<g class="icon">
 			<image class="cool1" href="icon/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
@@ -858,8 +861,9 @@
 				"boost": 0,
 				"checked": false,
 				"next": []
-			},
-
+			}
+		};
+		var matree = {
 			"ma0": {
 				"checked": false,
 				"next": ["ma1"]
@@ -967,6 +971,25 @@
 			};
 		})();
 
+		function toggle(id, b) {
+			var node = document.getElementById(id);
+			var assets = document.getElementsByClassName(id);
+			if (b) {
+				node.classList.add("checked");
+				for (var asset of assets) {
+					asset.classList.add("checked");
+				}
+				tree[id].checked = true;
+			}
+			else {
+				node.classList.remove("checked");
+				for (var asset of assets) {
+					asset.classList.remove("checked");
+				}
+				tree[id].checked = false;
+			}
+		}
+
 		var uncheck = (function() {
 			var visited;
 			return function(id, substep) {
@@ -975,12 +998,7 @@
 				}
 				visited.push(id);
 
-				var node = document.getElementById(id);
-				node.classList.remove("checked");
-				for (var e of document.getElementsByClassName(id)) {
-					e.classList.remove("checked");
-				}
-				tree[id].checked = false;
+				toggle(id, false);
 
 				for (var nextid of tree[id].next) {
 					if (visited.indexOf(nextid) < 0 && tree[nextid].checked) {
@@ -1013,25 +1031,21 @@
 					}
 				}
 
-				var node = document.getElementById(id);
-				node.classList.add("checked");
-				for (var e of document.getElementsByClassName(id)) {
-					e.classList.add("checked");
-				}
-				tree[id].checked = true;
+				toggle(id, true);
 			};
 		})();
 
-		function updateLines() {
-			for (var line of document.getElementsByTagName("line")) {
-				var ids = line.dataset.ids.split(" ");
-				if (ids.every(function (id) {
-					return tree[id].checked;
-				})) {
-					line.classList.add("checked");
-				}
-				else {
-					line.classList.remove("checked");
+		function isChecked(id) {
+			return tree[id].checked;
+		}
+
+		function pruneLines() {
+			for (var id in tree) {
+				if (!tree[id].checked) {
+					var lines = document.querySelectorAll("line." + id);
+					for (var line of lines) {
+						line.classList.remove("checked");
+					}
 				}
 			}
 		}
@@ -1041,12 +1055,29 @@
 				var id = e.target.id;
 				if (tree[id].checked) {
 					uncheck(id);
+					for (var id2 in matree) {
+						document.getElementById(id2).classList.remove("checked");
+						matree[id2].checked = false;
+					}
 				}
 				else {
 					check(id);
+					var ids = Object.keys(tree);
+					if (ids.every(isChecked)) {
+						document.getElementById("ma0").classList.add("checked");
+						matree.ma0.checked = true;
+					}
 				}
-				updateLines();
+				pruneLines();
 				postMessage();
+			}
+			else if (e.target.id in matree) {
+				var id = e.target.id;
+				for (var id2 in matree) {
+				}
+				for (var id2 in tree) {
+					toggle(id2, true);
+				}
 			}
 		}
 
