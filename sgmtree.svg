@@ -65,13 +65,17 @@
 			width: 7%;
 			height: 7%;
 		}
-		#marquee .icon image {
-			width: 12%;
-			height: 12%;
-		}
 		.frame image {
 			width: 8%;
 			height: 8%;
+		}
+		#ma {
+			filter: url(#dim);
+			width: 12%;
+			height: 12%;
+		}
+		#ma.checked {
+			filter: none;
 		}
 
 		text {
@@ -438,7 +442,7 @@
 			<text class="ma11" x="53.75" y="56.49519052838329">11</text>
 		</g>
 		<g class="icon">
-			<image class="ma" href="icon/Super.png" x="50" y="50" transform="translate(-6,-6)" />
+			<image id="ma" href="icon/Super.png" x="50" y="50" transform="translate(-6,-6)" />
 		</g>
 	</g>
 	<script>
@@ -1049,6 +1053,7 @@
 		function updatePaths(e) {
 			if (e.target.id in tree) {
 				var id = e.target.id;
+				var ma = document.getElementById("ma");
 				if (maids.indexOf(id) >= 0) {
 					for (var id2 in tree) {
 						if (maids.indexOf(id2) < 0) {
@@ -1059,12 +1064,14 @@
 						}
 					}
 					check(id);
+					ma.classList.add("checked");
 				}
 				else if (tree[id].checked) {
 					uncheck(id);
 					for (var maid of maids) {
 						toggle(maid, false);
 					}
+					ma.classList.remove("checked");
 				}
 				else {
 					check(id);
@@ -1075,7 +1082,9 @@
 						}
 					}
 					if (maxtree) {
-						document.getElementById("ma0").classList.add("checked");
+						var ma0 = document.getElementById("ma0");
+						ma0.classList.add("checked");
+						ma.classList.add("checked");
 						tree.ma0.checked = true;
 					}
 				}
