@@ -13,50 +13,6 @@
 </style>
 
 <script>
-	var tree = {
-		/* Ability Branch */
-		"ca": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["sa11"]
-		},
-		"sa11": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["sa12", "combo1"]
-		},
-		"sa12": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["sa13", "sa21"]
-		},
-		"combo1": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["combo2", "sa21"]
-		},
-		"sa21": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["sa22"]
-		},
-		"sa22": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["sa23"]
-		},
-		"sa23": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": ["charge"]
-		},
-		"charge": {
-			"cost": {"sp": 1000, "coins": 1000, "theo": 1000},
-			"fs": 1,
-			"next": []
-		}
-		/* Energy Branch */
-	};
 	function onMessage(e) {
 		if (e.origin == window.origin) {
 			try {
