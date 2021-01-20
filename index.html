@@ -1,26 +1,30 @@
-<embed id="svg" src="sgmtree.svg" width="50%" height="50%">
-
-<style>
-	div {
-		background: black;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 10px;
-		height: 10px;
-		transform: translate(-50%)
-	}
-</style>
-
-<script>
-	function onMessage(e) {
-		if (e.origin == window.origin) {
-			try {
-				var data = JSON.parse(e.data);
-				console.log(data);
-			}
-			catch (e) {}
+<html>
+<head>
+	<style>
+		div {
+			background: black;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 10px;
+			height: 10px;
+			transform: translate(-50%)
 		}
-	}
-	window.addEventListener("message", onMessage);
-</script>
+		#sgmtree {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<embed id="sgmtree" src="https://krazete.github.io/sgmtree/sgmtree.svg">
+	<script>
+		function onMessage(e) {
+			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
+				console.log(e.data);
+			}
+		}
+		window.addEventListener("message", onMessage);
+	</script>
+</body>
+</html>

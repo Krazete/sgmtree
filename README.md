@@ -4,7 +4,21 @@ An interactive Skullgirls Mobile skill tree that sends cost data when updated.
 
 ## How to Use
 
-1. Download sgmtree.svg and the icon folder.
-2. See index.html for an example.
+0. (Optional) Save a copy of `sgmtree.svg` and the `sgmtree` folder.
+1. In your HTML, include the SVG.
+  - `<embed src="sgmtree.svg">`
+  - If you did not save a copy, replace `sgmtree.svg` with `https://krazete.github.io/sgmtree/sgmtree.svg>`.
+2. Include your script, include a message event listener.
+  - `window.addEventListener("message", onMessage);`
+3. In your message listener, filter requests by origin.
+  - `function onMessage(e) {if (e.origin == window.origin) { /* CODE */ }}`
+  - If you did not save a copy, replace `window.origin` with `"https://krazete.github.io"`.
+4. Handle the data.
+  - `e.data` will be in the format `{"sp": 0, "cc": 0, "th": 0, "fs": 0}`.
+  - `sp` and `cc` indicate the total cost using only Skill Points and Canopy Coins.
+  - `th` indicates the total cost using only Theonite.
+  - `fs` is the Fighter Score multiplier.
 
-Note: This will not work when testing as a local file unless hosted on a local server (e.g. Python's SimpleHTTPServer).
+See `index.html` for an example of basic use.
+
+Note: If testing locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
