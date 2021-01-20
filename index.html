@@ -1,27 +1,49 @@
 <html>
 <head>
+	<meta name="description" content="An interactive Skullgirls Mobile skill tree.">
+	<title>SGM Skill Tree</title>
+	<link rel="shortcut icon" type="image/png" href="sgmtree/Super.png">
 	<style>
-		div {
-			background: black;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 10px;
-			height: 10px;
-			transform: translate(-50%)
+		body {
+			font-family: sans-serif;
+			text-align: center;
+			margin: 0;
+		}
+		img {
+			height: 24px;
+			vertical-align: bottom;
 		}
 		#sgmtree {
-			width: 100%;
-			height: 100%;
+			width: 500px;
+			min-width: 30%;
+			max-width: 100%;
 		}
 	</style>
 </head>
 <body>
+	<h1>SGM Skill Tree</h1>
 	<embed id="sgmtree" src="https://krazete.github.io/sgmtree/sgmtree.svg">
+	<embed id="sgmtree" src="https://krazete.github.io/sgmtree/sgmtree.svg">
+	<h2>Cost</h2>
+	<img src="img/Random.png">
+	<span id="sp">0</span>
+	+
+	<img src="img/SoftCurrency.png">
+	<span id="cc">0</span>
+	<br>
+	OR
+	<br>
+	<img src="img/HardCurrency.png">
+	<span id="th">0</span>
 	<script>
+		var sp = document.getElementById("sp");
+		var cc = document.getElementById("cc");
+		var th = document.getElementById("th");
 		function onMessage(e) {
 			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
-				console.log(e.data);
+				sp.innerHTML = e.data.sp;
+				cc.innerHTML = e.data.cc;
+				th.innerHTML = e.data.th;
 			}
 		}
 		window.addEventListener("message", onMessage);
