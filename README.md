@@ -1,6 +1,8 @@
 # SGM Tree
 
-An interactive Skullgirls Mobile skill tree that sends cost data when updated.
+An interactive Skullgirls Mobile skill tree which communicates cost data to the parent window.
+
+![preview](preview.png)
 
 ## How to Use
 
@@ -21,4 +23,4 @@ An interactive Skullgirls Mobile skill tree that sends cost data when updated.
 
 See `index.html` for an example of basic use.
 
-Note: If testing locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
+Note: To test the message feature locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
