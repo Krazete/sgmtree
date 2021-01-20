@@ -9,32 +9,59 @@
 			text-align: center;
 			margin: 0;
 		}
+		embed {
+			width: 500px;
+			max-width: 100%;
+		}
+		input {
+			display: none;
+		}
+		input + label {
+			color: gray;
+			display: inline-block;
+			padding: 3px;
+			border: 1px solid black;
+			border-radius: 3px;
+			margin: 3px;
+			cursor: pointer;
+		}
+		input:checked + label {
+			color: red;
+		}
 		img {
 			height: 24px;
 			vertical-align: bottom;
-		}
-		#sgmtree {
-			width: 500px;
-			min-width: 30%;
-			max-width: 100%;
 		}
 	</style>
 </head>
 <body>
 	<h1>SGM Skill Tree</h1>
-	<embed id="sgmtree" src="https://krazete.github.io/sgmtree/sgmtree.svg">
-	<embed id="sgmtree" src="https://krazete.github.io/sgmtree/sgmtree.svg">
+	<embed id="sgmtree" src="sgmtree.svg">
+	<div>
+		<input type="radio" name="tier" id="b">
+		<label for="b">Bronze</label>
+		<input type="radio" name="tier" id="s">
+		<label for="s">Silver</label>
+		<input type="radio" name="tier" id="g">
+		<label for="g">Gold</label>
+		<input type="radio" name="tier" id="d">
+		<label for="d">Diamond</label>
+	</div>
+	<div>
+		<input type="checkbox" id="shiny">
+		<label for="shiny">Shiny</label>
+	</div>
 	<h2>Cost</h2>
 	<img src="img/Random.png">
 	<span id="sp">0</span>
-	+
+	and
 	<img src="img/SoftCurrency.png">
 	<span id="cc">0</span>
 	<br>
-	OR
-	<br>
+	(or
 	<img src="img/HardCurrency.png">
-	<span id="th">0</span>
+	<span id="th">0</span>)
+	<canvas id="canvas"></canvas>
 	<script>
 		var sp = document.getElementById("sp");
 		var cc = document.getElementById("cc");
