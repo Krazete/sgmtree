@@ -126,28 +126,28 @@
 			<line class="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
 		</g>
 		<g class="icon">
-			<image class="ca" href="icon/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
-			<image class="sa1" href="icon/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
-			<image class="sa2" href="icon/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
-			<image class="combo" href="icon/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
-			<image class="sa3" href="icon/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
-			<image class="sa4" href="icon/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
-			<image class="juggle" href="icon/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
-			<image class="sa5" href="icon/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
-			<image class="sa6" href="icon/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
-			<image class="charge" href="icon/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
+			<image class="ca" href="sgmtree/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
+			<image class="sa1" href="sgmtree/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
+			<image class="sa2" href="sgmtree/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
+			<image class="combo" href="sgmtree/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
+			<image class="sa3" href="sgmtree/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
+			<image class="sa4" href="sgmtree/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
+			<image class="juggle" href="sgmtree/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
+			<image class="sa5" href="sgmtree/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
+			<image class="sa6" href="sgmtree/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
+			<image class="charge" href="sgmtree/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
-			<image class="ca" href="icon/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
-			<image class="sa1" href="icon/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
-			<image class="sa2" href="icon/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
-			<image class="combo" href="icon/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
-			<image class="sa3" href="icon/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
-			<image class="sa4" href="icon/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
-			<image class="juggle" href="icon/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
-			<image class="sa5" href="icon/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
-			<image class="sa6" href="icon/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
-			<image class="charge" href="icon/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
+			<image class="ca" href="sgmtree/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
+			<image class="sa1" href="sgmtree/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
+			<image class="sa2" href="sgmtree/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
+			<image class="combo" href="sgmtree/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
+			<image class="sa3" href="sgmtree/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
+			<image class="sa4" href="sgmtree/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
+			<image class="juggle" href="sgmtree/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
+			<image class="sa5" href="sgmtree/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
+			<image class="sa6" href="sgmtree/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
+			<image class="charge" href="sgmtree/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="attack">
@@ -185,36 +185,36 @@
 			<line class="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
 		</g>
 		<g class="icon">
-			<image class="atk1" href="icon/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
-			<image class="atk2" href="icon/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
-			<image class="atk3" href="icon/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
-			<image class="atk4" href="icon/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
-			<image class="dmg1" href="icon/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
-			<image class="atk5" href="icon/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
-			<image class="atk6" href="icon/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
-			<image class="atk7" href="icon/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
-			<image class="rate1" href="icon/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
-			<image class="atk8" href="icon/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
-			<image class="dmg2" href="icon/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
-			<image class="atk9" href="icon/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
-			<image class="rate2" href="icon/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
-			<image class="atk10" href="icon/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
+			<image class="atk1" href="sgmtree/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
+			<image class="atk2" href="sgmtree/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
+			<image class="atk3" href="sgmtree/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
+			<image class="atk4" href="sgmtree/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
+			<image class="dmg1" href="sgmtree/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
+			<image class="atk5" href="sgmtree/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
+			<image class="atk6" href="sgmtree/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
+			<image class="atk7" href="sgmtree/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
+			<image class="rate1" href="sgmtree/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
+			<image class="atk8" href="sgmtree/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
+			<image class="dmg2" href="sgmtree/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
+			<image class="atk9" href="sgmtree/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
+			<image class="rate2" href="sgmtree/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
+			<image class="atk10" href="sgmtree/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
-			<image class="atk1" href="icon/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
-			<image class="atk2" href="icon/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
-			<image class="atk3" href="icon/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
-			<image class="atk4" href="icon/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
-			<image class="dmg1" href="icon/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
-			<image class="atk5" href="icon/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
-			<image class="atk6" href="icon/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
-			<image class="atk7" href="icon/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
-			<image class="rate1" href="icon/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
-			<image class="atk8" href="icon/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
-			<image class="dmg2" href="icon/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
-			<image class="atk9" href="icon/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
-			<image class="rate2" href="icon/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
-			<image class="atk10" href="icon/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
+			<image class="atk1" href="sgmtree/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
+			<image class="atk2" href="sgmtree/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
+			<image class="atk3" href="sgmtree/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
+			<image class="atk4" href="sgmtree/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
+			<image class="dmg1" href="sgmtree/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
+			<image class="atk5" href="sgmtree/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
+			<image class="atk6" href="sgmtree/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
+			<image class="atk7" href="sgmtree/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
+			<image class="rate1" href="sgmtree/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
+			<image class="atk8" href="sgmtree/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
+			<image class="dmg2" href="sgmtree/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
+			<image class="atk9" href="sgmtree/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
+			<image class="rate2" href="sgmtree/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
+			<image class="atk10" href="sgmtree/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="move">
@@ -249,34 +249,34 @@
 			<line class="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
 		</g>
 		<g class="icon">
-			<image class="slot1" href="icon/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
-			<image class="gear1" href="icon/GearIncrease.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
-			<image class="gear2" href="icon/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
-			<image class="gear3" href="icon/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
-			<image class="slot2" href="icon/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
-			<image class="gear4" href="icon/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
-			<image class="gear5" href="icon/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
-			<image class="gear6" href="icon/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
-			<image class="slot3" href="icon/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
-			<image class="gear7" href="icon/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
-			<image class="gear8" href="icon/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
-			<image class="gear9" href="icon/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
-			<image class="gear10" href="icon/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
+			<image class="slot1" href="sgmtree/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
+			<image class="gear1" href="sgmtree/GearIncrease.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
+			<image class="gear2" href="sgmtree/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
+			<image class="gear3" href="sgmtree/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
+			<image class="slot2" href="sgmtree/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
+			<image class="gear4" href="sgmtree/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
+			<image class="gear5" href="sgmtree/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
+			<image class="gear6" href="sgmtree/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
+			<image class="slot3" href="sgmtree/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
+			<image class="gear7" href="sgmtree/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
+			<image class="gear8" href="sgmtree/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
+			<image class="gear9" href="sgmtree/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
+			<image class="gear10" href="sgmtree/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
-			<image class="slot1" href="icon/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
-			<image class="gear1" href="icon/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
-			<image class="gear2" href="icon/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
-			<image class="gear3" href="icon/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
-			<image class="slot2" href="icon/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
-			<image class="gear4" href="icon/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
-			<image class="gear5" href="icon/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
-			<image class="gear6" href="icon/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
-			<image class="slot3" href="icon/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
-			<image class="gear7" href="icon/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
-			<image class="gear8" href="icon/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
-			<image class="gear9" href="icon/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
-			<image class="gear10" href="icon/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
+			<image class="slot1" href="sgmtree/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
+			<image class="gear1" href="sgmtree/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
+			<image class="gear2" href="sgmtree/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
+			<image class="gear3" href="sgmtree/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
+			<image class="slot2" href="sgmtree/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
+			<image class="gear4" href="sgmtree/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
+			<image class="gear5" href="sgmtree/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
+			<image class="gear6" href="sgmtree/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
+			<image class="slot3" href="sgmtree/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
+			<image class="gear7" href="sgmtree/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
+			<image class="gear8" href="sgmtree/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
+			<image class="gear9" href="sgmtree/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
+			<image class="gear10" href="sgmtree/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="health">
@@ -313,36 +313,36 @@
 			<line class="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
 		</g>
 		<g class="icon">
-			<image class="hp1" href="icon/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
-			<image class="hp2" href="icon/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
-			<image class="hp3" href="icon/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
-			<image class="hp4" href="icon/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
-			<image class="hp5" href="icon/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
-			<image class="block1" href="icon/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
-			<image class="hp6" href="icon/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
-			<image class="def1" href="icon/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
-			<image class="hp7" href="icon/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
-			<image class="def2" href="icon/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
-			<image class="hp8" href="icon/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
-			<image class="hp9" href="icon/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
-			<image class="hp10" href="icon/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
-			<image class="block2" href="icon/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
+			<image class="hp1" href="sgmtree/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
+			<image class="hp2" href="sgmtree/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
+			<image class="hp3" href="sgmtree/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
+			<image class="hp4" href="sgmtree/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
+			<image class="hp5" href="sgmtree/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
+			<image class="block1" href="sgmtree/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
+			<image class="hp6" href="sgmtree/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
+			<image class="def1" href="sgmtree/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
+			<image class="hp7" href="sgmtree/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
+			<image class="def2" href="sgmtree/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
+			<image class="hp8" href="sgmtree/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
+			<image class="hp9" href="sgmtree/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
+			<image class="hp10" href="sgmtree/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
+			<image class="block2" href="sgmtree/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
-			<image class="hp1" href="icon/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
-			<image class="hp2" href="icon/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
-			<image class="hp3" href="icon/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
-			<image class="hp4" href="icon/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
-			<image class="hp5" href="icon/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
-			<image class="block1" href="icon/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
-			<image class="hp6" href="icon/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
-			<image class="def1" href="icon/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
-			<image class="hp7" href="icon/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
-			<image class="def2" href="icon/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
-			<image class="hp8" href="icon/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
-			<image class="hp9" href="icon/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
-			<image class="hp10" href="icon/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
-			<image class="block2" href="icon/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
+			<image class="hp1" href="sgmtree/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
+			<image class="hp2" href="sgmtree/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
+			<image class="hp3" href="sgmtree/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
+			<image class="hp4" href="sgmtree/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
+			<image class="hp5" href="sgmtree/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
+			<image class="block1" href="sgmtree/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
+			<image class="hp6" href="sgmtree/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
+			<image class="def1" href="sgmtree/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
+			<image class="hp7" href="sgmtree/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
+			<image class="def2" href="sgmtree/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
+			<image class="hp8" href="sgmtree/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
+			<image class="hp9" href="sgmtree/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
+			<image class="hp10" href="sgmtree/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
+			<image class="block2" href="sgmtree/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="energy">
@@ -380,36 +380,36 @@
 			<line class="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
 		</g>
 		<g class="icon">
-			<image class="cool1" href="icon/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
-			<image class="cool2" href="icon/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
-			<image class="cool3" href="icon/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
-			<image class="cool4" href="icon/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
-			<image class="cool5" href="icon/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
-			<image class="cool6" href="icon/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
-			<image class="tag1" href="icon/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
-			<image class="cool7" href="icon/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
-			<image class="sm1" href="icon/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
-			<image class="cool8" href="icon/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
-			<image class="sm2" href="icon/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
-			<image class="cool9" href="icon/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
-			<image class="tag2" href="icon/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
-			<image class="cool10" href="icon/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
+			<image class="cool1" href="sgmtree/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
+			<image class="cool2" href="sgmtree/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
+			<image class="cool3" href="sgmtree/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
+			<image class="cool4" href="sgmtree/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
+			<image class="cool5" href="sgmtree/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
+			<image class="cool6" href="sgmtree/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
+			<image class="tag1" href="sgmtree/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
+			<image class="cool7" href="sgmtree/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
+			<image class="sm1" href="sgmtree/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
+			<image class="cool8" href="sgmtree/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
+			<image class="sm2" href="sgmtree/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
+			<image class="cool9" href="sgmtree/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
+			<image class="tag2" href="sgmtree/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
+			<image class="cool10" href="sgmtree/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
 		</g>
 		<g class="frame">
-			<image class="cool1" href="icon/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
-			<image class="cool2" href="icon/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
-			<image class="cool3" href="icon/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
-			<image class="cool4" href="icon/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
-			<image class="cool5" href="icon/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
-			<image class="cool6" href="icon/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
-			<image class="tag1" href="icon/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
-			<image class="cool7" href="icon/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
-			<image class="sm1" href="icon/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
-			<image class="cool8" href="icon/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
-			<image class="sm2" href="icon/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
-			<image class="cool9" href="icon/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
-			<image class="tag2" href="icon/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
-			<image class="cool10" href="icon/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
+			<image class="cool1" href="sgmtree/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
+			<image class="cool2" href="sgmtree/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
+			<image class="cool3" href="sgmtree/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
+			<image class="cool4" href="sgmtree/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
+			<image class="cool5" href="sgmtree/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
+			<image class="cool6" href="sgmtree/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
+			<image class="tag1" href="sgmtree/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
+			<image class="cool7" href="sgmtree/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
+			<image class="sm1" href="sgmtree/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
+			<image class="cool8" href="sgmtree/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
+			<image class="sm2" href="sgmtree/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
+			<image class="cool9" href="sgmtree/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
+			<image class="tag2" href="sgmtree/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
+			<image class="cool10" href="sgmtree/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
 		</g>
 	</g>
 	<g id="marquee">
@@ -442,7 +442,7 @@
 			<text class="ma11" x="53.75" y="56.49519052838329">11</text>
 		</g>
 		<g class="icon">
-			<image id="ma" href="icon/Super.png" x="50" y="50" transform="translate(-6,-6)" />
+			<image id="ma" href="sgmtree/Super.png" x="50" y="50" transform="translate(-6,-6)" />
 		</g>
 	</g>
 	<script>
