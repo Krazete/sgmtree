@@ -1057,7 +1057,7 @@
 						data.fs += tree[id].fs;
 					}
 				}
-				window.parent.postMessage(JSON.stringify(data), window.origin);
+				window.parent.postMessage(data, "*");
 			}
 		}
 
