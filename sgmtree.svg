@@ -449,22 +449,22 @@
 	// <![CDATA[
 		var price = {
 			"default": [
-				{"sp": 1, "cc": 2000, "t": 10},
-				{"sp": 2, "cc": 3000, "t": 15},
-				{"sp": 3, "cc": 5000, "t": 20},
-				{"sp": 4, "cc": 8000, "t": 30}
+				{"sp": 1, "cc": 2000, "th": 10},
+				{"sp": 2, "cc": 3000, "th": 15},
+				{"sp": 3, "cc": 5000, "th": 20},
+				{"sp": 4, "cc": 8000, "th": 30}
 			],
 			"ability": [
-				{"sp": 3, "cc": 5000, "t": 20},
-				{"sp": 4, "cc": 8000, "t": 30},
-				{"sp": 5, "cc": 15000, "t": 50},
-				{"sp": 5, "cc": 20000, "t": 65}
+				{"sp": 3, "cc": 5000, "th": 20},
+				{"sp": 4, "cc": 8000, "th": 30},
+				{"sp": 5, "cc": 15000, "th": 50},
+				{"sp": 5, "cc": 20000, "th": 65}
 			],
 			"move": [
-				{"sp": 2, "cc": 3000, "t": 15},
-				{"sp": 3, "cc": 5000, "t": 20},
-				{"sp": 4, "cc": 8000, "t": 30},
-				{"sp": 5, "cc": 15000, "t": 50}
+				{"sp": 2, "cc": 3000, "th": 15},
+				{"sp": 3, "cc": 5000, "th": 20},
+				{"sp": 4, "cc": 8000, "th": 30},
+				{"sp": 5, "cc": 15000, "th": 50}
 			],
 			"marquee": [
 				{},
@@ -475,468 +475,468 @@
 		var tree = {
 			"ca": {
 				"cost": price.ability[0],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["sa2"]
 			},
 			"sa1": {
 				"cost": price.ability[1],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["sa3", "sa4"]
 			},
 			"sa2": {
 				"cost": price.ability[1],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["sa1", "combo"]
 			},
 			"combo": {
 				"cost": price.ability[1],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["sa4", "juggle"]
 			},
 			"sa3": {
 				"cost": price.ability[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": []
 			},
 			"sa4": {
 				"cost": price.ability[2],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["sa1", "combo", "sa5"]
 			},
 			"juggle": {
 				"cost": price.ability[2],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": []
 			},
 			"sa5": {
 				"cost": price.ability[3],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["sa6"]
 			},
 			"sa6": {
 				"cost": price.ability[3],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["charge"]
 			},
 			"charge": {
 				"cost": price.ability[3],
-				"boost": 4,
+				"fs": 4,
 				"checked": false,
 				"next": []
 			},
 
 			"atk1": {
 				"cost": price.default[0],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["atk3"]
 			},
 			"atk2": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["atk5"]
 			},
 			"atk3": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["atk2", "atk4"]
 			},
 			"atk4": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["atk7"]
 			},
 			"dmg1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["atk8"]
 			},
 			"atk5": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["atk2", "dmg1", "atk6"]
 			},
 			"atk6": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["atk5", "atk7", "atk9"]
 			},
 			"atk7": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["atk4", "atk6", "rate1"]
 			},
 			"rate1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["atk10"]
 			},
 			"atk8": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": []
 			},
 			"dmg2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"atk9": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": ["dmg2", "rate2"]
 			},
 			"rate2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"atk10": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": []
 			},
 
 			"slot1": {
 				"cost": price.move[0],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["gear1"]
 			},
 			"gear1": {
 				"cost": price.move[1],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear2", "slot2"]
 			},
 			"gear2": {
 				"cost": price.move[1],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear3"]
 			},
 			"gear3": {
 				"cost": price.move[1],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": []
 			},
 			"slot2": {
 				"cost": price.move[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["gear4", "slot3"]
 			},
 			"gear4": {
 				"cost": price.move[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear5"]
 			},
 			"gear5": {
 				"cost": price.move[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear6"]
 			},
 			"gear6": {
 				"cost": price.move[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": []
 			},
 			"slot3": {
 				"cost": price.move[3],
-				"boost": 7,
+				"fs": 7,
 				"checked": false,
 				"next": ["gear7"]
 			},
 			"gear7": {
 				"cost": price.move[3],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear8"]
 			},
 			"gear8": {
 				"cost": price.move[3],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear9"]
 			},
 			"gear9": {
 				"cost": price.move[3],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["gear10"]
 			},
 			"gear10": {
 				"cost": price.move[3],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": []
 			},
 
 			"hp1": {
 				"cost": price.default[0],
-				"boost": 2,
+				"fs": 2,
 				"checked": false,
 				"next": ["hp3"]
 			},
 			"hp2": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["hp5"]
 			},
 			"hp3": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["hp2", "hp4", "hp6"]
 			},
 			"hp4": {
 				"cost": price.default[1],
-				"boost": 3,
+				"fs": 3,
 				"checked": false,
 				"next": ["hp7"]
 			},
 			"hp5": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["block1"]
 			},
 			"block1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["hp8"]
 			},
 			"hp6": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["hp9"]
 			},
 			"def1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["hp10"]
 			},
 			"hp7": {
 				"cost": price.default[2],
-				"boost": 5,
+				"fs": 5,
 				"checked": false,
 				"next": ["def1"]
 			},
 			"def2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"hp8": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": ["def2"]
 			},
 			"hp9": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": []
 			},
 			"hp10": {
 				"cost": price.default[3],
-				"boost": 8,
+				"fs": 8,
 				"checked": false,
 				"next": ["block2"]
 			},
 			"block2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 
 			"cool1": {
 				"cost": price.default[0],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool2", "cool4"]
 			},
 			"cool2": {
 				"cost": price.default[1],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool3", "cool5"]
 			},
 			"cool3": {
 				"cost": price.default[1],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool2", "cool4", "tag1"]
 			},
 			"cool4": {
 				"cost": price.default[1],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool3", "sm1"]
 			},
 			"cool5": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool8"]
 			},
 			"cool6": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["sm2"]
 			},
 			"tag1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool6", "cool9"]
 			},
 			"cool7": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["tag2"]
 			},
 			"sm1": {
 				"cost": price.default[2],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool7"]
 			},
 			"cool8": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"sm2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"cool9": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 			"tag2": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["cool10"]
 			},
 			"cool10": {
 				"cost": price.default[3],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": []
 			},
 
 			"ma0": {
 				"cost": price.marquee[0],
-				"boost": 0,
+				"fs": 0,
 				"checked": false,
 				"next": ["ma1"]
 			},
 			"ma1": {
 				"cost": price.marquee[1],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma2"]
 			},
 			"ma2": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma3"]
 			},
 			"ma3": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma4"]
 			},
 			"ma4": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma5"]
 			},
 			"ma5": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma6"]
 			},
 			"ma6": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma7"]
 			},
 			"ma7": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma8"]
 			},
 			"ma8": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma9"]
 			},
 			"ma9": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma10"]
 			},
 			"ma10": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": ["ma11"]
 			},
 			"ma11": {
 				"cost": price.marquee[2],
-				"boost": 1,
+				"fs": 1,
 				"checked": false,
 				"next": []
 			}
@@ -1048,8 +1048,16 @@
 
 		function postMessage() {
 			if (window.parent != window) {
-				var json = JSON.stringify({});
-				window.parent.postMessage(json, window.parent.origin);
+				var data = {"sp": 0, "cc": 0, "th": 0, "fs": 0};
+				for (var id in tree) {
+					if (tree[id].checked) {
+						data.sp += tree[id].cost.sp || 0;
+						data.cc += tree[id].cost.cc || 0;
+						data.th += tree[id].cost.th || 0;
+						data.fs += tree[id].fs;
+					}
+				}
+				window.parent.postMessage(JSON.stringify(data), window.parent.origin);
 			}
 		}
 
