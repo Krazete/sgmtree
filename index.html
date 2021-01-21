@@ -5,72 +5,85 @@
 	<link rel="shortcut icon" type="image/png" href="sgmtree/Super.png">
 	<style>
 		body {
+			background: black;
+			color: white;
 			font-family: sans-serif;
 			text-align: center;
 			margin: 0;
 		}
 		embed {
-			width: 500px;
+			width: 75vh;
+			min-width: 500px;
 			max-width: 100%;
 		}
 		input {
 			display: none;
 		}
+		input#z + label {background-image: url(img/NoSmoking.png), url(img/Shiny.png);}
+		input#z:checked + label {background-image: url(img/Shiny.png);}
+		input#b + label {background-image: url(img/Bronze.png);}
+		input#s + label {background-image: url(img/Silver.png);}
+		input#g + label {background-image: url(img/Gold.png);}
+		input#d + label {background-image: url(img/Diamond.png);}
 		input + label {
-			color: gray;
+			width: 30px;
+			height: 30px;
+			background-color: black;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
 			display: inline-block;
-			padding: 3px;
-			border: 1px solid black;
-			border-radius: 3px;
-			margin: 3px;
+			border: 1px solid maroon;
+			border-radius: 6px;
 			cursor: pointer;
 		}
 		input:checked + label {
-			color: red;
+			border-color: lime;
+			background-color: white;
 		}
+		span#sp:after {content: ' SP';}
+		span#cc:after {content: ' CC';}
+		span#th:after {content: ' Theonite';}
 		img {
-			height: 24px;
-			vertical-align: bottom;
+			height: 30px;
+			vertical-align: middle;
 		}
 	</style>
 </head>
 <body>
 	<h1>SGM Skill Tree</h1>
 	<embed id="sgmtree" src="sgmtree.svg">
-	<div>
-		<input type="radio" name="tier" id="b">
-		<label for="b">Bronze</label>
+	<p>
+		<input type="checkbox" id="z">
+		<label for="z"></label>
+		&nbsp;
+		<input type="radio" name="tier" id="b" checked>
+		<label for="b"></label>
 		<input type="radio" name="tier" id="s">
-		<label for="s">Silver</label>
+		<label for="s"></label>
 		<input type="radio" name="tier" id="g">
-		<label for="g">Gold</label>
+		<label for="g"></label>
 		<input type="radio" name="tier" id="d">
-		<label for="d">Diamond</label>
-	</div>
-	<div>
-		<input type="checkbox" id="shiny">
-		<label for="shiny">Shiny</label>
-	</div>
+		<label for="d"></label>
+	</p>
 	<h2>Cost</h2>
 	<img src="img/Random.png">
 	<span id="sp">0</span>
-	and
+	+
 	<img src="img/SoftCurrency.png">
 	<span id="cc">0</span>
-	<br>
 	(or
 	<img src="img/HardCurrency.png">
 	<span id="th">0</span>)
-	<canvas id="canvas"></canvas>
 	<script>
 		var sp = document.getElementById("sp");
 		var cc = document.getElementById("cc");
 		var th = document.getElementById("th");
 		function onMessage(e) {
 			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
-				sp.innerHTML = e.data.sp;
-				cc.innerHTML = e.data.cc;
-				th.innerHTML = e.data.th;
+				sp.innerHTML = e.data.sp || 0;
+				cc.innerHTML = e.data.cc || 0;
+				th.innerHTML = e.data.th || 0;
 			}
 		}
 		window.addEventListener("message", onMessage);
