@@ -23,4 +23,7 @@ An interactive Skullgirls Mobile skill tree which communicates cost data to the 
 
 See `index.html` for an example of basic use.
 
-Note: To test the message feature locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
+## Notes
+
+- In the SVG file, nodes are named according to the counterclockwise direction, not tree order. E.g. `sa1` is actually the second tier of Signature Ability 1 while `sa2` is the first tier of Signature Ability 1.
+- To test the message feature locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
