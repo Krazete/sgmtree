@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="An interactive Skullgirls Mobile skill tree.">
 	<title>SGM Skill Tree</title>
 	<link rel="shortcut icon" type="image/png" href="sgmtree/Super.png">
@@ -15,6 +16,8 @@
 			width: 75vh;
 			min-width: 500px;
 			max-width: 100%;
+			display: block;
+			margin: auto;
 		}
 		input {
 			display: none;
@@ -45,13 +48,17 @@
 			height: 30px;
 			vertical-align: middle;
 		}
-		span.gray {
+		.gray {
 			opacity: 0.5;
 		}
 	</style>
 </head>
 <body>
 	<h1>SGM Skill Tree</h1>
+	<p class="gray">
+		Tip: Click "11" to select everything.
+	</p>
+	<!-- <embed id="sgmtree" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
 	<embed id="sgmtree" src="sgmtree.svg">
 	<p>
 		<input type="checkbox" id="z">
@@ -79,14 +86,14 @@
 	</span>
 	<script>
 		var msg, m;
-		var sp = document.getElementById("sp");
-		var cc = document.getElementById("cc");
-		var th = document.getElementById("th");
 		var radioZ = document.getElementById("z");
 		var radioB = document.getElementById("b");
 		var radioS = document.getElementById("s");
 		var radioG = document.getElementById("g");
 		var radioD = document.getElementById("d");
+		var sp = document.getElementById("sp");
+		var cc = document.getElementById("cc");
+		var th = document.getElementById("th");
 		function setMultiplier() {
 			if (radioB.checked) {
 				m = 1;
@@ -103,24 +110,31 @@
 			if (radioZ.checked) {
 				m /= 2;
 			}
+			setCost();
+		}
+		function msum(total, n) {
+			return total + (isNaN(n) ? 0 : Math.ceil(m * n));
 		}
 		function setCost() {
-			setMultiplier();
-			sp.innerHTML = Math.ceil(m * msg.data.sp || 0).toLocaleString();
-			cc.innerHTML = Math.ceil(m * msg.data.cc || 0).toLocaleString();
-			th.innerHTML = Math.ceil(m * msg.data.th || 0).toLocaleString();
+			if (msg && msg.data) {
+				sp.innerHTML = msg.data.sp.reduce(msum, 0).toLocaleString();
+				cc.innerHTML = msg.data.cc.reduce(msum, 0).toLocaleString();
+				th.innerHTML = msg.data.th.reduce(msum, 0).toLocaleString();
+			}
 		}
 		function onMessage(e) {
+			console.log(e.data, e.source);
 			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
 				msg = e;
 				setCost();
 			}
 		}
-		radioZ.addEventListener("input", setCost);
-		radioB.addEventListener("input", setCost);
-		radioS.addEventListener("input", setCost);
-		radioG.addEventListener("input", setCost);
-		radioD.addEventListener("input", setCost);
+		setMultiplier();
+		radioZ.addEventListener("input", setMultiplier);
+		radioB.addEventListener("input", setMultiplier);
+		radioS.addEventListener("input", setMultiplier);
+		radioG.addEventListener("input", setMultiplier);
+		radioD.addEventListener("input", setMultiplier);
 		window.addEventListener("message", onMessage);
 	</script>
 </body>
