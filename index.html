@@ -123,18 +123,17 @@
 			}
 		}
 		function onMessage(e) {
-			console.log(e.data, e.source);
 			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
 				msg = e;
 				setCost();
 			}
 		}
-		setMultiplier();
 		radioZ.addEventListener("input", setMultiplier);
 		radioB.addEventListener("input", setMultiplier);
 		radioS.addEventListener("input", setMultiplier);
 		radioG.addEventListener("input", setMultiplier);
 		radioD.addEventListener("input", setMultiplier);
+		window.addEventListener("load", setMultiplier);
 		window.addEventListener("message", onMessage);
 	</script>
 </body>
