@@ -41,12 +41,12 @@
 			border-color: lime;
 			background-color: white;
 		}
-		span#sp:after {content: ' SP';}
-		span#cc:after {content: ' CC';}
-		span#th:after {content: ' Theonite';}
 		img {
 			height: 30px;
 			vertical-align: middle;
+		}
+		span.gray {
+			opacity: 0.5;
 		}
 	</style>
 </head>
@@ -66,26 +66,61 @@
 		<input type="radio" name="tier" id="d">
 		<label for="d"></label>
 	</p>
-	<h2>Cost</h2>
-	<img src="img/Random.png">
+	Cost:
+	<img src="img/Random.png" alt="SP">
 	<span id="sp">0</span>
-	+
-	<img src="img/SoftCurrency.png">
+	and
+	<img src="img/SoftCurrency.png" alt="CC">
 	<span id="cc">0</span>
-	(or
-	<img src="img/HardCurrency.png">
-	<span id="th">0</span>)
+	<span class="gray">
+		(or
+		<img src="img/HardCurrency.png" alt="THEO">
+		<span id="th">0</span>)
+	</span>
 	<script>
+		var msg, m;
 		var sp = document.getElementById("sp");
 		var cc = document.getElementById("cc");
 		var th = document.getElementById("th");
-		function onMessage(e) {
-			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
-				sp.innerHTML = e.data.sp || 0;
-				cc.innerHTML = e.data.cc || 0;
-				th.innerHTML = e.data.th || 0;
+		var radioZ = document.getElementById("z");
+		var radioB = document.getElementById("b");
+		var radioS = document.getElementById("s");
+		var radioG = document.getElementById("g");
+		var radioD = document.getElementById("d");
+		function setMultiplier() {
+			if (radioB.checked) {
+				m = 1;
+			}
+			else if (radioS.checked) {
+				m = 2;
+			}
+			else if (radioG.checked) {
+				m = 5;
+			}
+			else if (radioD.checked) {
+				m = 10;
+			}
+			if (radioZ.checked) {
+				m /= 2;
 			}
 		}
+		function setCost() {
+			setMultiplier();
+			sp.innerHTML = Math.ceil(m * msg.data.sp || 0).toLocaleString();
+			cc.innerHTML = Math.ceil(m * msg.data.cc || 0).toLocaleString();
+			th.innerHTML = Math.ceil(m * msg.data.th || 0).toLocaleString();
+		}
+		function onMessage(e) {
+			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
+				msg = e;
+				setCost();
+			}
+		}
+		radioZ.addEventListener("input", setCost);
+		radioB.addEventListener("input", setCost);
+		radioS.addEventListener("input", setCost);
+		radioG.addEventListener("input", setCost);
+		radioD.addEventListener("input", setCost);
 		window.addEventListener("message", onMessage);
 	</script>
 </body>
