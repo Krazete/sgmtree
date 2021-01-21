@@ -1048,12 +1048,12 @@
 
 		function postMessage() {
 			if (window.parent != window) {
-				var data = {"sp": 0, "cc": 0, "th": 0, "fs": 0};
+				var data = {"sp": [], "cc": [], "th": [], "fs": 0};
 				for (var id in tree) {
-					if (tree[id].checked) {
-						data.sp += tree[id].cost.sp || 0;
-						data.cc += tree[id].cost.cc || 0;
-						data.th += tree[id].cost.th || 0;
+					if (tree[id].checked && id != "ma0") {
+						data.sp.push(tree[id].cost.sp);
+						data.cc.push(tree[id].cost.cc);
+						data.th.push(tree[id].cost.th);
 						data.fs += tree[id].fs;
 					}
 				}

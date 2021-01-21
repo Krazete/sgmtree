@@ -16,9 +16,9 @@ An interactive Skullgirls Mobile skill tree which communicates cost data to the 
   - `function onMessage(e) {if (e.origin == window.origin) { /* CODE */ }}`
   - If you did not save a copy, replace `window.origin` with `"https://krazete.github.io"`.
 4. Handle the data.
-  - `e.data` will be in the format `{"sp": 0, "cc": 0, "th": 0, "fs": 0}`.
-  - `sp` and `cc` indicate the total cost using only Skill Points and Canopy Coins.
-  - `th` indicates the total cost using only Theonite.
+  - `e.data` is an object in the format `{"sp": [], "cc": [], "th": [], "fs": 0}`.
+  - `sp` and `cc` lists node costs if using only Skill Points and Canopy Coins.
+  - `th` lists node costs if using only Theonite.
   - `fs` is the Fighter Score multiplier.
 
 See `index.html` for an example of basic use.
