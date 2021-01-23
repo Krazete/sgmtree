@@ -1,0 +1,55 @@
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.gray {
+    opacity: 0.5;
+}
+
+embed {
+    width: 70vh;
+    min-width: 500px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+input {
+    display: none;
+}
+
+input#z + label {background-image: url(img/NoSmoking.png), url(img/Shiny.png);}
+input#z:checked + label {background-image: url(img/Shiny.png);}
+input#b + label {background-image: url(img/Bronze.png);}
+input#s + label {background-image: url(img/Silver.png);}
+input#g + label {background-image: url(img/Gold.png);}
+input#d + label {background-image: url(img/Diamond.png);}
+input + label {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    border: 1px solid maroon;
+    border-radius: 6px;
+    cursor: pointer;
+}
+input:checked + label {
+    border-color: lime;
+    background-color: white;
+}
+
+img {
+    height: 30px;
+    vertical-align: middle;
+}

@@ -21,7 +21,7 @@ An interactive Skullgirls Mobile skill tree which communicates cost data to the 
   - `th` lists node costs if using only Theonite.
   - `fs` is the Fighter Score multiplier.
 
-See `index.html` for an example of basic use.
+See `index.html` and `index.js` for an example.
 
 ## Notes
 
