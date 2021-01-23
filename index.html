@@ -9,18 +9,18 @@
 <body>
     <h1>SGM Skill Tree</h1>
     <p class="gray">Tip: Click "11" to select everything.</p>
-    <p>
-        <span>
-            <h2 class="dual hidden">Tree 1</h2>
+    <div class="flexbox">
+        <div>
+            <h2 class="dual hidden">Initial</h2>
             <!-- <embed id="t0" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg0" src="sgmtree.svg">
-        </span>
-        <span class="dual hidden">
-            <h2>Tree 2</h2>
+        </div>
+        <div class="dual hidden">
+            <h2>Final</h2>
             <!-- <embed id="t1" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg1" src="sgmtree.svg">
-        </span>
-    </p>
+        </div>
+    </div>
     <p>
         <input type="checkbox" id="z">
         <label for="z"></label>
@@ -76,7 +76,7 @@
             )
         </span>
     </p>
-    <button id="dual-button">Show Tree 2</button>
+    <button id="dual-button">Show Second Tree</button>
     <script src="index.js"></script>
 </body>
 </html>

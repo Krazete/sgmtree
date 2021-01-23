@@ -31,24 +31,6 @@ var dtree = {
     "ccElement": document.getElementById("dcc"),
     "thElement": document.getElementById("dth")
 };
-var theoniteElements = document.getElementsByClassName("theonite");
-
-function toggleDual() {
-    if (dual) {
-        for (var i = 0; i < dualElements.length; i++) {
-            dualElements[i].classList.add("hidden");
-        }
-        dualButton.innerHTML = "Show";
-        dual = false;
-    }
-    else {
-        for (var i = 0; i < dualElements.length; i++) {
-            dualElements[i].classList.remove("hidden");
-        }
-        dualButton.innerHTML = "Hide";
-        dual = true;
-    }
-}
 
 function setMultiplier() {
     if (radioB.checked) {
@@ -75,32 +57,34 @@ function msum(total, n) {
     return total + Math.ceil(m * n);
 }
 
-function updateElements(tree) {
-    tree.spElement.innerHTML = tree.sp.toLocaleString();
-    tree.ccElement.innerHTML = tree.cc.toLocaleString();
-    tree.thElement.innerHTML = tree.cc.toLocaleString();
-    if (isNaN(tree.th)) {
-        tree.thElement.parentElement.classList.add("hidden");
-    }
-    else {
-        tree.thElement.parentElement.classList.remove("hidden");
-    }
-}
-
 function setCost(tree) {
     if (tree.msg.data) {
         tree.sp = tree.msg.data.sp.reduce(msum, 0);
         tree.cc = tree.msg.data.cc.reduce(msum, 0);
         tree.th = tree.msg.data.th.reduce(msum, 0);
-        updateElements(tree);
+        tree.spElement.innerHTML = tree.sp.toLocaleString();
+        tree.ccElement.innerHTML = tree.cc.toLocaleString();
+        tree.thElement.innerHTML = tree.cc.toLocaleString();
     }
 }
 
 function setDifference() {
-    dtree.sp = tree1.sp - tree0.sp;
-    dtree.cc = tree1.cc - tree0.cc;
-    dtree.th = tree1.th - tree0.th;
-    updateElements(dtree);
+    var dsp = tree1.sp - tree0.sp;
+    var dcc = tree1.cc - tree0.cc;
+    var dth = tree1.th - tree0.th;
+    dtree.spElement.innerHTML = dsp.toLocaleString();
+    dtree.ccElement.innerHTML = dcc.toLocaleString();
+    dtree.thElement.innerHTML = dth.toLocaleString();
+    if (isNaN(dth)) {
+        tree0.thElement.parentElement.classList.add("hidden");
+        tree1.thElement.parentElement.classList.add("hidden");
+        dtree.thElement.parentElement.classList.add("hidden");
+    }
+    else {
+        tree0.thElement.parentElement.classList.remove("hidden");
+        tree1.thElement.parentElement.classList.remove("hidden");
+        dtree.thElement.parentElement.classList.remove("hidden");
+    }
 }
 
 function onMessage(msg) {
@@ -116,6 +100,25 @@ function onMessage(msg) {
             setCost(tree1);
         }
         setDifference();
+    }
+}
+
+function toggleDual() {
+    if (dual) {
+        document.body.classList.add("ddddddd");
+        for (var i = 0; i < dualElements.length; i++) {
+            dualElements[i].classList.add("hidden");
+        }
+        dualButton.innerHTML = "Show Second Tree";
+        dual = false;
+    }
+    else {
+        document.body.classList.add("ddddddd");
+        for (var i = 0; i < dualElements.length; i++) {
+            dualElements[i].classList.remove("hidden");
+        }
+        dualButton.innerHTML = "Hide Second Tree";
+        dual = true;
     }
 }
 

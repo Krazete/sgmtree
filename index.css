@@ -14,9 +14,17 @@ body {
     opacity: 0.5;
 }
 
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox > * {
+    flex: 1;
+}
+
 embed {
     width: 70vh;
-    min-width: 500px;
     max-width: 100%;
     display: block;
     margin: auto;
