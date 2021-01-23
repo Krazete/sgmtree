@@ -971,10 +971,10 @@
             };
         })();
 
-        function toggle(id, b) {
+        function toggle(id, on) {
             var node = document.getElementById(id);
             var assets = document.getElementsByClassName(id);
-            if (b) {
+            if (on) {
                 node.classList.add("checked");
                 for (var asset of assets) {
                     asset.classList.add("checked");
@@ -1046,9 +1046,9 @@
             }
         }
 
-        function postMessage() {
+        function postMessage(stopper) {
             if (window.parent != window) {
-                var data = {"sp": [], "cc": [], "th": [], "fs": 0};
+                var data = {"sp": [], "cc": [], "th": [], "fs": 0, "stopper": stopper};
                 for (var id in tree) {
                     if (tree[id].checked && id != "ma0") {
                         data.sp.push(tree[id].cost.sp);
@@ -1104,7 +1104,17 @@
             }
         }
 
+        function onCustomEvent(e) {
+            for (var id of e.detail.ids) {
+                toggle(id, e.detail.on);
+            }
+            pruneLines();
+
+            postMessage(true);
+        }
+
         window.addEventListener("click", updatePaths);
+        document.addEventListener("mnbmnb", onCustomEvent);
     // ]]>
     </script>
 </svg>

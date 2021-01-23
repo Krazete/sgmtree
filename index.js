@@ -87,6 +87,22 @@ function setDifference() {
     }
 }
 
+function relay(booooo) {
+    var svg0doc = (booooo ? svg0 : svg1).getSVGDocument();
+    var svg1doc = (booooo ? svg1 : svg0).getSVGDocument();
+    if (svg0doc && svg1doc) {
+        var detail = {"ids": [], "on": booooo};
+        for (var node of svg0doc.getElementsByTagName("path")) {
+            if (node.classList.contains("checked") == booooo) {
+                detail.ids.push(node.id);
+            }
+        }
+        var event = new CustomEvent("mnbmnb", {"detail": detail});
+        svg1doc.dispatchEvent(event);
+        setCost(booooo ? tree1 : tree0);
+    }
+}
+
 function onMessage(msg) {
     /* if (msg.origin == "https://krazete.github.io") { */
     if (msg.origin == window.origin) {
@@ -98,6 +114,9 @@ function onMessage(msg) {
         else if (id == "svg1") {
             tree1.msg = msg;
             setCost(tree1);
+        }
+        if (!msg.data.stopper) {
+            relay(id == "svg0");
         }
         setDifference();
     }
