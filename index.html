@@ -12,11 +12,14 @@
 			text-align: center;
 			margin: 0;
 		}
+		.hidden {
+			display: none;
+		}
 		.gray {
 			opacity: 0.5;
 		}
 		embed {
-			width: 75vh;
+			width: 70vh;
 			min-width: 500px;
 			max-width: 100%;
 			display: block;
@@ -58,8 +61,18 @@
 	<p class="gray">
 		Tip: Click "11" to select everything.
 	</p>
-	<!-- <embed id="sgmtree" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
-	<embed id="sgmtree" src="sgmtree.svg">
+	<p>
+		<span>
+			<h2 class="t2 hidden">Tree 1</h2>
+			<!-- <embed id="t0" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
+			<embed id="t0" src="sgmtree.svg">
+		</span>
+		<span class="t2 hidden">
+			<h2>Tree 2</h2>
+			<!-- <embed id="t1" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
+			<embed id="t1" src="sgmtree.svg">
+		</span>
+	</p>
 	<p>
 		<input type="checkbox" id="z">
 		<label for="z"></label>
@@ -73,21 +86,71 @@
 		<input type="radio" name="tier" id="d">
 		<label for="d"></label>
 	</p>
-	Cost:
-	<img src="img/Random.png" alt="SP">
-	<span id="sp">0</span>
-	and
-	<img src="img/SoftCurrency.png" alt="CC">
-	<span id="cc">0</span>
+	<p>
+		<span class="t2 hidden">Initial</span> Cost:
+		<img src="img/Random.png" alt="SP">
+		<span id="sp0">0</span>
+		and
+		<img src="img/SoftCurrency.png" alt="CC">
+		<span id="cc0">0</span>
+	</p>
+	<p class="t2 hidden">
+		Final Cost:
+		<img src="img/Random.png" alt="SP">
+		<span id="sp1">0</span>
+		and
+		<img src="img/SoftCurrency.png" alt="CC">
+		<span id="cc1">0</span>
+	</p>
+	<p class="t2 hidden">
+		Difference:
+		<img src="img/Random.png" alt="SP">
+		<span id="dsp">0</span>
+		and
+		<img src="img/SoftCurrency.png" alt="CC">
+		<span id="dcc">0</span>
+	</p>
+	<button id="t2b">Show Tree 2</button>
 	<script>
-		var msg, m;
+		var m;
 		var radioZ = document.getElementById("z");
 		var radioB = document.getElementById("b");
 		var radioS = document.getElementById("s");
 		var radioG = document.getElementById("g");
 		var radioD = document.getElementById("d");
-		var sp = document.getElementById("sp");
-		var cc = document.getElementById("cc");
+		var t2f = false;
+		var t2s = document.getElementsByClassName("t2");
+		var t2b = document.getElementById("t2b");
+		var tree0 = {
+			"msg": {},
+			"sp": 0,
+			"cc": 0,
+			"spElement": document.getElementById("sp0"),
+			"ccElement": document.getElementById("cc0")
+		};
+		var tree1 = {
+			"msg": {},
+			"sp": 0,
+			"cc": 0,
+			"spElement": document.getElementById("sp1"),
+			"ccElement": document.getElementById("cc1")
+		};
+		var dsp = document.getElementById("dsp");
+		var dcc = document.getElementById("dcc");
+		function toggleT2() {
+			for (var i = 0; i < t2s.length; i++) {
+				if (t2f) {
+					t2b.innerHTML = "Show";
+					t2s[i].classList.add("hidden");
+					t2f = false;
+				}
+				else {
+					t2b.innerHTML = "Hide";
+					t2s[i].classList.remove("hidden");
+					t2f = true;
+				}
+			}
+		}
 		function setMultiplier() {
 			if (radioB.checked) {
 				m = 1;
@@ -104,23 +167,42 @@
 			if (radioZ.checked) {
 				m /= 2;
 			}
-			setCost();
+			setCost(tree0);
+			setCost(tree1);
+			setDifference();
 		}
 		function msum(total, n) {
 			return total + (isNaN(n) ? 0 : Math.ceil(m * n));
 		}
-		function setCost() {
-			if (msg && msg.data) {
-				sp.innerHTML = msg.data.sp.reduce(msum, 0).toLocaleString();
-				cc.innerHTML = msg.data.cc.reduce(msum, 0).toLocaleString();
+		function setCost(tree) {
+			if (tree.msg.data) {
+				tree.sp = tree.msg.data.sp.reduce(msum, 0);
+				tree.cc = tree.msg.data.cc.reduce(msum, 0);
+				tree.spElement.innerHTML = tree.sp.toLocaleString();
+				tree.ccElement.innerHTML = tree.cc.toLocaleString();
 			}
 		}
-		function onMessage(e) {
-			if (e.origin == window.origin || e.origin == "https://krazete.github.io") {
-				msg = e;
-				setCost();
+		function setDifference() {
+			dsp.innerHTML = (tree1.sp - tree0.sp).toLocaleString();
+			dcc.innerHTML = (tree1.cc - tree0.cc).toLocaleString();
+		}
+		function onMessage(msg) {
+			console.log(msg.source.frameElement);
+			/* if (msg.origin == "https://krazete.github.io") { */
+			if (msg.origin == window.origin) {
+				var id = msg.source.frameElement.id;
+				if (id == "t0") {
+					tree0.msg = msg;
+					setCost(tree0);
+				}
+				else if (id == "t1") {
+					tree1.msg = msg;
+					setCost(tree1);
+				}
+				setDifference();
 			}
 		}
+		t2b.addEventListener("click", toggleT2);
 		radioZ.addEventListener("input", setMultiplier);
 		radioB.addEventListener("input", setMultiplier);
 		radioS.addEventListener("input", setMultiplier);
