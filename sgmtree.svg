@@ -1,1110 +1,1110 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-	<style type="text/css">
-		#ability path {
-			stroke: #5f2f5f;
-			fill: #5f2f5f;
-		}
-		#attack path {
-			stroke: #df0f0f;
-			fill: #df0f0f;
-		}
-		#move path {
-			stroke: #0f6fcf;
-			fill: #0f6fcf;
-		}
-		#health path {
-			stroke: #0f8f2f;
-			fill: #0f8f2f;
-		}
-		#energy path {
-			stroke: #efcf5f;
-			fill: #efcf5f;
-		}
-		#marquee path {
-			stroke: #8f8f8f;
-			fill: #8f8f8f;
-		}
+    <style type="text/css">
+        #ability path {
+            stroke: #5f2f5f;
+            fill: #5f2f5f;
+        }
+        #attack path {
+            stroke: #df0f0f;
+            fill: #df0f0f;
+        }
+        #move path {
+            stroke: #0f6fcf;
+            fill: #0f6fcf;
+        }
+        #health path {
+            stroke: #0f8f2f;
+            fill: #0f8f2f;
+        }
+        #energy path {
+            stroke: #efcf5f;
+            fill: #efcf5f;
+        }
+        #marquee path {
+            stroke: #8f8f8f;
+            fill: #8f8f8f;
+        }
 
-		@media (pointer: fine) {
-			g:hover image {
-				filter: none;
-			}
-			g:hover text {
-				fill: #808080;
-			}
-		}
+        @media (pointer: fine) {
+            g:hover image {
+                filter: none;
+            }
+            g:hover text {
+                fill: #808080;
+            }
+        }
 
-		path {
-			stroke-width: 0.2;
-			stroke-linejoin: round;
-			filter: url(#dim);
-			cursor: pointer;
-		}
-		path.checked {
-			filter: none;
-		}
+        path {
+            stroke-width: 0.2;
+            stroke-linejoin: round;
+            filter: url(#dim);
+            cursor: pointer;
+        }
+        path.checked {
+            filter: none;
+        }
 
-		line {
-			stroke: #000000;
-			stroke-width: 0.5;
-			stroke-linecap: round;
-			pointer-events: none;
-		}
-		line.checked {
-			stroke: #ffffff;
-		}
+        line {
+            stroke: #000000;
+            stroke-width: 0.5;
+            stroke-linecap: round;
+            pointer-events: none;
+        }
+        line.checked {
+            stroke: #ffffff;
+        }
 
-		image {
-			filter: url(#dim);
-			pointer-events: none;
-		}
-		g image.checked {
-			filter: none;
-		}
-		.icon image {
-			width: 7%;
-			height: 7%;
-		}
-		.frame image {
-			width: 8%;
-			height: 8%;
-		}
-		#ma {
-			filter: url(#dim);
-			width: 12%;
-			height: 12%;
-		}
-		#ma.checked {
-			filter: none;
-		}
+        image {
+            filter: url(#dim);
+            pointer-events: none;
+        }
+        g image.checked {
+            filter: none;
+        }
+        .icon image {
+            width: 7%;
+            height: 7%;
+        }
+        .frame image {
+            width: 8%;
+            height: 8%;
+        }
+        #ma {
+            filter: url(#dim);
+            width: 12%;
+            height: 12%;
+        }
+        #ma.checked {
+            filter: none;
+        }
 
-		text {
-			fill: #000000;
-			font: 3px monospace;
-			letter-spacing: -0.3px;
-			text-anchor: middle;
-			alignment-baseline: central;
-			pointer-events: none;
-		}
-		g text.checked {
-			fill: #ffffff;
-		}
-	</style>
-	<defs>
-		<filter id="dim">
-			<feComponentTransfer>
-				<feFuncR type="linear" slope="0.2" />
-				<feFuncG type="linear" slope="0.2" />
-				<feFuncB type="linear" slope="0.2" />
-			</feComponentTransfer>
-		</filter>
-	</defs>
-	<g id="ability">
-		<g class="node">
-			<path id="ca" d="M61.755705,33.81966 A20,20,0,0,0,38.244295,33.81966 L44.122147,41.90983 A10,10,0,0,1,55.877853,41.90983 Z" />
-			<path id="sa1" d="M67.633558,25.72949 A30,30,0,0,0,56.237351,20.655572 L54.158234,30.437048 A20,20,0,0,1,61.755705,33.81966 Z" />
-			<path id="sa2" d="M56.237351,20.655572 A30,30,0,0,0,43.762649,20.655572 L45.841766,30.437048 A20,20,0,0,1,54.158234,30.437048 Z" />
-			<path id="combo" d="M43.762649,20.655572 A30,30,0,0,0,32.366442,25.72949 L38.244295,33.81966 A20,20,0,0,1,45.841766,30.437048 Z" />
-			<path id="sa3" d="M73.51141,17.63932 A40,40,0,0,0,58.316468,10.874096 L56.237351,20.655572 A30,30,0,0,1,67.633558,25.72949 Z" />
-			<path id="sa4" d="M58.316468,10.874096 A40,40,0,0,0,41.683532,10.874096 L43.762649,20.655572 A30,30,0,0,1,56.237351,20.655572 Z" />
-			<path id="juggle" d="M41.683532,10.874096 A40,40,0,0,0,26.48859,17.63932 L32.366442,25.72949 A30,30,0,0,1,43.762649,20.655572 Z" />
-			<path id="sa5" d="M79.389263,9.54915 A50,50,0,0,0,60.395585,1.09262 L58.316468,10.874096 A40,40,0,0,1,73.51141,17.63932 Z" />
-			<path id="sa6" d="M60.395585,1.09262 A50,50,0,0,0,39.604415,1.09262 L41.683532,10.874096 A40,40,0,0,1,58.316468,10.874096 Z" />
-			<path id="charge" d="M39.604415,1.09262 A50,50,0,0,0,20.610737,9.54915 L26.48859,17.63932 A40,40,0,0,1,41.683532,10.874096 Z" />
-		</g>
-		<g class="line">
-			<line class="ca" x1="50" y1="50" x2="50" y2="35" />
-			<line class="ca sa2" x1="50" y1="35" x2="50" y2="25" />
-			<line class="sa1 sa2" x1="60.168416" y1="27.161364" x2="50" y2="25" />
-			<line class="sa1 sa3" x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
-			<line class="sa1 sa4" x1="60.168416" y1="27.161364" x2="50" y2="15" />
-			<line class="sa2 combo" x1="50" y1="25" x2="39.831584" y2="27.161364" />
-			<line class="combo sa4" x1="39.831584" y1="27.161364" x2="50" y2="15" />
-			<line class="combo juggle" x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
-			<line class="sa4 sa5" x1="50" y1="15" x2="68.303149" y2="8.890454" />
-			<line class="sa5 sa6" x1="68.303149" y1="8.890454" x2="50" y2="5" />
-			<line class="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
-		</g>
-		<g class="icon">
-			<image class="ca" href="sgmtree/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
-			<image class="sa1" href="sgmtree/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
-			<image class="sa2" href="sgmtree/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
-			<image class="combo" href="sgmtree/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
-			<image class="sa3" href="sgmtree/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
-			<image class="sa4" href="sgmtree/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
-			<image class="juggle" href="sgmtree/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
-			<image class="sa5" href="sgmtree/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
-			<image class="sa6" href="sgmtree/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
-			<image class="charge" href="sgmtree/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
-		</g>
-		<g class="frame">
-			<image class="ca" href="sgmtree/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
-			<image class="sa1" href="sgmtree/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
-			<image class="sa2" href="sgmtree/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
-			<image class="combo" href="sgmtree/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
-			<image class="sa3" href="sgmtree/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
-			<image class="sa4" href="sgmtree/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
-			<image class="juggle" href="sgmtree/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
-			<image class="sa5" href="sgmtree/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
-			<image class="sa6" href="sgmtree/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
-			<image class="charge" href="sgmtree/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
-		</g>
-	</g>
-	<g id="attack">
-		<g class="node">
-			<path id="atk1" d="M38.244295,33.81966 A20,20,0,0,0,30.97887,56.18034 L40.489435,53.09017 A10,10,0,0,1,44.122147,41.90983 Z" />
-			<path id="atk2" d="M32.366442,25.72949 A30,30,0,0,0,24.019238,35 L32.679492,40 A20,20,0,0,1,38.244295,33.81966 Z" />
-			<path id="atk3" d="M24.019238,35 A30,30,0,0,0,20.164343,46.864146 L30.109562,47.909431 A20,20,0,0,1,32.679492,40 Z" />
-			<path id="atk4" d="M20.164343,46.864146 A30,30,0,0,0,21.468305,59.27051 L30.97887,56.18034 A20,20,0,0,1,30.109562,47.909431 Z" />
-			<path id="dmg1" d="M26.48859,17.63932 A40,40,0,0,0,19.17947,24.50304 L26.884603,30.87728 A30,30,0,0,1,32.366442,25.72949 Z" />
-			<path id="atk5" d="M19.17947,24.50304 A40,40,0,0,0,13.806918,32.968828 L22.855188,37.226621 A30,30,0,0,1,26.884603,30.87728 Z" />
-			<path id="atk6" d="M13.806918,32.968828 A40,40,0,0,0,10.70851,42.504747 L20.531382,44.378561 A30,30,0,0,1,22.855188,37.226621 Z" />
-			<path id="atk7" d="M10.70851,42.504747 A40,40,0,0,0,10.078931,52.511621 L20.059198,51.883716 A30,30,0,0,1,20.531382,44.378561 Z" />
-			<path id="rate1" d="M10.078931,52.511621 A40,40,0,0,0,11.957739,62.36068 L21.468305,59.27051 A30,30,0,0,1,20.059198,51.883716 Z" />
-			<path id="atk8" d="M20.610737,9.54915 A50,50,0,0,0,11.474338,18.128801 L19.17947,24.50304 A40,40,0,0,1,26.48859,17.63932 Z" />
-			<path id="dmg2" d="M11.474338,18.128801 A50,50,0,0,0,4.758647,28.711035 L13.806918,32.968828 A40,40,0,0,1,19.17947,24.50304 Z" />
-			<path id="atk9" d="M4.758647,28.711035 A50,50,0,0,0,0.885637,40.630934 L10.70851,42.504747 A40,40,0,0,1,13.806918,32.968828 Z" />
-			<path id="rate2" d="M0.885637,40.630934 A50,50,0,0,0,0.098664,53.139526 L10.078931,52.511621 A40,40,0,0,1,10.70851,42.504747 Z" />
-			<path id="atk10" d="M0.098664,53.139526 A50,50,0,0,0,2.447174,65.45085 L11.957739,62.36068 A40,40,0,0,1,10.078931,52.511621 Z" />
-		</g>
-		<g class="line">
-			<line class="atk1" x1="50" y1="50" x2="35.734152" y2="45.364745" />
-			<line class="atk1 atk3" x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
-			<line class="atk2 atk3" x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
-			<line class="atk2 atk5" x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
-			<line class="atk3 atk4" x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
-			<line class="atk4 atk7" x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
-			<line class="dmg1 atk5" x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
-			<line class="dmg1 atk8" x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
-			<line class="atk5 atk6" x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
-			<line class="atk6 atk7" x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
-			<line class="atk6 atk9" x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
-			<line class="atk7 rate1" x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
-			<line class="rate1 atk10" x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
-			<line class="dmg2 atk9" x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
-			<line class="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
-		</g>
-		<g class="icon">
-			<image class="atk1" href="sgmtree/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
-			<image class="atk2" href="sgmtree/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
-			<image class="atk3" href="sgmtree/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
-			<image class="atk4" href="sgmtree/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
-			<image class="dmg1" href="sgmtree/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
-			<image class="atk5" href="sgmtree/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
-			<image class="atk6" href="sgmtree/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
-			<image class="atk7" href="sgmtree/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
-			<image class="rate1" href="sgmtree/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
-			<image class="atk8" href="sgmtree/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
-			<image class="dmg2" href="sgmtree/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
-			<image class="atk9" href="sgmtree/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
-			<image class="rate2" href="sgmtree/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
-			<image class="atk10" href="sgmtree/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
-		</g>
-		<g class="frame">
-			<image class="atk1" href="sgmtree/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
-			<image class="atk2" href="sgmtree/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
-			<image class="atk3" href="sgmtree/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
-			<image class="atk4" href="sgmtree/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
-			<image class="dmg1" href="sgmtree/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
-			<image class="atk5" href="sgmtree/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
-			<image class="atk6" href="sgmtree/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
-			<image class="atk7" href="sgmtree/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
-			<image class="rate1" href="sgmtree/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
-			<image class="atk8" href="sgmtree/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
-			<image class="dmg2" href="sgmtree/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
-			<image class="atk9" href="sgmtree/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
-			<image class="rate2" href="sgmtree/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
-			<image class="atk10" href="sgmtree/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
-		</g>
-	</g>
-	<g id="move">
-		<g class="node">
-			<path id="slot1" d="M30.97887,56.18034 A20,20,0,0,0,50,70 L50,60 A10,10,0,0,1,40.489435,53.09017 Z" />
-			<path id="gear1" d="M21.468305,59.27051 A30,30,0,0,0,27.705655,70.073918 L35.137103,63.382612 A20,20,0,0,1,30.97887,56.18034 Z" />
-			<path id="gear2" d="M27.705655,70.073918 A30,30,0,0,0,37.797901,77.406364 L41.865267,68.270909 A20,20,0,0,1,35.137103,63.382612 Z" />
-			<path id="gear3" d="M37.797901,77.406364 A30,30,0,0,0,50,80 L50,70 A20,20,0,0,1,41.865267,68.270909 Z" />
-			<path id="slot2" d="M11.957739,62.36068 A40,40,0,0,0,17.63932,73.51141 L25.72949,67.633558 A30,30,0,0,1,21.468305,59.27051 Z" />
-			<path id="gear4" d="M17.63932,73.51141 A40,40,0,0,0,26.48859,82.36068 L32.366442,74.27051 A30,30,0,0,1,25.72949,67.633558 Z" />
-			<path id="gear5" d="M26.48859,82.36068 A40,40,0,0,0,37.63932,88.042261 L40.72949,78.531695 A30,30,0,0,1,32.366442,74.27051 Z" />
-			<path id="gear6" d="M37.63932,88.042261 A40,40,0,0,0,50,90 L50,80 A30,30,0,0,1,40.72949,78.531695 Z" />
-			<path id="slot3" d="M2.447174,65.45085 A50,50,0,0,0,7.783604,76.79134 L16.226883,71.433072 A40,40,0,0,1,11.957739,62.36068 Z" />
-			<path id="gear7" d="M7.783604,76.79134 A50,50,0,0,0,15.772645,86.448431 L22.618116,79.158745 A40,40,0,0,1,16.226883,71.433072 Z" />
-			<path id="gear8" d="M15.772645,86.448431 A50,50,0,0,0,25.912316,93.815334 L30.729853,85.052267 A40,40,0,0,1,22.618116,79.158745 Z" />
-			<path id="gear9" d="M25.912316,93.815334 A50,50,0,0,0,37.565506,98.429158 L40.052405,88.743326 A40,40,0,0,1,30.729853,85.052267 Z" />
-			<path id="gear10" d="M37.565506,98.429158 A50,50,0,0,0,50,100 L50,90 A40,40,0,0,1,40.052405,88.743326 Z" />
-		</g>
-		<g class="line">
-			<line class="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
-			<line class="slot1 gear1" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
-			<line class="gear1 gear2" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
-			<line class="gear1 slot2" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
-			<line class="gear2 gear3" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
-			<line class="slot2 gear4" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
-			<line class="slot2 slot3" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
-			<line class="gear4 gear5" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
-			<line class="gear5 gear6" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
-			<line class="slot3 gear7" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
-			<line class="gear7 gear8" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
-			<line class="gear8 gear9" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
-			<line class="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
-		</g>
-		<g class="icon">
-			<image class="slot1" href="sgmtree/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
-			<image class="gear1" href="sgmtree/GearIncrease.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
-			<image class="gear2" href="sgmtree/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
-			<image class="gear3" href="sgmtree/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
-			<image class="slot2" href="sgmtree/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
-			<image class="gear4" href="sgmtree/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
-			<image class="gear5" href="sgmtree/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
-			<image class="gear6" href="sgmtree/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
-			<image class="slot3" href="sgmtree/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
-			<image class="gear7" href="sgmtree/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
-			<image class="gear8" href="sgmtree/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
-			<image class="gear9" href="sgmtree/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
-			<image class="gear10" href="sgmtree/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
-		</g>
-		<g class="frame">
-			<image class="slot1" href="sgmtree/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
-			<image class="gear1" href="sgmtree/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
-			<image class="gear2" href="sgmtree/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
-			<image class="gear3" href="sgmtree/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
-			<image class="slot2" href="sgmtree/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
-			<image class="gear4" href="sgmtree/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
-			<image class="gear5" href="sgmtree/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
-			<image class="gear6" href="sgmtree/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
-			<image class="slot3" href="sgmtree/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
-			<image class="gear7" href="sgmtree/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
-			<image class="gear8" href="sgmtree/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
-			<image class="gear9" href="sgmtree/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
-			<image class="gear10" href="sgmtree/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
-		</g>
-	</g>
-	<g id="health">
-		<g class="node">
-			<path id="hp1" d="M50,70 A20,20,0,0,0,69.02113,56.18034 L59.510565,53.09017 A10,10,0,0,1,50,60 Z" />
-			<path id="hp2" d="M50,80 A30,30,0,0,0,62.202099,77.406364 L58.134733,68.270909 A20,20,0,0,1,50,70 Z" />
-			<path id="hp3" d="M62.202099,77.406364 A30,30,0,0,0,72.294345,70.073918 L64.862897,63.382612 A20,20,0,0,1,58.134733,68.270909 Z" />
-			<path id="hp4" d="M72.294345,70.073918 A30,30,0,0,0,78.531695,59.27051 L69.02113,56.18034 A20,20,0,0,1,64.862897,63.382612 Z" />
-			<path id="hp5" d="M50,90 A40,40,0,0,0,59.947595,88.743326 L57.460697,79.057495 A30,30,0,0,1,50,80 Z" />
-			<path id="block1" d="M59.947595,88.743326 A40,40,0,0,0,69.270147,85.052267 L64.45261,76.2892 A30,30,0,0,1,57.460697,79.057495 Z" />
-			<path id="hp6" d="M69.270147,85.052267 A40,40,0,0,0,77.381884,79.158745 L70.536413,71.869059 A30,30,0,0,1,64.45261,76.2892 Z" />
-			<path id="def1" d="M77.381884,79.158745 A40,40,0,0,0,83.773117,71.433072 L75.329838,66.074804 A30,30,0,0,1,70.536413,71.869059 Z" />
-			<path id="hp7" d="M83.773117,71.433072 A40,40,0,0,0,88.042261,62.36068 L78.531695,59.27051 A30,30,0,0,1,75.329838,66.074804 Z" />
-			<path id="def2" d="M50,100 A50,50,0,0,0,62.434494,98.429158 L59.947595,88.743326 A40,40,0,0,1,50,90 Z" />
-			<path id="hp8" d="M62.434494,98.429158 A50,50,0,0,0,74.087684,93.815334 L69.270147,85.052267 A40,40,0,0,1,59.947595,88.743326 Z" />
-			<path id="hp9" d="M74.087684,93.815334 A50,50,0,0,0,84.227355,86.448431 L77.381884,79.158745 A40,40,0,0,1,69.270147,85.052267 Z" />
-			<path id="hp10" d="M84.227355,86.448431 A50,50,0,0,0,92.216396,76.79134 L83.773117,71.433072 A40,40,0,0,1,77.381884,79.158745 Z" />
-			<path id="block2" d="M92.216396,76.79134 A50,50,0,0,0,97.552826,65.45085 L88.042261,62.36068 A40,40,0,0,1,83.773117,71.433072 Z" />
-		</g>
-		<g class="line">
-			<line class="hp1" x1="50" y1="50" x2="58.816779" y2="62.135255" />
-			<line class="hp1 hp3" x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
-			<line class="hp2 hp3" x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
-			<line class="hp2 hp5" x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
-			<line class="hp3 hp4" x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
-			<line class="hp3 hp6" x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
-			<line class="hp4 hp7" x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
-			<line class="hp5 block1" x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
-			<line class="block1 hp8" x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
-			<line class="hp6 hp9" x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
-			<line class="def1 hp7" x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
-			<line class="def1 hp10" x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
-			<line class="def2 hp8" x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
-			<line class="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
-		</g>
-		<g class="icon">
-			<image class="hp1" href="sgmtree/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
-			<image class="hp2" href="sgmtree/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
-			<image class="hp3" href="sgmtree/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
-			<image class="hp4" href="sgmtree/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
-			<image class="hp5" href="sgmtree/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
-			<image class="block1" href="sgmtree/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
-			<image class="hp6" href="sgmtree/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
-			<image class="def1" href="sgmtree/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
-			<image class="hp7" href="sgmtree/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
-			<image class="def2" href="sgmtree/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
-			<image class="hp8" href="sgmtree/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
-			<image class="hp9" href="sgmtree/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
-			<image class="hp10" href="sgmtree/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
-			<image class="block2" href="sgmtree/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
-		</g>
-		<g class="frame">
-			<image class="hp1" href="sgmtree/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
-			<image class="hp2" href="sgmtree/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
-			<image class="hp3" href="sgmtree/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
-			<image class="hp4" href="sgmtree/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
-			<image class="hp5" href="sgmtree/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
-			<image class="block1" href="sgmtree/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
-			<image class="hp6" href="sgmtree/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
-			<image class="def1" href="sgmtree/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
-			<image class="hp7" href="sgmtree/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
-			<image class="def2" href="sgmtree/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
-			<image class="hp8" href="sgmtree/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
-			<image class="hp9" href="sgmtree/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
-			<image class="hp10" href="sgmtree/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
-			<image class="block2" href="sgmtree/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
-		</g>
-	</g>
-	<g id="energy">
-		<g class="node">
-			<path id="cool1" d="M69.02113,56.18034 A20,20,0,0,0,61.755705,33.81966 L55.877853,41.90983 A10,10,0,0,1,59.510565,53.09017 Z" />
-			<path id="cool2" d="M78.531695,59.27051 A30,30,0,0,0,79.835657,46.864146 L69.890438,47.909431 A20,20,0,0,1,69.02113,56.18034 Z" />
-			<path id="cool3" d="M79.835657,46.864146 A30,30,0,0,0,75.980762,35 L67.320508,40 A20,20,0,0,1,69.890438,47.909431 Z" />
-			<path id="cool4" d="M75.980762,35 A30,30,0,0,0,67.633558,25.72949 L61.755705,33.81966 A20,20,0,0,1,67.320508,40 Z" />
-			<path id="cool5" d="M88.042261,62.36068 A40,40,0,0,0,89.921069,52.511621 L79.940802,51.883716 A30,30,0,0,1,78.531695,59.27051 Z" />
-			<path id="cool6" d="M89.921069,52.511621 A40,40,0,0,0,89.29149,42.504747 L79.468618,44.378561 A30,30,0,0,1,79.940802,51.883716 Z" />
-			<path id="tag1" d="M89.29149,42.504747 A40,40,0,0,0,86.193082,32.968828 L77.144812,37.226621 A30,30,0,0,1,79.468618,44.378561 Z" />
-			<path id="cool7" d="M86.193082,32.968828 A40,40,0,0,0,80.82053,24.50304 L73.115397,30.87728 A30,30,0,0,1,77.144812,37.226621 Z" />
-			<path id="sm1" d="M80.82053,24.50304 A40,40,0,0,0,73.51141,17.63932 L67.633558,25.72949 A30,30,0,0,1,73.115397,30.87728 Z" />
-			<path id="cool8" d="M97.552826,65.45085 A50,50,0,0,0,99.901336,53.139526 L89.921069,52.511621 A40,40,0,0,1,88.042261,62.36068 Z" />
-			<path id="sm2" d="M99.901336,53.139526 A50,50,0,0,0,99.114363,40.630934 L89.29149,42.504747 A40,40,0,0,1,89.921069,52.511621 Z" />
-			<path id="cool9" d="M99.114363,40.630934 A50,50,0,0,0,95.241353,28.711035 L86.193082,32.968828 A40,40,0,0,1,89.29149,42.504747 Z" />
-			<path id="tag2" d="M95.241353,28.711035 A50,50,0,0,0,88.525662,18.128801 L80.82053,24.50304 A40,40,0,0,1,86.193082,32.968828 Z" />
-			<path id="cool10" d="M88.525662,18.128801 A50,50,0,0,0,79.389263,9.54915 L73.51141,17.63932 A40,40,0,0,1,80.82053,24.50304 Z" />
-		</g>
-		<g class="line">
-			<line class="cool1" x1="50" y1="50" x2="64.265848" y2="45.364745" />
-			<line class="cool1 cool2" x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
-			<line class="cool1 cool4" x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
-			<line class="cool2 cool3" x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
-			<line class="cool2 cool5" x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
-			<line class="cool3 cool4" x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
-			<line class="cool3 tag1" x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
-			<line class="cool4 sm1" x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
-			<line class="cool5 cool8" x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
-			<line class="cool6 tag1" x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
-			<line class="cool6 sm2" x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
-			<line class="tag1 cool9" x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
-			<line class="cool7 sm1" x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
-			<line class="cool7 tag2" x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
-			<line class="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
-		</g>
-		<g class="icon">
-			<image class="cool1" href="sgmtree/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
-			<image class="cool2" href="sgmtree/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
-			<image class="cool3" href="sgmtree/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
-			<image class="cool4" href="sgmtree/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
-			<image class="cool5" href="sgmtree/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
-			<image class="cool6" href="sgmtree/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
-			<image class="tag1" href="sgmtree/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
-			<image class="cool7" href="sgmtree/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
-			<image class="sm1" href="sgmtree/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
-			<image class="cool8" href="sgmtree/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
-			<image class="sm2" href="sgmtree/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
-			<image class="cool9" href="sgmtree/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
-			<image class="tag2" href="sgmtree/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
-			<image class="cool10" href="sgmtree/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
-		</g>
-		<g class="frame">
-			<image class="cool1" href="sgmtree/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
-			<image class="cool2" href="sgmtree/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
-			<image class="cool3" href="sgmtree/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
-			<image class="cool4" href="sgmtree/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
-			<image class="cool5" href="sgmtree/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
-			<image class="cool6" href="sgmtree/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
-			<image class="tag1" href="sgmtree/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
-			<image class="cool7" href="sgmtree/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
-			<image class="sm1" href="sgmtree/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
-			<image class="cool8" href="sgmtree/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
-			<image class="sm2" href="sgmtree/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
-			<image class="cool9" href="sgmtree/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
-			<image class="tag2" href="sgmtree/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
-			<image class="cool10" href="sgmtree/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
-		</g>
-	</g>
-	<g id="marquee">
-		<g class="node">
-			<path id="ma0" d="M47.41181,59.659258 A10,10,0,0,0,52.58819,59.659258 L50,50 Z" />
-			<path id="ma1" d="M42.928932,57.071068 A10,10,0,0,0,47.41181,59.659258 L50,50 Z" />
-			<path id="ma2" d="M40.340742,52.58819 A10,10,0,0,0,42.928932,57.071068 L50,50 Z" />
-			<path id="ma3" d="M40.340742,47.41181 A10,10,0,0,0,40.340742,52.58819 L50,50 Z" />
-			<path id="ma4" d="M42.928932,42.928932 A10,10,0,0,0,40.340742,47.41181 L50,50 Z" />
-			<path id="ma5" d="M47.41181,40.340742 A10,10,0,0,0,42.928932,42.928932 L50,50 Z" />
-			<path id="ma6" d="M52.58819,40.340742 A10,10,0,0,0,47.41181,40.340742 L50,50 Z" />
-			<path id="ma7" d="M57.071068,42.928932 A10,10,0,0,0,52.58819,40.340742 L50,50 Z" />
-			<path id="ma8" d="M59.659258,47.41181 A10,10,0,0,0,57.071068,42.928932 L50,50 Z" />
-			<path id="ma9" d="M59.659258,52.58819 A10,10,0,0,0,59.659258,47.41181 L50,50 Z" />
-			<path id="ma10" d="M57.071068,57.071068 A10,10,0,0,0,59.659258,52.58819 L50,50 Z" />
-			<path id="ma11" d="M52.58819,59.659258 A10,10,0,0,0,57.071068,57.071068 L50,50 Z" />
-		</g>
-		<g class="text">
-			<text class="ma0" x="50" y="57.5">0</text>
-			<text class="ma1" x="46.25" y="56.49519052838329">1</text>
-			<text class="ma2" x="43.50480947161671" y="53.75">2</text>
-			<text class="ma3" x="42.5" y="50">3</text>
-			<text class="ma4" x="43.50480947161671" y="46.25">4</text>
-			<text class="ma5" x="46.25" y="43.50480947161671">5</text>
-			<text class="ma6" x="50" y="42.5">6</text>
-			<text class="ma7" x="53.75" y="43.50480947161671">7</text>
-			<text class="ma8" x="56.49519052838329" y="46.25">8</text>
-			<text class="ma9" x="57.5" y="50">9</text>
-			<text class="ma10" x="56.49519052838329" y="53.75">10</text>
-			<text class="ma11" x="53.75" y="56.49519052838329">11</text>
-		</g>
-		<g class="icon">
-			<image id="ma" href="sgmtree/Super.png" x="50" y="50" transform="translate(-6,-6)" />
-		</g>
-	</g>
-	<script>
-	// <![CDATA[
-		var price = {
-			"default": [
-				{"sp": 1, "cc": 2000, "th": 10},
-				{"sp": 2, "cc": 3000, "th": 15},
-				{"sp": 3, "cc": 5000, "th": 20},
-				{"sp": 4, "cc": 8000, "th": 30}
-			],
-			"ability": [
-				{"sp": 3, "cc": 5000, "th": 20},
-				{"sp": 4, "cc": 8000, "th": 30},
-				{"sp": 5, "cc": 15000, "th": 50},
-				{"sp": 5, "cc": 20000, "th": 65}
-			],
-			"move": [
-				{"sp": 2, "cc": 3000, "th": 15},
-				{"sp": 3, "cc": 5000, "th": 20},
-				{"sp": 4, "cc": 8000, "th": 30},
-				{"sp": 5, "cc": 15000, "th": 50}
-			],
-			"marquee": [
-				{},
-				{"sp": 50, "cc": 50000},
-				{"sp": 50, "cc": 0}
-			]
-		};
-		var tree = {
-			"ca": {
-				"cost": price.ability[0],
-				"fs": 2,
-				"checked": false,
-				"next": ["sa2"]
-			},
-			"sa1": {
-				"cost": price.ability[1],
-				"fs": 1,
-				"checked": false,
-				"next": ["sa3", "sa4"]
-			},
-			"sa2": {
-				"cost": price.ability[1],
-				"fs": 2,
-				"checked": false,
-				"next": ["sa1", "combo"]
-			},
-			"combo": {
-				"cost": price.ability[1],
-				"fs": 2,
-				"checked": false,
-				"next": ["sa4", "juggle"]
-			},
-			"sa3": {
-				"cost": price.ability[2],
-				"fs": 1,
-				"checked": false,
-				"next": []
-			},
-			"sa4": {
-				"cost": price.ability[2],
-				"fs": 3,
-				"checked": false,
-				"next": ["sa1", "combo", "sa5"]
-			},
-			"juggle": {
-				"cost": price.ability[2],
-				"fs": 2,
-				"checked": false,
-				"next": []
-			},
-			"sa5": {
-				"cost": price.ability[3],
-				"fs": 2,
-				"checked": false,
-				"next": ["sa6"]
-			},
-			"sa6": {
-				"cost": price.ability[3],
-				"fs": 2,
-				"checked": false,
-				"next": ["charge"]
-			},
-			"charge": {
-				"cost": price.ability[3],
-				"fs": 4,
-				"checked": false,
-				"next": []
-			},
+        text {
+            fill: #000000;
+            font: 3px monospace;
+            letter-spacing: -0.3px;
+            text-anchor: middle;
+            alignment-baseline: central;
+            pointer-events: none;
+        }
+        g text.checked {
+            fill: #ffffff;
+        }
+    </style>
+    <defs>
+        <filter id="dim">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="0.2" />
+                <feFuncG type="linear" slope="0.2" />
+                <feFuncB type="linear" slope="0.2" />
+            </feComponentTransfer>
+        </filter>
+    </defs>
+    <g id="ability">
+        <g class="node">
+            <path id="ca" d="M61.755705,33.81966 A20,20,0,0,0,38.244295,33.81966 L44.122147,41.90983 A10,10,0,0,1,55.877853,41.90983 Z" />
+            <path id="sa1" d="M67.633558,25.72949 A30,30,0,0,0,56.237351,20.655572 L54.158234,30.437048 A20,20,0,0,1,61.755705,33.81966 Z" />
+            <path id="sa2" d="M56.237351,20.655572 A30,30,0,0,0,43.762649,20.655572 L45.841766,30.437048 A20,20,0,0,1,54.158234,30.437048 Z" />
+            <path id="combo" d="M43.762649,20.655572 A30,30,0,0,0,32.366442,25.72949 L38.244295,33.81966 A20,20,0,0,1,45.841766,30.437048 Z" />
+            <path id="sa3" d="M73.51141,17.63932 A40,40,0,0,0,58.316468,10.874096 L56.237351,20.655572 A30,30,0,0,1,67.633558,25.72949 Z" />
+            <path id="sa4" d="M58.316468,10.874096 A40,40,0,0,0,41.683532,10.874096 L43.762649,20.655572 A30,30,0,0,1,56.237351,20.655572 Z" />
+            <path id="juggle" d="M41.683532,10.874096 A40,40,0,0,0,26.48859,17.63932 L32.366442,25.72949 A30,30,0,0,1,43.762649,20.655572 Z" />
+            <path id="sa5" d="M79.389263,9.54915 A50,50,0,0,0,60.395585,1.09262 L58.316468,10.874096 A40,40,0,0,1,73.51141,17.63932 Z" />
+            <path id="sa6" d="M60.395585,1.09262 A50,50,0,0,0,39.604415,1.09262 L41.683532,10.874096 A40,40,0,0,1,58.316468,10.874096 Z" />
+            <path id="charge" d="M39.604415,1.09262 A50,50,0,0,0,20.610737,9.54915 L26.48859,17.63932 A40,40,0,0,1,41.683532,10.874096 Z" />
+        </g>
+        <g class="line">
+            <line class="ca" x1="50" y1="50" x2="50" y2="35" />
+            <line class="ca sa2" x1="50" y1="35" x2="50" y2="25" />
+            <line class="sa1 sa2" x1="60.168416" y1="27.161364" x2="50" y2="25" />
+            <line class="sa1 sa3" x1="60.168416" y1="27.161364" x2="64.235783" y2="18.025909" />
+            <line class="sa1 sa4" x1="60.168416" y1="27.161364" x2="50" y2="15" />
+            <line class="sa2 combo" x1="50" y1="25" x2="39.831584" y2="27.161364" />
+            <line class="combo sa4" x1="39.831584" y1="27.161364" x2="50" y2="15" />
+            <line class="combo juggle" x1="39.831584" y1="27.161364" x2="35.764217" y2="18.025909" />
+            <line class="sa4 sa5" x1="50" y1="15" x2="68.303149" y2="8.890454" />
+            <line class="sa5 sa6" x1="68.303149" y1="8.890454" x2="50" y2="5" />
+            <line class="sa6 charge" x1="50" y1="5" x2="31.696851" y2="8.890454" />
+        </g>
+        <g class="icon">
+            <image class="ca" href="sgmtree/RandomDiamond.png" x="50" y="35" transform="translate(-3.5,-3.5)" />
+            <image class="sa1" href="sgmtree/RandomDiamond.png" x="60.168416" y="27.161364" transform="translate(-3.5,-3.5)" />
+            <image class="sa2" href="sgmtree/RandomDiamond.png" x="50" y="25" transform="translate(-3.5,-3.5)" />
+            <image class="combo" href="sgmtree/Combo.png" x="39.831584" y="27.161364" transform="translate(-3.5,-3.5)" />
+            <image class="sa3" href="sgmtree/RandomDiamond.png" x="64.235783" y="18.025909" transform="translate(-3.5,-3.5)" />
+            <image class="sa4" href="sgmtree/RandomDiamond.png" x="50" y="15" transform="translate(-3.5,-3.5)" />
+            <image class="juggle" href="sgmtree/Juggle.png" x="35.764217" y="18.025909" transform="translate(-3.5,-3.5)" />
+            <image class="sa5" href="sgmtree/RandomDiamond.png" x="68.303149" y="8.890454" transform="translate(-3.5,-3.5)" />
+            <image class="sa6" href="sgmtree/RandomDiamond.png" x="50" y="5" transform="translate(-3.5,-3.5)" />
+            <image class="charge" href="sgmtree/ChargeUp.png" x="31.696851" y="8.890454" transform="translate(-3.5,-3.5)" />
+        </g>
+        <g class="frame">
+            <image class="ca" href="sgmtree/FrameDiamond.png" x="50" y="35" transform="translate(-4,-4)" />
+            <image class="sa1" href="sgmtree/FrameDiamond.png" x="60.168416" y="27.161364" transform="translate(-4,-4)" />
+            <image class="sa2" href="sgmtree/FrameDiamond.png" x="50" y="25" transform="translate(-4,-4)" />
+            <image class="combo" href="sgmtree/FrameHex.png" x="39.831584" y="27.161364" transform="translate(-4,-4)" />
+            <image class="sa3" href="sgmtree/FrameDiamond.png" x="64.235783" y="18.025909" transform="translate(-4,-4)" />
+            <image class="sa4" href="sgmtree/FrameDiamond.png" x="50" y="15" transform="translate(-4,-4)" />
+            <image class="juggle" href="sgmtree/FrameHex.png" x="35.764217" y="18.025909" transform="translate(-4,-4)" />
+            <image class="sa5" href="sgmtree/FrameDiamond.png" x="68.303149" y="8.890454" transform="translate(-4,-4)" />
+            <image class="sa6" href="sgmtree/FrameDiamond.png" x="50" y="5" transform="translate(-4,-4)" />
+            <image class="charge" href="sgmtree/FrameHex.png" x="31.696851" y="8.890454" transform="translate(-4,-4)" />
+        </g>
+    </g>
+    <g id="attack">
+        <g class="node">
+            <path id="atk1" d="M38.244295,33.81966 A20,20,0,0,0,30.97887,56.18034 L40.489435,53.09017 A10,10,0,0,1,44.122147,41.90983 Z" />
+            <path id="atk2" d="M32.366442,25.72949 A30,30,0,0,0,24.019238,35 L32.679492,40 A20,20,0,0,1,38.244295,33.81966 Z" />
+            <path id="atk3" d="M24.019238,35 A30,30,0,0,0,20.164343,46.864146 L30.109562,47.909431 A20,20,0,0,1,32.679492,40 Z" />
+            <path id="atk4" d="M20.164343,46.864146 A30,30,0,0,0,21.468305,59.27051 L30.97887,56.18034 A20,20,0,0,1,30.109562,47.909431 Z" />
+            <path id="dmg1" d="M26.48859,17.63932 A40,40,0,0,0,19.17947,24.50304 L26.884603,30.87728 A30,30,0,0,1,32.366442,25.72949 Z" />
+            <path id="atk5" d="M19.17947,24.50304 A40,40,0,0,0,13.806918,32.968828 L22.855188,37.226621 A30,30,0,0,1,26.884603,30.87728 Z" />
+            <path id="atk6" d="M13.806918,32.968828 A40,40,0,0,0,10.70851,42.504747 L20.531382,44.378561 A30,30,0,0,1,22.855188,37.226621 Z" />
+            <path id="atk7" d="M10.70851,42.504747 A40,40,0,0,0,10.078931,52.511621 L20.059198,51.883716 A30,30,0,0,1,20.531382,44.378561 Z" />
+            <path id="rate1" d="M10.078931,52.511621 A40,40,0,0,0,11.957739,62.36068 L21.468305,59.27051 A30,30,0,0,1,20.059198,51.883716 Z" />
+            <path id="atk8" d="M20.610737,9.54915 A50,50,0,0,0,11.474338,18.128801 L19.17947,24.50304 A40,40,0,0,1,26.48859,17.63932 Z" />
+            <path id="dmg2" d="M11.474338,18.128801 A50,50,0,0,0,4.758647,28.711035 L13.806918,32.968828 A40,40,0,0,1,19.17947,24.50304 Z" />
+            <path id="atk9" d="M4.758647,28.711035 A50,50,0,0,0,0.885637,40.630934 L10.70851,42.504747 A40,40,0,0,1,13.806918,32.968828 Z" />
+            <path id="rate2" d="M0.885637,40.630934 A50,50,0,0,0,0.098664,53.139526 L10.078931,52.511621 A40,40,0,0,1,10.70851,42.504747 Z" />
+            <path id="atk10" d="M0.098664,53.139526 A50,50,0,0,0,2.447174,65.45085 L11.957739,62.36068 A40,40,0,0,1,10.078931,52.511621 Z" />
+        </g>
+        <g class="line">
+            <line class="atk1" x1="50" y1="50" x2="35.734152" y2="45.364745" />
+            <line class="atk1 atk3" x1="35.734152" y1="45.364745" x2="26.223587" y2="42.274575" />
+            <line class="atk2 atk3" x1="31.421379" y1="33.271735" x2="26.223587" y2="42.274575" />
+            <line class="atk2 atk5" x1="31.421379" y1="33.271735" x2="20.448523" y2="31.246062" />
+            <line class="atk3 atk4" x1="26.223587" y1="42.274575" x2="25.136953" y2="52.613212" />
+            <line class="atk4 atk7" x1="25.136953" y1="52.613212" x2="15.069065" y2="47.802332" />
+            <line class="dmg1 atk5" x1="26.040851" y1="24.486098" x2="20.448523" y2="31.246062" />
+            <line class="dmg1 atk8" x1="26.040851" y1="24.486098" x2="19.19538" y2="17.196412" />
+            <line class="atk5 atk6" x1="20.448523" y1="31.246062" x2="16.713022" y2="39.184405" />
+            <line class="atk6 atk7" x1="16.713022" y1="39.184405" x2="15.069065" y2="47.802332" />
+            <line class="atk6 atk9" x1="16.713022" y1="39.184405" x2="7.202457" y2="36.094235" />
+            <line class="atk7 rate1" x1="15.069065" y1="47.802332" x2="15.619946" y2="56.558346" />
+            <line class="rate1 atk10" x1="15.619946" y1="56.558346" x2="5.797074" y2="58.432159" />
+            <line class="dmg2 atk9" x1="12.005243" y1="25.887794" x2="7.202457" y2="36.094235" />
+            <line class="atk9 rate2" x1="7.202457" y1="36.094235" x2="5.088797" y2="47.174427" />
+        </g>
+        <g class="icon">
+            <image class="atk1" href="sgmtree/Damage.png" x="35.734152" y="45.364745" transform="translate(-3.5,-3.5)" />
+            <image class="atk2" href="sgmtree/Damage.png" x="31.421379" y="33.271735" transform="translate(-3.5,-3.5)" />
+            <image class="atk3" href="sgmtree/Damage.png" x="26.223587" y="42.274575" transform="translate(-3.5,-3.5)" />
+            <image class="atk4" href="sgmtree/Damage.png" x="25.136953" y="52.613212" transform="translate(-3.5,-3.5)" />
+            <image class="dmg1" href="sgmtree/CritDamage.png" x="26.040851" y="24.486098" transform="translate(-3.5,-3.5)" />
+            <image class="atk5" href="sgmtree/Damage.png" x="20.448523" y="31.246062" transform="translate(-3.5,-3.5)" />
+            <image class="atk6" href="sgmtree/Damage.png" x="16.713022" y="39.184405" transform="translate(-3.5,-3.5)" />
+            <image class="atk7" href="sgmtree/Damage.png" x="15.069065" y="47.802332" transform="translate(-3.5,-3.5)" />
+            <image class="rate1" href="sgmtree/CritRateIncrease.png" x="15.619946" y="56.558346" transform="translate(-3.5,-3.5)" />
+            <image class="atk8" href="sgmtree/Damage.png" x="19.19538" y="17.196412" transform="translate(-3.5,-3.5)" />
+            <image class="dmg2" href="sgmtree/CritDamage.png" x="12.005243" y="25.887794" transform="translate(-3.5,-3.5)" />
+            <image class="atk9" href="sgmtree/Damage.png" x="7.202457" y="36.094235" transform="translate(-3.5,-3.5)" />
+            <image class="rate2" href="sgmtree/CritRateIncrease.png" x="5.088797" y="47.174427" transform="translate(-3.5,-3.5)" />
+            <image class="atk10" href="sgmtree/Damage.png" x="5.797074" y="58.432159" transform="translate(-3.5,-3.5)" />
+        </g>
+        <g class="frame">
+            <image class="atk1" href="sgmtree/Frame.png" x="35.734152" y="45.364745" transform="translate(-4,-4)" />
+            <image class="atk2" href="sgmtree/Frame.png" x="31.421379" y="33.271735" transform="translate(-4,-4)" />
+            <image class="atk3" href="sgmtree/Frame.png" x="26.223587" y="42.274575" transform="translate(-4,-4)" />
+            <image class="atk4" href="sgmtree/Frame.png" x="25.136953" y="52.613212" transform="translate(-4,-4)" />
+            <image class="dmg1" href="sgmtree/Frame.png" x="26.040851" y="24.486098" transform="translate(-4,-4)" />
+            <image class="atk5" href="sgmtree/Frame.png" x="20.448523" y="31.246062" transform="translate(-4,-4)" />
+            <image class="atk6" href="sgmtree/Frame.png" x="16.713022" y="39.184405" transform="translate(-4,-4)" />
+            <image class="atk7" href="sgmtree/Frame.png" x="15.069065" y="47.802332" transform="translate(-4,-4)" />
+            <image class="rate1" href="sgmtree/Frame.png" x="15.619946" y="56.558346" transform="translate(-4,-4)" />
+            <image class="atk8" href="sgmtree/Frame.png" x="19.19538" y="17.196412" transform="translate(-4,-4)" />
+            <image class="dmg2" href="sgmtree/Frame.png" x="12.005243" y="25.887794" transform="translate(-4,-4)" />
+            <image class="atk9" href="sgmtree/Frame.png" x="7.202457" y="36.094235" transform="translate(-4,-4)" />
+            <image class="rate2" href="sgmtree/Frame.png" x="5.088797" y="47.174427" transform="translate(-4,-4)" />
+            <image class="atk10" href="sgmtree/Frame.png" x="5.797074" y="58.432159" transform="translate(-4,-4)" />
+        </g>
+    </g>
+    <g id="move">
+        <g class="node">
+            <path id="slot1" d="M30.97887,56.18034 A20,20,0,0,0,50,70 L50,60 A10,10,0,0,1,40.489435,53.09017 Z" />
+            <path id="gear1" d="M21.468305,59.27051 A30,30,0,0,0,27.705655,70.073918 L35.137103,63.382612 A20,20,0,0,1,30.97887,56.18034 Z" />
+            <path id="gear2" d="M27.705655,70.073918 A30,30,0,0,0,37.797901,77.406364 L41.865267,68.270909 A20,20,0,0,1,35.137103,63.382612 Z" />
+            <path id="gear3" d="M37.797901,77.406364 A30,30,0,0,0,50,80 L50,70 A20,20,0,0,1,41.865267,68.270909 Z" />
+            <path id="slot2" d="M11.957739,62.36068 A40,40,0,0,0,17.63932,73.51141 L25.72949,67.633558 A30,30,0,0,1,21.468305,59.27051 Z" />
+            <path id="gear4" d="M17.63932,73.51141 A40,40,0,0,0,26.48859,82.36068 L32.366442,74.27051 A30,30,0,0,1,25.72949,67.633558 Z" />
+            <path id="gear5" d="M26.48859,82.36068 A40,40,0,0,0,37.63932,88.042261 L40.72949,78.531695 A30,30,0,0,1,32.366442,74.27051 Z" />
+            <path id="gear6" d="M37.63932,88.042261 A40,40,0,0,0,50,90 L50,80 A30,30,0,0,1,40.72949,78.531695 Z" />
+            <path id="slot3" d="M2.447174,65.45085 A50,50,0,0,0,7.783604,76.79134 L16.226883,71.433072 A40,40,0,0,1,11.957739,62.36068 Z" />
+            <path id="gear7" d="M7.783604,76.79134 A50,50,0,0,0,15.772645,86.448431 L22.618116,79.158745 A40,40,0,0,1,16.226883,71.433072 Z" />
+            <path id="gear8" d="M15.772645,86.448431 A50,50,0,0,0,25.912316,93.815334 L30.729853,85.052267 A40,40,0,0,1,22.618116,79.158745 Z" />
+            <path id="gear9" d="M25.912316,93.815334 A50,50,0,0,0,37.565506,98.429158 L40.052405,88.743326 A40,40,0,0,1,30.729853,85.052267 Z" />
+            <path id="gear10" d="M37.565506,98.429158 A50,50,0,0,0,50,100 L50,90 A40,40,0,0,1,40.052405,88.743326 Z" />
+        </g>
+        <g class="line">
+            <line class="slot1" x1="50" y1="50" x2="41.183221" y2="62.135255" />
+            <line class="slot1 gear1" x1="41.183221" y1="62.135255" x2="28.349365" y2="62.5" />
+            <line class="gear1 gear2" x1="28.349365" y1="62.5" x2="35.305369" y2="70.225425" />
+            <line class="gear1 slot2" x1="28.349365" y1="62.5" x2="18.814772" y2="65.889667" />
+            <line class="gear2 gear3" x1="35.305369" y1="70.225425" x2="44.802208" y2="74.45369" />
+            <line class="slot2 gear4" x1="18.814772" y1="65.889667" x2="25.251263" y2="74.748737" />
+            <line class="slot2 slot3" x1="18.814772" y1="65.889667" x2="9.282783" y2="69.160068" />
+            <line class="gear4 gear5" x1="25.251263" y1="74.748737" x2="34.110333" y2="81.185228" />
+            <line class="gear5 gear6" x1="34.110333" y1="81.185228" x2="44.524794" y2="84.569092" />
+            <line class="slot3 gear7" x1="9.282783" y1="69.160068" x2="15.326904" y2="78.68408" />
+            <line class="gear7 gear8" x1="15.326904" y1="78.68408" x2="23.549664" y2="86.405765" />
+            <line class="gear8 gear9" x1="23.549664" y1="86.405765" x2="33.434395" y2="91.839942" />
+            <line class="gear9 gear10" x1="33.434395" y1="91.839942" x2="44.360004" y2="94.645162" />
+        </g>
+        <g class="icon">
+            <image class="slot1" href="sgmtree/GearSlotUnlock.png" x="41.183221" y="62.135255" transform="translate(-3.5,-3.5)" />
+            <image class="gear1" href="sgmtree/GearIncrease.png" x="28.349365" y="62.5" transform="translate(-3.5,-3.5)" />
+            <image class="gear2" href="sgmtree/GearIncrease.png" x="35.305369" y="70.225425" transform="translate(-3.5,-3.5)" />
+            <image class="gear3" href="sgmtree/GearIncrease.png" x="44.802208" y="74.45369" transform="translate(-3.5,-3.5)" />
+            <image class="slot2" href="sgmtree/GearSlotUnlock.png" x="18.814772" y="65.889667" transform="translate(-3.5,-3.5)" />
+            <image class="gear4" href="sgmtree/GearIncrease.png" x="25.251263" y="74.748737" transform="translate(-3.5,-3.5)" />
+            <image class="gear5" href="sgmtree/GearIncrease.png" x="34.110333" y="81.185228" transform="translate(-3.5,-3.5)" />
+            <image class="gear6" href="sgmtree/GearIncrease.png" x="44.524794" y="84.569092" transform="translate(-3.5,-3.5)" />
+            <image class="slot3" href="sgmtree/GearSlotUnlock.png" x="9.282783" y="69.160068" transform="translate(-3.5,-3.5)" />
+            <image class="gear7" href="sgmtree/GearIncrease.png" x="15.326904" y="78.68408" transform="translate(-3.5,-3.5)" />
+            <image class="gear8" href="sgmtree/GearIncrease.png" x="23.549664" y="86.405765" transform="translate(-3.5,-3.5)" />
+            <image class="gear9" href="sgmtree/GearIncrease.png" x="33.434395" y="91.839942" transform="translate(-3.5,-3.5)" />
+            <image class="gear10" href="sgmtree/GearIncrease.png" x="44.360004" y="94.645162" transform="translate(-3.5,-3.5)" />
+        </g>
+        <g class="frame">
+            <image class="slot1" href="sgmtree/Frame.png" x="41.183221" y="62.135255" transform="translate(-4,-4)" />
+            <image class="gear1" href="sgmtree/Frame.png" x="28.349365" y="62.5" transform="translate(-4,-4)" />
+            <image class="gear2" href="sgmtree/Frame.png" x="35.305369" y="70.225425" transform="translate(-4,-4)" />
+            <image class="gear3" href="sgmtree/Frame.png" x="44.802208" y="74.45369" transform="translate(-4,-4)" />
+            <image class="slot2" href="sgmtree/Frame.png" x="18.814772" y="65.889667" transform="translate(-4,-4)" />
+            <image class="gear4" href="sgmtree/Frame.png" x="25.251263" y="74.748737" transform="translate(-4,-4)" />
+            <image class="gear5" href="sgmtree/Frame.png" x="34.110333" y="81.185228" transform="translate(-4,-4)" />
+            <image class="gear6" href="sgmtree/Frame.png" x="44.524794" y="84.569092" transform="translate(-4,-4)" />
+            <image class="slot3" href="sgmtree/Frame.png" x="9.282783" y="69.160068" transform="translate(-4,-4)" />
+            <image class="gear7" href="sgmtree/Frame.png" x="15.326904" y="78.68408" transform="translate(-4,-4)" />
+            <image class="gear8" href="sgmtree/Frame.png" x="23.549664" y="86.405765" transform="translate(-4,-4)" />
+            <image class="gear9" href="sgmtree/Frame.png" x="33.434395" y="91.839942" transform="translate(-4,-4)" />
+            <image class="gear10" href="sgmtree/Frame.png" x="44.360004" y="94.645162" transform="translate(-4,-4)" />
+        </g>
+    </g>
+    <g id="health">
+        <g class="node">
+            <path id="hp1" d="M50,70 A20,20,0,0,0,69.02113,56.18034 L59.510565,53.09017 A10,10,0,0,1,50,60 Z" />
+            <path id="hp2" d="M50,80 A30,30,0,0,0,62.202099,77.406364 L58.134733,68.270909 A20,20,0,0,1,50,70 Z" />
+            <path id="hp3" d="M62.202099,77.406364 A30,30,0,0,0,72.294345,70.073918 L64.862897,63.382612 A20,20,0,0,1,58.134733,68.270909 Z" />
+            <path id="hp4" d="M72.294345,70.073918 A30,30,0,0,0,78.531695,59.27051 L69.02113,56.18034 A20,20,0,0,1,64.862897,63.382612 Z" />
+            <path id="hp5" d="M50,90 A40,40,0,0,0,59.947595,88.743326 L57.460697,79.057495 A30,30,0,0,1,50,80 Z" />
+            <path id="block1" d="M59.947595,88.743326 A40,40,0,0,0,69.270147,85.052267 L64.45261,76.2892 A30,30,0,0,1,57.460697,79.057495 Z" />
+            <path id="hp6" d="M69.270147,85.052267 A40,40,0,0,0,77.381884,79.158745 L70.536413,71.869059 A30,30,0,0,1,64.45261,76.2892 Z" />
+            <path id="def1" d="M77.381884,79.158745 A40,40,0,0,0,83.773117,71.433072 L75.329838,66.074804 A30,30,0,0,1,70.536413,71.869059 Z" />
+            <path id="hp7" d="M83.773117,71.433072 A40,40,0,0,0,88.042261,62.36068 L78.531695,59.27051 A30,30,0,0,1,75.329838,66.074804 Z" />
+            <path id="def2" d="M50,100 A50,50,0,0,0,62.434494,98.429158 L59.947595,88.743326 A40,40,0,0,1,50,90 Z" />
+            <path id="hp8" d="M62.434494,98.429158 A50,50,0,0,0,74.087684,93.815334 L69.270147,85.052267 A40,40,0,0,1,59.947595,88.743326 Z" />
+            <path id="hp9" d="M74.087684,93.815334 A50,50,0,0,0,84.227355,86.448431 L77.381884,79.158745 A40,40,0,0,1,69.270147,85.052267 Z" />
+            <path id="hp10" d="M84.227355,86.448431 A50,50,0,0,0,92.216396,76.79134 L83.773117,71.433072 A40,40,0,0,1,77.381884,79.158745 Z" />
+            <path id="block2" d="M92.216396,76.79134 A50,50,0,0,0,97.552826,65.45085 L88.042261,62.36068 A40,40,0,0,1,83.773117,71.433072 Z" />
+        </g>
+        <g class="line">
+            <line class="hp1" x1="50" y1="50" x2="58.816779" y2="62.135255" />
+            <line class="hp1 hp3" x1="58.816779" y1="62.135255" x2="64.694631" y2="70.225425" />
+            <line class="hp2 hp3" x1="55.197792" y1="74.45369" x2="64.694631" y2="70.225425" />
+            <line class="hp2 hp5" x1="55.197792" y1="74.45369" x2="54.386663" y2="84.724015" />
+            <line class="hp3 hp4" x1="64.694631" y1="70.225425" x2="71.650635" y2="62.5" />
+            <line class="hp3 hp6" x1="64.694631" y1="70.225425" x2="70.572484" y2="78.315595" />
+            <line class="hp4 hp7" x1="71.650635" y1="62.5" x2="81.668947" y2="64.902275" />
+            <line class="hp5 block1" x1="54.386663" y1="84.724015" x2="62.884359" y2="82.542177" />
+            <line class="block1 hp8" x1="62.884359" y1="82.542177" x2="66.565605" y2="91.839942" />
+            <line class="hp6 hp9" x1="70.572484" y1="78.315595" x2="76.450336" y2="86.405765" />
+            <line class="def1 hp7" x1="76.967963" y1="72.30984" x2="81.668947" y2="64.902275" />
+            <line class="def1 hp10" x1="76.967963" y1="72.30984" x2="84.673096" y2="78.68408" />
+            <line class="def2 hp8" x1="55.639996" y1="94.645162" x2="66.565605" y2="91.839942" />
+            <line class="hp10 block2" x1="84.673096" y1="78.68408" x2="90.717217" y2="69.160068" />
+        </g>
+        <g class="icon">
+            <image class="hp1" href="sgmtree/Life.png" x="58.816779" y="62.135255" transform="translate(-3.5,-3.5)" />
+            <image class="hp2" href="sgmtree/Life.png" x="55.197792" y="74.45369" transform="translate(-3.5,-3.5)" />
+            <image class="hp3" href="sgmtree/Life.png" x="64.694631" y="70.225425" transform="translate(-3.5,-3.5)" />
+            <image class="hp4" href="sgmtree/Life.png" x="71.650635" y="62.5" transform="translate(-3.5,-3.5)" />
+            <image class="hp5" href="sgmtree/Life.png" x="54.386663" y="84.724015" transform="translate(-3.5,-3.5)" />
+            <image class="block1" href="sgmtree/BlockArmorReduction.png" x="62.884359" y="82.542177" transform="translate(-3.5,-3.5)" />
+            <image class="hp6" href="sgmtree/Life.png" x="70.572484" y="78.315595" transform="translate(-3.5,-3.5)" />
+            <image class="def1" href="sgmtree/ArmorUp.png" x="76.967963" y="72.30984" transform="translate(-3.5,-3.5)" />
+            <image class="hp7" href="sgmtree/Life.png" x="81.668947" y="64.902275" transform="translate(-3.5,-3.5)" />
+            <image class="def2" href="sgmtree/ArmorUp.png" x="55.639996" y="94.645162" transform="translate(-3.5,-3.5)" />
+            <image class="hp8" href="sgmtree/Life.png" x="66.565605" y="91.839942" transform="translate(-3.5,-3.5)" />
+            <image class="hp9" href="sgmtree/Life.png" x="76.450336" y="86.405765" transform="translate(-3.5,-3.5)" />
+            <image class="hp10" href="sgmtree/Life.png" x="84.673096" y="78.68408" transform="translate(-3.5,-3.5)" />
+            <image class="block2" href="sgmtree/BlockArmorReduction.png" x="90.717217" y="69.160068" transform="translate(-3.5,-3.5)" />
+        </g>
+        <g class="frame">
+            <image class="hp1" href="sgmtree/Frame.png" x="58.816779" y="62.135255" transform="translate(-4,-4)" />
+            <image class="hp2" href="sgmtree/Frame.png" x="55.197792" y="74.45369" transform="translate(-4,-4)" />
+            <image class="hp3" href="sgmtree/Frame.png" x="64.694631" y="70.225425" transform="translate(-4,-4)" />
+            <image class="hp4" href="sgmtree/Frame.png" x="71.650635" y="62.5" transform="translate(-4,-4)" />
+            <image class="hp5" href="sgmtree/Frame.png" x="54.386663" y="84.724015" transform="translate(-4,-4)" />
+            <image class="block1" href="sgmtree/Frame.png" x="62.884359" y="82.542177" transform="translate(-4,-4)" />
+            <image class="hp6" href="sgmtree/Frame.png" x="70.572484" y="78.315595" transform="translate(-4,-4)" />
+            <image class="def1" href="sgmtree/Frame.png" x="76.967963" y="72.30984" transform="translate(-4,-4)" />
+            <image class="hp7" href="sgmtree/Frame.png" x="81.668947" y="64.902275" transform="translate(-4,-4)" />
+            <image class="def2" href="sgmtree/Frame.png" x="55.639996" y="94.645162" transform="translate(-4,-4)" />
+            <image class="hp8" href="sgmtree/Frame.png" x="66.565605" y="91.839942" transform="translate(-4,-4)" />
+            <image class="hp9" href="sgmtree/Frame.png" x="76.450336" y="86.405765" transform="translate(-4,-4)" />
+            <image class="hp10" href="sgmtree/Frame.png" x="84.673096" y="78.68408" transform="translate(-4,-4)" />
+            <image class="block2" href="sgmtree/Frame.png" x="90.717217" y="69.160068" transform="translate(-4,-4)" />
+        </g>
+    </g>
+    <g id="energy">
+        <g class="node">
+            <path id="cool1" d="M69.02113,56.18034 A20,20,0,0,0,61.755705,33.81966 L55.877853,41.90983 A10,10,0,0,1,59.510565,53.09017 Z" />
+            <path id="cool2" d="M78.531695,59.27051 A30,30,0,0,0,79.835657,46.864146 L69.890438,47.909431 A20,20,0,0,1,69.02113,56.18034 Z" />
+            <path id="cool3" d="M79.835657,46.864146 A30,30,0,0,0,75.980762,35 L67.320508,40 A20,20,0,0,1,69.890438,47.909431 Z" />
+            <path id="cool4" d="M75.980762,35 A30,30,0,0,0,67.633558,25.72949 L61.755705,33.81966 A20,20,0,0,1,67.320508,40 Z" />
+            <path id="cool5" d="M88.042261,62.36068 A40,40,0,0,0,89.921069,52.511621 L79.940802,51.883716 A30,30,0,0,1,78.531695,59.27051 Z" />
+            <path id="cool6" d="M89.921069,52.511621 A40,40,0,0,0,89.29149,42.504747 L79.468618,44.378561 A30,30,0,0,1,79.940802,51.883716 Z" />
+            <path id="tag1" d="M89.29149,42.504747 A40,40,0,0,0,86.193082,32.968828 L77.144812,37.226621 A30,30,0,0,1,79.468618,44.378561 Z" />
+            <path id="cool7" d="M86.193082,32.968828 A40,40,0,0,0,80.82053,24.50304 L73.115397,30.87728 A30,30,0,0,1,77.144812,37.226621 Z" />
+            <path id="sm1" d="M80.82053,24.50304 A40,40,0,0,0,73.51141,17.63932 L67.633558,25.72949 A30,30,0,0,1,73.115397,30.87728 Z" />
+            <path id="cool8" d="M97.552826,65.45085 A50,50,0,0,0,99.901336,53.139526 L89.921069,52.511621 A40,40,0,0,1,88.042261,62.36068 Z" />
+            <path id="sm2" d="M99.901336,53.139526 A50,50,0,0,0,99.114363,40.630934 L89.29149,42.504747 A40,40,0,0,1,89.921069,52.511621 Z" />
+            <path id="cool9" d="M99.114363,40.630934 A50,50,0,0,0,95.241353,28.711035 L86.193082,32.968828 A40,40,0,0,1,89.29149,42.504747 Z" />
+            <path id="tag2" d="M95.241353,28.711035 A50,50,0,0,0,88.525662,18.128801 L80.82053,24.50304 A40,40,0,0,1,86.193082,32.968828 Z" />
+            <path id="cool10" d="M88.525662,18.128801 A50,50,0,0,0,79.389263,9.54915 L73.51141,17.63932 A40,40,0,0,1,80.82053,24.50304 Z" />
+        </g>
+        <g class="line">
+            <line class="cool1" x1="50" y1="50" x2="64.265848" y2="45.364745" />
+            <line class="cool1 cool2" x1="64.265848" y1="45.364745" x2="74.863047" y2="52.613212" />
+            <line class="cool1 cool4" x1="64.265848" y1="45.364745" x2="68.578621" y2="33.271735" />
+            <line class="cool2 cool3" x1="74.863047" y1="52.613212" x2="73.776413" y2="42.274575" />
+            <line class="cool2 cool5" x1="74.863047" y1="52.613212" x2="84.380054" y2="56.558346" />
+            <line class="cool3 cool4" x1="73.776413" y1="42.274575" x2="68.578621" y2="33.271735" />
+            <line class="cool3 tag1" x1="73.776413" y1="42.274575" x2="83.286978" y2="39.184405" />
+            <line class="cool4 sm1" x1="68.578621" y1="33.271735" x2="73.959149" y2="24.486098" />
+            <line class="cool5 cool8" x1="84.380054" y1="56.558346" x2="94.202926" y2="58.432159" />
+            <line class="cool6 tag1" x1="84.930935" y1="47.802332" x2="83.286978" y2="39.184405" />
+            <line class="cool6 sm2" x1="84.930935" y1="47.802332" x2="94.911203" y2="47.174427" />
+            <line class="tag1 cool9" x1="83.286978" y1="39.184405" x2="92.797543" y2="36.094235" />
+            <line class="cool7 sm1" x1="79.551477" y1="31.246062" x2="73.959149" y2="24.486098" />
+            <line class="cool7 tag2" x1="79.551477" y1="31.246062" x2="87.994757" y2="25.887794" />
+            <line class="tag2 cool10" x1="87.994757" y1="25.887794" x2="80.80462" y2="17.196412" />
+        </g>
+        <g class="icon">
+            <image class="cool1" href="sgmtree/EnergyCooldown.png" x="64.265848" y="45.364745" transform="translate(-3.5,-3.5)" />
+            <image class="cool2" href="sgmtree/EnergyCooldown.png" x="74.863047" y="52.613212" transform="translate(-3.5,-3.5)" />
+            <image class="cool3" href="sgmtree/EnergyCooldown.png" x="73.776413" y="42.274575" transform="translate(-3.5,-3.5)" />
+            <image class="cool4" href="sgmtree/EnergyCooldown.png" x="68.578621" y="33.271735" transform="translate(-3.5,-3.5)" />
+            <image class="cool5" href="sgmtree/EnergyCooldown.png" x="84.380054" y="56.558346" transform="translate(-3.5,-3.5)" />
+            <image class="cool6" href="sgmtree/EnergyCooldown.png" x="84.930935" y="47.802332" transform="translate(-3.5,-3.5)" />
+            <image class="tag1" href="sgmtree/SwapCooldown.png" x="83.286978" y="39.184405" transform="translate(-3.5,-3.5)" />
+            <image class="cool7" href="sgmtree/EnergyCooldown.png" x="79.551477" y="31.246062" transform="translate(-3.5,-3.5)" />
+            <image class="sm1" href="sgmtree/SpecialMoveCooldown.png" x="73.959149" y="24.486098" transform="translate(-3.5,-3.5)" />
+            <image class="cool8" href="sgmtree/EnergyCooldown.png" x="94.202926" y="58.432159" transform="translate(-3.5,-3.5)" />
+            <image class="sm2" href="sgmtree/SpecialMoveCooldown.png" x="94.911203" y="47.174427" transform="translate(-3.5,-3.5)" />
+            <image class="cool9" href="sgmtree/EnergyCooldown.png" x="92.797543" y="36.094235" transform="translate(-3.5,-3.5)" />
+            <image class="tag2" href="sgmtree/SwapCooldown.png" x="87.994757" y="25.887794" transform="translate(-3.5,-3.5)" />
+            <image class="cool10" href="sgmtree/EnergyCooldown.png" x="80.80462" y="17.196412" transform="translate(-3.5,-3.5)" />
+        </g>
+        <g class="frame">
+            <image class="cool1" href="sgmtree/Frame.png" x="64.265848" y="45.364745" transform="translate(-4,-4)" />
+            <image class="cool2" href="sgmtree/Frame.png" x="74.863047" y="52.613212" transform="translate(-4,-4)" />
+            <image class="cool3" href="sgmtree/Frame.png" x="73.776413" y="42.274575" transform="translate(-4,-4)" />
+            <image class="cool4" href="sgmtree/Frame.png" x="68.578621" y="33.271735" transform="translate(-4,-4)" />
+            <image class="cool5" href="sgmtree/Frame.png" x="84.380054" y="56.558346" transform="translate(-4,-4)" />
+            <image class="cool6" href="sgmtree/Frame.png" x="84.930935" y="47.802332" transform="translate(-4,-4)" />
+            <image class="tag1" href="sgmtree/Frame.png" x="83.286978" y="39.184405" transform="translate(-4,-4)" />
+            <image class="cool7" href="sgmtree/Frame.png" x="79.551477" y="31.246062" transform="translate(-4,-4)" />
+            <image class="sm1" href="sgmtree/Frame.png" x="73.959149" y="24.486098" transform="translate(-4,-4)" />
+            <image class="cool8" href="sgmtree/Frame.png" x="94.202926" y="58.432159" transform="translate(-4,-4)" />
+            <image class="sm2" href="sgmtree/Frame.png" x="94.911203" y="47.174427" transform="translate(-4,-4)" />
+            <image class="cool9" href="sgmtree/Frame.png" x="92.797543" y="36.094235" transform="translate(-4,-4)" />
+            <image class="tag2" href="sgmtree/Frame.png" x="87.994757" y="25.887794" transform="translate(-4,-4)" />
+            <image class="cool10" href="sgmtree/Frame.png" x="80.80462" y="17.196412" transform="translate(-4,-4)" />
+        </g>
+    </g>
+    <g id="marquee">
+        <g class="node">
+            <path id="ma0" d="M47.41181,59.659258 A10,10,0,0,0,52.58819,59.659258 L50,50 Z" />
+            <path id="ma1" d="M42.928932,57.071068 A10,10,0,0,0,47.41181,59.659258 L50,50 Z" />
+            <path id="ma2" d="M40.340742,52.58819 A10,10,0,0,0,42.928932,57.071068 L50,50 Z" />
+            <path id="ma3" d="M40.340742,47.41181 A10,10,0,0,0,40.340742,52.58819 L50,50 Z" />
+            <path id="ma4" d="M42.928932,42.928932 A10,10,0,0,0,40.340742,47.41181 L50,50 Z" />
+            <path id="ma5" d="M47.41181,40.340742 A10,10,0,0,0,42.928932,42.928932 L50,50 Z" />
+            <path id="ma6" d="M52.58819,40.340742 A10,10,0,0,0,47.41181,40.340742 L50,50 Z" />
+            <path id="ma7" d="M57.071068,42.928932 A10,10,0,0,0,52.58819,40.340742 L50,50 Z" />
+            <path id="ma8" d="M59.659258,47.41181 A10,10,0,0,0,57.071068,42.928932 L50,50 Z" />
+            <path id="ma9" d="M59.659258,52.58819 A10,10,0,0,0,59.659258,47.41181 L50,50 Z" />
+            <path id="ma10" d="M57.071068,57.071068 A10,10,0,0,0,59.659258,52.58819 L50,50 Z" />
+            <path id="ma11" d="M52.58819,59.659258 A10,10,0,0,0,57.071068,57.071068 L50,50 Z" />
+        </g>
+        <g class="text">
+            <text class="ma0" x="50" y="57.5">0</text>
+            <text class="ma1" x="46.25" y="56.49519052838329">1</text>
+            <text class="ma2" x="43.50480947161671" y="53.75">2</text>
+            <text class="ma3" x="42.5" y="50">3</text>
+            <text class="ma4" x="43.50480947161671" y="46.25">4</text>
+            <text class="ma5" x="46.25" y="43.50480947161671">5</text>
+            <text class="ma6" x="50" y="42.5">6</text>
+            <text class="ma7" x="53.75" y="43.50480947161671">7</text>
+            <text class="ma8" x="56.49519052838329" y="46.25">8</text>
+            <text class="ma9" x="57.5" y="50">9</text>
+            <text class="ma10" x="56.49519052838329" y="53.75">10</text>
+            <text class="ma11" x="53.75" y="56.49519052838329">11</text>
+        </g>
+        <g class="icon">
+            <image id="ma" href="sgmtree/Super.png" x="50" y="50" transform="translate(-6,-6)" />
+        </g>
+    </g>
+    <script>
+    // <![CDATA[
+        var price = {
+            "default": [
+                {"sp": 1, "cc": 2000, "th": 10},
+                {"sp": 2, "cc": 3000, "th": 15},
+                {"sp": 3, "cc": 5000, "th": 20},
+                {"sp": 4, "cc": 8000, "th": 30}
+            ],
+            "ability": [
+                {"sp": 3, "cc": 5000, "th": 20},
+                {"sp": 4, "cc": 8000, "th": 30},
+                {"sp": 5, "cc": 15000, "th": 50},
+                {"sp": 5, "cc": 20000, "th": 65}
+            ],
+            "move": [
+                {"sp": 2, "cc": 3000, "th": 15},
+                {"sp": 3, "cc": 5000, "th": 20},
+                {"sp": 4, "cc": 8000, "th": 30},
+                {"sp": 5, "cc": 15000, "th": 50}
+            ],
+            "marquee": [
+                {},
+                {"sp": 50, "cc": 50000},
+                {"sp": 50, "cc": 0}
+            ]
+        };
+        var tree = {
+            "ca": {
+                "cost": price.ability[0],
+                "fs": 2,
+                "checked": false,
+                "next": ["sa2"]
+            },
+            "sa1": {
+                "cost": price.ability[1],
+                "fs": 1,
+                "checked": false,
+                "next": ["sa3", "sa4"]
+            },
+            "sa2": {
+                "cost": price.ability[1],
+                "fs": 2,
+                "checked": false,
+                "next": ["sa1", "combo"]
+            },
+            "combo": {
+                "cost": price.ability[1],
+                "fs": 2,
+                "checked": false,
+                "next": ["sa4", "juggle"]
+            },
+            "sa3": {
+                "cost": price.ability[2],
+                "fs": 1,
+                "checked": false,
+                "next": []
+            },
+            "sa4": {
+                "cost": price.ability[2],
+                "fs": 3,
+                "checked": false,
+                "next": ["sa1", "combo", "sa5"]
+            },
+            "juggle": {
+                "cost": price.ability[2],
+                "fs": 2,
+                "checked": false,
+                "next": []
+            },
+            "sa5": {
+                "cost": price.ability[3],
+                "fs": 2,
+                "checked": false,
+                "next": ["sa6"]
+            },
+            "sa6": {
+                "cost": price.ability[3],
+                "fs": 2,
+                "checked": false,
+                "next": ["charge"]
+            },
+            "charge": {
+                "cost": price.ability[3],
+                "fs": 4,
+                "checked": false,
+                "next": []
+            },
 
-			"atk1": {
-				"cost": price.default[0],
-				"fs": 2,
-				"checked": false,
-				"next": ["atk3"]
-			},
-			"atk2": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["atk5"]
-			},
-			"atk3": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["atk2", "atk4"]
-			},
-			"atk4": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["atk7"]
-			},
-			"dmg1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["atk8"]
-			},
-			"atk5": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["atk2", "dmg1", "atk6"]
-			},
-			"atk6": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["atk5", "atk7", "atk9"]
-			},
-			"atk7": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["atk4", "atk6", "rate1"]
-			},
-			"rate1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["atk10"]
-			},
-			"atk8": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": []
-			},
-			"dmg2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"atk9": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": ["dmg2", "rate2"]
-			},
-			"rate2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"atk10": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": []
-			},
+            "atk1": {
+                "cost": price.default[0],
+                "fs": 2,
+                "checked": false,
+                "next": ["atk3"]
+            },
+            "atk2": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["atk5"]
+            },
+            "atk3": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["atk2", "atk4"]
+            },
+            "atk4": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["atk7"]
+            },
+            "dmg1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["atk8"]
+            },
+            "atk5": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["atk2", "dmg1", "atk6"]
+            },
+            "atk6": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["atk5", "atk7", "atk9"]
+            },
+            "atk7": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["atk4", "atk6", "rate1"]
+            },
+            "rate1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["atk10"]
+            },
+            "atk8": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": []
+            },
+            "dmg2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "atk9": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": ["dmg2", "rate2"]
+            },
+            "rate2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "atk10": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": []
+            },
 
-			"slot1": {
-				"cost": price.move[0],
-				"fs": 3,
-				"checked": false,
-				"next": ["gear1"]
-			},
-			"gear1": {
-				"cost": price.move[1],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear2", "slot2"]
-			},
-			"gear2": {
-				"cost": price.move[1],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear3"]
-			},
-			"gear3": {
-				"cost": price.move[1],
-				"fs": 1,
-				"checked": false,
-				"next": []
-			},
-			"slot2": {
-				"cost": price.move[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["gear4", "slot3"]
-			},
-			"gear4": {
-				"cost": price.move[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear5"]
-			},
-			"gear5": {
-				"cost": price.move[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear6"]
-			},
-			"gear6": {
-				"cost": price.move[2],
-				"fs": 1,
-				"checked": false,
-				"next": []
-			},
-			"slot3": {
-				"cost": price.move[3],
-				"fs": 7,
-				"checked": false,
-				"next": ["gear7"]
-			},
-			"gear7": {
-				"cost": price.move[3],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear8"]
-			},
-			"gear8": {
-				"cost": price.move[3],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear9"]
-			},
-			"gear9": {
-				"cost": price.move[3],
-				"fs": 1,
-				"checked": false,
-				"next": ["gear10"]
-			},
-			"gear10": {
-				"cost": price.move[3],
-				"fs": 1,
-				"checked": false,
-				"next": []
-			},
+            "slot1": {
+                "cost": price.move[0],
+                "fs": 3,
+                "checked": false,
+                "next": ["gear1"]
+            },
+            "gear1": {
+                "cost": price.move[1],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear2", "slot2"]
+            },
+            "gear2": {
+                "cost": price.move[1],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear3"]
+            },
+            "gear3": {
+                "cost": price.move[1],
+                "fs": 1,
+                "checked": false,
+                "next": []
+            },
+            "slot2": {
+                "cost": price.move[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["gear4", "slot3"]
+            },
+            "gear4": {
+                "cost": price.move[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear5"]
+            },
+            "gear5": {
+                "cost": price.move[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear6"]
+            },
+            "gear6": {
+                "cost": price.move[2],
+                "fs": 1,
+                "checked": false,
+                "next": []
+            },
+            "slot3": {
+                "cost": price.move[3],
+                "fs": 7,
+                "checked": false,
+                "next": ["gear7"]
+            },
+            "gear7": {
+                "cost": price.move[3],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear8"]
+            },
+            "gear8": {
+                "cost": price.move[3],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear9"]
+            },
+            "gear9": {
+                "cost": price.move[3],
+                "fs": 1,
+                "checked": false,
+                "next": ["gear10"]
+            },
+            "gear10": {
+                "cost": price.move[3],
+                "fs": 1,
+                "checked": false,
+                "next": []
+            },
 
-			"hp1": {
-				"cost": price.default[0],
-				"fs": 2,
-				"checked": false,
-				"next": ["hp3"]
-			},
-			"hp2": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["hp5"]
-			},
-			"hp3": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["hp2", "hp4", "hp6"]
-			},
-			"hp4": {
-				"cost": price.default[1],
-				"fs": 3,
-				"checked": false,
-				"next": ["hp7"]
-			},
-			"hp5": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["block1"]
-			},
-			"block1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["hp8"]
-			},
-			"hp6": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["hp9"]
-			},
-			"def1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["hp10"]
-			},
-			"hp7": {
-				"cost": price.default[2],
-				"fs": 5,
-				"checked": false,
-				"next": ["def1"]
-			},
-			"def2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"hp8": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": ["def2"]
-			},
-			"hp9": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": []
-			},
-			"hp10": {
-				"cost": price.default[3],
-				"fs": 8,
-				"checked": false,
-				"next": ["block2"]
-			},
-			"block2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
+            "hp1": {
+                "cost": price.default[0],
+                "fs": 2,
+                "checked": false,
+                "next": ["hp3"]
+            },
+            "hp2": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["hp5"]
+            },
+            "hp3": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["hp2", "hp4", "hp6"]
+            },
+            "hp4": {
+                "cost": price.default[1],
+                "fs": 3,
+                "checked": false,
+                "next": ["hp7"]
+            },
+            "hp5": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["block1"]
+            },
+            "block1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["hp8"]
+            },
+            "hp6": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["hp9"]
+            },
+            "def1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["hp10"]
+            },
+            "hp7": {
+                "cost": price.default[2],
+                "fs": 5,
+                "checked": false,
+                "next": ["def1"]
+            },
+            "def2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "hp8": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": ["def2"]
+            },
+            "hp9": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": []
+            },
+            "hp10": {
+                "cost": price.default[3],
+                "fs": 8,
+                "checked": false,
+                "next": ["block2"]
+            },
+            "block2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
 
-			"cool1": {
-				"cost": price.default[0],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool2", "cool4"]
-			},
-			"cool2": {
-				"cost": price.default[1],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool3", "cool5"]
-			},
-			"cool3": {
-				"cost": price.default[1],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool2", "cool4", "tag1"]
-			},
-			"cool4": {
-				"cost": price.default[1],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool3", "sm1"]
-			},
-			"cool5": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool8"]
-			},
-			"cool6": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["sm2"]
-			},
-			"tag1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool6", "cool9"]
-			},
-			"cool7": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["tag2"]
-			},
-			"sm1": {
-				"cost": price.default[2],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool7"]
-			},
-			"cool8": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"sm2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"cool9": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
-			"tag2": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": ["cool10"]
-			},
-			"cool10": {
-				"cost": price.default[3],
-				"fs": 0,
-				"checked": false,
-				"next": []
-			},
+            "cool1": {
+                "cost": price.default[0],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool2", "cool4"]
+            },
+            "cool2": {
+                "cost": price.default[1],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool3", "cool5"]
+            },
+            "cool3": {
+                "cost": price.default[1],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool2", "cool4", "tag1"]
+            },
+            "cool4": {
+                "cost": price.default[1],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool3", "sm1"]
+            },
+            "cool5": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool8"]
+            },
+            "cool6": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["sm2"]
+            },
+            "tag1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool6", "cool9"]
+            },
+            "cool7": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["tag2"]
+            },
+            "sm1": {
+                "cost": price.default[2],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool7"]
+            },
+            "cool8": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "sm2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "cool9": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
+            "tag2": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": ["cool10"]
+            },
+            "cool10": {
+                "cost": price.default[3],
+                "fs": 0,
+                "checked": false,
+                "next": []
+            },
 
-			"ma0": {
-				"cost": price.marquee[0],
-				"fs": 0,
-				"checked": false,
-				"next": ["ma1"]
-			},
-			"ma1": {
-				"cost": price.marquee[1],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma2"]
-			},
-			"ma2": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma3"]
-			},
-			"ma3": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma4"]
-			},
-			"ma4": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma5"]
-			},
-			"ma5": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma6"]
-			},
-			"ma6": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma7"]
-			},
-			"ma7": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma8"]
-			},
-			"ma8": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma9"]
-			},
-			"ma9": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma10"]
-			},
-			"ma10": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": ["ma11"]
-			},
-			"ma11": {
-				"cost": price.marquee[2],
-				"fs": 1,
-				"checked": false,
-				"next": []
-			}
-		};
-		var maids = ["ma0", "ma1", "ma2", "ma3", "ma4", "ma5", "ma6", "ma7", "ma8", "ma9", "ma10", "ma11"];
+            "ma0": {
+                "cost": price.marquee[0],
+                "fs": 0,
+                "checked": false,
+                "next": ["ma1"]
+            },
+            "ma1": {
+                "cost": price.marquee[1],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma2"]
+            },
+            "ma2": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma3"]
+            },
+            "ma3": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma4"]
+            },
+            "ma4": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma5"]
+            },
+            "ma5": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma6"]
+            },
+            "ma6": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma7"]
+            },
+            "ma7": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma8"]
+            },
+            "ma8": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma9"]
+            },
+            "ma9": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma10"]
+            },
+            "ma10": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": ["ma11"]
+            },
+            "ma11": {
+                "cost": price.marquee[2],
+                "fs": 1,
+                "checked": false,
+                "next": []
+            }
+        };
+        var maids = ["ma0", "ma1", "ma2", "ma3", "ma4", "ma5", "ma6", "ma7", "ma8", "ma9", "ma10", "ma11"];
 
-		function prev(id) {
-			var previds = [];
-			for (var previd in tree) {
-				if (tree[previd].next.indexOf(id) >= 0) {
-					previds.push(previd);
-				}
-			}
-			return previds;
-		}
+        function prev(id) {
+            var previds = [];
+            for (var previd in tree) {
+                if (tree[previd].next.indexOf(id) >= 0) {
+                    previds.push(previd);
+                }
+            }
+            return previds;
+        }
 
-		var anchored = (function() {
-			var visited;
-			return function(id, substep) {
-				if (!substep) {
-					visited = [];
-				}
-				visited.push(id);
+        var anchored = (function() {
+            var visited;
+            return function(id, substep) {
+                if (!substep) {
+                    visited = [];
+                }
+                visited.push(id);
 
-				var previds = prev(id);
-				for (var previd of previds) {
-					if (visited.indexOf(previd) < 0 && tree[previd].checked) {
-						return anchored(previd, true);
-					}
-				}
-				return !previds.length;
-			};
-		})();
+                var previds = prev(id);
+                for (var previd of previds) {
+                    if (visited.indexOf(previd) < 0 && tree[previd].checked) {
+                        return anchored(previd, true);
+                    }
+                }
+                return !previds.length;
+            };
+        })();
 
-		function toggle(id, b) {
-			var node = document.getElementById(id);
-			var assets = document.getElementsByClassName(id);
-			if (b) {
-				node.classList.add("checked");
-				for (var asset of assets) {
-					asset.classList.add("checked");
-				}
-				tree[id].checked = true;
-			}
-			else {
-				node.classList.remove("checked");
-				for (var asset of assets) {
-					asset.classList.remove("checked");
-				}
-				tree[id].checked = false;
-			}
-		}
+        function toggle(id, b) {
+            var node = document.getElementById(id);
+            var assets = document.getElementsByClassName(id);
+            if (b) {
+                node.classList.add("checked");
+                for (var asset of assets) {
+                    asset.classList.add("checked");
+                }
+                tree[id].checked = true;
+            }
+            else {
+                node.classList.remove("checked");
+                for (var asset of assets) {
+                    asset.classList.remove("checked");
+                }
+                tree[id].checked = false;
+            }
+        }
 
-		var uncheck = (function() {
-			var visited;
-			return function(id, substep) {
-				if (!substep) {
-					visited = [];
-				}
-				visited.push(id);
+        var uncheck = (function() {
+            var visited;
+            return function(id, substep) {
+                if (!substep) {
+                    visited = [];
+                }
+                visited.push(id);
 
-				toggle(id, false);
+                toggle(id, false);
 
-				for (var nextid of tree[id].next) {
-					if (visited.indexOf(nextid) < 0 && tree[nextid].checked) {
-						if (!anchored(nextid)) {
-							uncheck(nextid, true);
-						}
-					}
-				}
-			};
-		})();
+                for (var nextid of tree[id].next) {
+                    if (visited.indexOf(nextid) < 0 && tree[nextid].checked) {
+                        if (!anchored(nextid)) {
+                            uncheck(nextid, true);
+                        }
+                    }
+                }
+            };
+        })();
 
-		var check = (function() {
-			var visited;
-			return function(id, substep) {
-				if (!substep) {
-					visited = [];
-				}
-				visited.push(id);
+        var check = (function() {
+            var visited;
+            return function(id, substep) {
+                if (!substep) {
+                    visited = [];
+                }
+                visited.push(id);
 
-				var previds = prev(id);
-				for (var previd of previds) {
-					if (tree[previd].checked) {
-						previds = [];
-					}
-				}
-				for (var previd of previds) {
-					if (visited.indexOf(previd) < 0) { 
-						check(previd, true);
-						break;
-					}
-				}
+                var previds = prev(id);
+                for (var previd of previds) {
+                    if (tree[previd].checked) {
+                        previds = [];
+                    }
+                }
+                for (var previd of previds) {
+                    if (visited.indexOf(previd) < 0) {
+                        check(previd, true);
+                        break;
+                    }
+                }
 
-				toggle(id, true);
-			};
-		})();
+                toggle(id, true);
+            };
+        })();
 
-		function pruneLines() {
-			for (var id in tree) {
-				if (!tree[id].checked) {
-					var lines = document.querySelectorAll("line." + id);
-					for (var line of lines) {
-						line.classList.remove("checked");
-					}
-				}
-			}
-		}
+        function pruneLines() {
+            for (var id in tree) {
+                if (!tree[id].checked) {
+                    var lines = document.querySelectorAll("line." + id);
+                    for (var line of lines) {
+                        line.classList.remove("checked");
+                    }
+                }
+            }
+        }
 
-		function postMessage() {
-			if (window.parent != window) {
-				var data = {"sp": [], "cc": [], "th": [], "fs": 0};
-				for (var id in tree) {
-					if (tree[id].checked && id != "ma0") {
-						data.sp.push(tree[id].cost.sp);
-						data.cc.push(tree[id].cost.cc);
-						data.th.push(tree[id].cost.th);
-						data.fs += tree[id].fs;
-					}
-				}
-				window.parent.postMessage(data, "*");
-			}
-		}
+        function postMessage() {
+            if (window.parent != window) {
+                var data = {"sp": [], "cc": [], "th": [], "fs": 0};
+                for (var id in tree) {
+                    if (tree[id].checked && id != "ma0") {
+                        data.sp.push(tree[id].cost.sp);
+                        data.cc.push(tree[id].cost.cc);
+                        data.th.push(tree[id].cost.th);
+                        data.fs += tree[id].fs;
+                    }
+                }
+                window.parent.postMessage(data, "*");
+            }
+        }
 
-		function updatePaths(e) {
-			if (e.target.id in tree) {
-				var id = e.target.id;
-				var ma = document.getElementById("ma");
-				if (maids.indexOf(id) >= 0) {
-					for (var id2 in tree) {
-						if (maids.indexOf(id2) < 0) {
-							toggle(id2, true);
-						}
-						else {
-							toggle(id2, false);
-						}
-					}
-					check(id);
-					ma.classList.add("checked");
-				}
-				else if (tree[id].checked) {
-					uncheck(id);
-					for (var maid of maids) {
-						toggle(maid, false);
-					}
-					ma.classList.remove("checked");
-				}
-				else {
-					check(id);
-					var maxtree = true;
-					for (var id2 in tree) {
-						if (maids.indexOf(id2) < 0 && !tree[id2].checked) {
-							maxtree = false;
-						}
-					}
-					if (maxtree) {
-						toggle("ma0", true);
-						ma.classList.add("checked");
-					}
-					else {
-						pruneLines();
-					}
-				}
-				postMessage();
-			}
-		}
+        function updatePaths(e) {
+            if (e.target.id in tree) {
+                var id = e.target.id;
+                var ma = document.getElementById("ma");
+                if (maids.indexOf(id) >= 0) {
+                    for (var id2 in tree) {
+                        if (maids.indexOf(id2) < 0) {
+                            toggle(id2, true);
+                        }
+                        else {
+                            toggle(id2, false);
+                        }
+                    }
+                    check(id);
+                    ma.classList.add("checked");
+                }
+                else if (tree[id].checked) {
+                    uncheck(id);
+                    for (var maid of maids) {
+                        toggle(maid, false);
+                    }
+                    ma.classList.remove("checked");
+                }
+                else {
+                    check(id);
+                    var maxtree = true;
+                    for (var id2 in tree) {
+                        if (maids.indexOf(id2) < 0 && !tree[id2].checked) {
+                            maxtree = false;
+                        }
+                    }
+                    if (maxtree) {
+                        toggle("ma0", true);
+                        ma.classList.add("checked");
+                    }
+                    else {
+                        pruneLines();
+                    }
+                }
+                postMessage();
+            }
+        }
 
-		window.addEventListener("click", updatePaths);
-	// ]]>
-	</script>
+        window.addEventListener("click", updatePaths);
+    // ]]>
+    </script>
 </svg>
