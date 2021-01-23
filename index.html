@@ -8,16 +8,14 @@
 </head>
 <body>
     <h1>SGM Skill Tree</h1>
-    <p class="gray">
-        Tip: Click "11" to select everything.
-    </p>
+    <p class="gray">Tip: Click "11" to select everything.</p>
     <p>
         <span>
-            <h2 class="t2 hidden">Tree 1</h2>
+            <h2 class="dual hidden">Tree 1</h2>
             <!-- <embed id="t0" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg0" src="sgmtree.svg">
         </span>
-        <span class="t2 hidden">
+        <span class="dual hidden">
             <h2>Tree 2</h2>
             <!-- <embed id="t1" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg1" src="sgmtree.svg">
@@ -37,30 +35,48 @@
         <label for="d"></label>
     </p>
     <p>
-        <span class="t2 hidden">Initial</span> Cost:
+        <span class="dual hidden">Initial</span> Cost:
         <img src="img/Random.png" alt="SP">
         <span id="sp0">0</span>
         and
         <img src="img/SoftCurrency.png" alt="CC">
         <span id="cc0">0</span>
+        <span class="gray">
+            (or
+            <img src="img/HardCurrency.png" alt="TH">
+            <span id="th0">0</span>
+            )
+        </span>
     </p>
-    <p class="t2 hidden">
+    <p class="dual hidden">
         Final Cost:
         <img src="img/Random.png" alt="SP">
         <span id="sp1">0</span>
         and
         <img src="img/SoftCurrency.png" alt="CC">
         <span id="cc1">0</span>
+        <span class="theonite gray">
+            (or
+            <img src="img/HardCurrency.png" alt="TH">
+            <span id="th1">0</span>
+            )
+        </span>
     </p>
-    <p class="t2 hidden">
+    <p class="dual hidden">
         Difference:
         <img src="img/Random.png" alt="SP">
         <span id="dsp">0</span>
         and
         <img src="img/SoftCurrency.png" alt="CC">
         <span id="dcc">0</span>
+        <span class="theonite gray">
+            (or
+            <img src="img/HardCurrency.png" alt="TH">
+            <span id="dth">0</span>
+            )
+        </span>
     </p>
-    <button id="t2b">Show Tree 2</button>
+    <button id="dual-button">Show Tree 2</button>
     <script src="index.js"></script>
 </body>
 </html>
