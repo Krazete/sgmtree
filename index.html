@@ -10,13 +10,13 @@
     <h1>SGM Skill Tree</h1>
     <p class="gray">Tip: Click "11" to select everything.</p>
     <div class="flexbox">
-        <div>
-            <h2 class="dual hidden">Initial</h2>
+        <div class="dual hidden">
+            <h2>Initial</h2>
             <!-- <embed id="t0" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg0" src="sgmtree.svg">
         </div>
-        <div class="dual hidden">
-            <h2>Final</h2>
+        <div>
+            <h2 class="dual hidden">Final</h2>
             <!-- <embed id="t1" src="https://krazete.github.com/sgmtree/sgmtree.svg"> -->
             <embed id="svg1" src="sgmtree.svg">
         </div>
@@ -34,8 +34,8 @@
         <input type="radio" name="tier" id="d">
         <label for="d"></label>
     </p>
-    <p>
-        <span class="dual hidden">Initial</span> Cost:
+    <p class="dual hidden">
+        Initial Cost:
         <img src="img/Random.png" alt="SP">
         <span id="sp0">0</span>
         and
@@ -48,8 +48,8 @@
             )
         </span>
     </p>
-    <p class="dual hidden">
-        Final Cost:
+    <p>
+        <span class="dual hidden">Final</span> Cost:
         <img src="img/Random.png" alt="SP">
         <span id="sp1">0</span>
         and
@@ -76,7 +76,7 @@
             )
         </span>
     </p>
-    <button id="dual-button">Show Second Tree</button>
+    <button id="dual-button">Enable Initial Tree</button>
     <script src="index.js"></script>
 </body>
 </html>

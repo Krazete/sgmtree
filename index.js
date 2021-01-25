@@ -128,7 +128,7 @@ function toggleDual() {
         for (var i = 0; i < dualElements.length; i++) {
             dualElements[i].classList.add("hidden");
         }
-        dualButton.innerHTML = "Show Second Tree";
+        dualButton.innerHTML = "Enable Initial Tree";
         dual = false;
     }
     else {
@@ -136,7 +136,7 @@ function toggleDual() {
         for (var i = 0; i < dualElements.length; i++) {
             dualElements[i].classList.remove("hidden");
         }
-        dualButton.innerHTML = "Hide Second Tree";
+        dualButton.innerHTML = "Disable Initial Tree";
         dual = true;
     }
 }
