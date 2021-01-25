@@ -6,7 +6,7 @@ An interactive Skullgirls Mobile skill tree.
 
 It sends cost data to the parent window and can also receive instructions from the parent window.
 
-## How to Use
+## How to Use the SVG
 
 0. (Optional) Save a copy of `sgmtree.svg` and the `sgmtree` folder.
 1. In your HTML, include the SVG.
@@ -17,15 +17,21 @@ It sends cost data to the parent window and can also receive instructions from t
 3. In your message listener, filter requests by origin.
   - `function onMessage(e) {if (e.origin == window.origin) { /* CODE */ }}`
   - If you did not save a copy, replace `window.origin` with `"https://krazete.github.io"`.
-4. Handle the data.
-  - `e.data` is an object in the format `{"sp": [], "cc": [], "th": [], "fs": 0}`.
+4. Handle the message data.
+  - `e.data` is an object in the format `{"sp": [], "cc": [], "th": [], "fs": 0, "mandated": false}`.
   - `sp` and `cc` lists node costs if using only Skill Points and Canopy Coins.
   - `th` lists node costs if using only Theonite.
   - `fs` is the Fighter Score multiplier.
+  - `mandated` indicates whether the message was posted as a result of a mandate event.
+5. (Optional) Toggle nodes with a mandate event.
+  - `svgDocument.dispatchEvent(new CustomEvent("mandate", {"detail": {"ids": [], "on": true}}));`
+  - `ids` is the list of node ids to affect.
+  - `on` is true if checking nodes and false if unchecking nodes.
 
-See `index.html` and `index.js` for an example.
+See `index.html` and `index.js` for an example of use.
 
 ## Notes
 
+- Cost data was manually recorded for each node of each tier on my [SGM Skill Tree Costs](https://docs.google.com/spreadsheets/d/1his-ztPswmUIKaeAeO3a4pmihLn7LsssLTb-6Z3i350) spreadsheet.
 - In the SVG file, nodes are named according to the counterclockwise direction, not tree order. E.g. `sa1` is actually the second tier of Signature Ability 1 while `sa2` is the first tier of Signature Ability 1.
 - To test the message feature locally, you must open your HTML with a local server (e.g. Python's SimpleHTTPServer) due to CORS policy.
