@@ -990,6 +990,16 @@
             }
         }
 
+        function toggleMA(on) {
+            var ma = document.getElementById("ma");
+            if (on) {
+                ma.classList.add("checked");
+            }
+            else {
+                ma.classList.remove("checked");
+            }
+        }
+
         var uncheck = (function() {
             var visited;
             return function(id, substep) {
@@ -1046,6 +1056,18 @@
             }
         }
 
+        function tidy() {
+            for (var id in tree) {
+                if (maids.indexOf(id) < 0 && !tree[id].checked) {
+                    toggleMA(false);
+                    pruneLines();
+                    return;
+                }
+            }
+            toggleMA(true);
+            toggle("ma0", true);
+        }
+
         function postMessage(stopper) {
             if (window.parent != window) {
                 var data = {"sp": [], "cc": [], "th": [], "fs": 0, "stopper": stopper};
@@ -1064,8 +1086,8 @@
         function updatePaths(e) {
             if (e.target.id in tree) {
                 var id = e.target.id;
-                var ma = document.getElementById("ma");
                 if (maids.indexOf(id) >= 0) {
+                    toggleMA(true);
                     for (var id2 in tree) {
                         if (maids.indexOf(id2) < 0) {
                             toggle(id2, true);
@@ -1075,30 +1097,17 @@
                         }
                     }
                     check(id);
-                    ma.classList.add("checked");
                 }
                 else if (tree[id].checked) {
-                    uncheck(id);
-                    for (var maid of maids) {
-                        toggle(maid, false);
+                    toggleMA(false);
+                    for (var id2 of maids) {
+                        toggle(id2, false);
                     }
-                    ma.classList.remove("checked");
+                    uncheck(id);
                 }
                 else {
                     check(id);
-                    var maxtree = true;
-                    for (var id2 in tree) {
-                        if (maids.indexOf(id2) < 0 && !tree[id2].checked) {
-                            maxtree = false;
-                        }
-                    }
-                    if (maxtree) {
-                        toggle("ma0", true);
-                        ma.classList.add("checked");
-                    }
-                    else {
-                        pruneLines();
-                    }
+                    tidy();
                 }
                 postMessage();
             }
@@ -1108,8 +1117,7 @@
             for (var id of e.detail.ids) {
                 toggle(id, e.detail.on);
             }
-            pruneLines();
-
+            tidy();
             postMessage(true);
         }
 
