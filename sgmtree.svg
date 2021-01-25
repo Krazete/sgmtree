@@ -68,6 +68,10 @@
         .frame image {
             width: 8%;
             height: 8%;
+            display: none;
+        }
+        .frame image.checked {
+            display: initial;
         }
         #ma {
             filter: url(#dim);
