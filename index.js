@@ -13,6 +13,7 @@ var tree0 = {
     "sp": 0,
     "cc": 0,
     "th": 0,
+    "svg": document.getElementById("svg0"),
     "spElement": document.getElementById("sp0"),
     "ccElement": document.getElementById("cc0"),
     "thElement": document.getElementById("th0")
@@ -22,6 +23,7 @@ var tree1 = {
     "sp": 0,
     "cc": 0,
     "th": 0,
+    "svg": document.getElementById("svg1"),
     "spElement": document.getElementById("sp1"),
     "ccElement": document.getElementById("cc1"),
     "thElement": document.getElementById("th1")
@@ -64,7 +66,7 @@ function setCost(tree) {
         tree.th = tree.msg.data.th.reduce(msum, 0);
         tree.spElement.innerHTML = tree.sp.toLocaleString();
         tree.ccElement.innerHTML = tree.cc.toLocaleString();
-        tree.thElement.innerHTML = tree.cc.toLocaleString();
+        tree.thElement.innerHTML = tree.th.toLocaleString();
     }
 }
 
@@ -87,19 +89,21 @@ function setDifference() {
     }
 }
 
-function relay(booooo) {
-    var svg0doc = (booooo ? svg0 : svg1).getSVGDocument();
-    var svg1doc = (booooo ? svg1 : svg0).getSVGDocument();
-    if (svg0doc && svg1doc) {
-        var detail = {"ids": [], "on": booooo};
-        for (var node of svg0doc.getElementsByTagName("path")) {
-            if (node.classList.contains("checked") == booooo) {
-                detail.ids.push(node.id);
+function mandate(treeA, treeB, on) {
+    if (!treeA.msg.data.mandated) {
+        var docA = treeA.svg.getSVGDocument();
+        var docB = treeB.svg.getSVGDocument();
+        if (docA && docB) {
+            var ids = [];
+            var nodes = docA.getElementsByTagName("path");
+            for (var node of nodes) {
+                if (node.classList.contains("checked") == on) {
+                    ids.push(node.id);
+                }
             }
+            var event = new CustomEvent("mandate", {"detail": {"ids": ids, "on": on}});
+            docB.dispatchEvent(event);
         }
-        var event = new CustomEvent("mnbmnb", {"detail": detail});
-        svg1doc.dispatchEvent(event);
-        setCost(booooo ? tree1 : tree0);
     }
 }
 
@@ -110,13 +114,12 @@ function onMessage(msg) {
         if (id == "svg0") {
             tree0.msg = msg;
             setCost(tree0);
+            mandate(tree0, tree1, true);
         }
         else if (id == "svg1") {
             tree1.msg = msg;
             setCost(tree1);
-        }
-        if (!msg.data.stopper) {
-            relay(id == "svg0");
+            mandate(tree1, tree0, false);
         }
         setDifference();
     }

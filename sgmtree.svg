@@ -1068,9 +1068,9 @@
             toggle("ma0", true);
         }
 
-        function postMessage(stopper) {
+        function postMessage(mandated) {
             if (window.parent != window) {
-                var data = {"sp": [], "cc": [], "th": [], "fs": 0, "stopper": stopper};
+                var data = {"sp": [], "cc": [], "th": [], "fs": 0, "mandated": mandated};
                 for (var id in tree) {
                     if (tree[id].checked && id != "ma0") {
                         data.sp.push(tree[id].cost.sp);
@@ -1109,11 +1109,11 @@
                     check(id);
                     tidy();
                 }
-                postMessage();
+                postMessage(false);
             }
         }
 
-        function onCustomEvent(e) {
+        function onMandate(e) {
             for (var id of e.detail.ids) {
                 toggle(id, e.detail.on);
             }
@@ -1122,7 +1122,7 @@
         }
 
         window.addEventListener("click", updatePaths);
-        document.addEventListener("mnbmnb", onCustomEvent);
+        document.addEventListener("mandate", onMandate);
     // ]]>
     </script>
 </svg>

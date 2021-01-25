@@ -1,8 +1,10 @@
 # SGM Tree
 
-An interactive Skullgirls Mobile skill tree which communicates cost data to the parent window.
+An interactive Skullgirls Mobile skill tree.
 
 ![preview](preview.png)
+
+It sends cost data to the parent window and can also receive instructions from the parent window.
 
 ## How to Use
 
