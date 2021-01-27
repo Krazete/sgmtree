@@ -13,6 +13,13 @@ a {
 .hidden {
     display: none;
 }
+.hidden.fsafari {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: initial;
+}
 
 .gray {
     opacity: 0.5;
