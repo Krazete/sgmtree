@@ -1088,6 +1088,9 @@
         }
 
         function updatePaths(e) {
+            if (e.touches) {
+                e.preventDefault();
+            }
             if (e.target.id in tree) {
                 var id = e.target.id;
                 if (maids.indexOf(id) >= 0) {
@@ -1130,6 +1133,7 @@
             postMessage(true);
         }
 
+        window.addEventListener("touchstart", updatePaths, {"passive": false});
         window.addEventListener("click", updatePaths);
         document.addEventListener("mandate", onMandate);
     // ]]>
