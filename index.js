@@ -127,7 +127,6 @@ function onMessage(msg) {
 
 function toggleDual() {
     if (dual) {
-        document.body.classList.add("ddddddd");
         for (var i = 0; i < dualElements.length; i++) {
             dualElements[i].classList.add("hidden");
         }
@@ -135,7 +134,6 @@ function toggleDual() {
         dual = false;
     }
     else {
-        document.body.classList.add("ddddddd");
         for (var i = 0; i < dualElements.length; i++) {
             dualElements[i].classList.remove("hidden");
         }

@@ -18,6 +18,10 @@ a {
     opacity: 0.5;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .flexbox {
     display: flex;
     flex-wrap: wrap;

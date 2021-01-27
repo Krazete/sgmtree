@@ -11,7 +11,7 @@ It sends cost data to the parent window and can also receive instructions from t
 0. (Optional) Save a copy of `sgmtree.svg` and the `sgmtree` folder.
 1. In your HTML, include the SVG.
   - `<embed src="sgmtree.svg">`
-  - If you did not save a copy, replace `sgmtree.svg` with `https://krazete.github.io/sgmtree/sgmtree.svg>`.
+  - If you did not save a copy, replace `sgmtree.svg` with `https://krazete.github.io/sgmtree/sgmtree.svg`.
 2. Include your script, include a message event listener.
   - `window.addEventListener("message", onMessage);`
 3. In your message listener, filter requests by origin.

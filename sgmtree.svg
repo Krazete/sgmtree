@@ -1119,7 +1119,12 @@
 
         function onMandate(e) {
             for (var id of e.detail.ids) {
-                toggle(id, e.detail.on);
+                if (e.detail.on && !tree[id].checked) {
+                    check(id);
+                }
+                else if (!e.detail.on && tree[id].checked) {
+                    uncheck(id);
+                }
             }
             tidy();
             postMessage(true);
