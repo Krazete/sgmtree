@@ -142,6 +142,9 @@ function toggleDual() {
     }
 }
 
+tree0.svg.addEventListener("touchstart", function () {});
+tree1.svg.addEventListener("touchstart", function () {});
+
 radioZ.addEventListener("input", setMultiplier);
 radioB.addEventListener("input", setMultiplier);
 radioS.addEventListener("input", setMultiplier);
