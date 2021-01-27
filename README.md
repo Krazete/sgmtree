@@ -4,27 +4,37 @@ An interactive Skullgirls Mobile skill tree.
 
 ![preview](preview.png)
 
-It sends cost data to the parent window and can also receive instructions from the parent window.
+The SVG file can be embedded in other websites. It communicates data to the parent window and can receive instructions from the parent window.
 
 ## How to Use the SVG
 
 0. (Optional) Save a copy of `sgmtree.svg` and the `sgmtree` folder.
 1. In your HTML, include the SVG.
-  - `<embed src="sgmtree.svg">`
+  - ```html
+    <embed src="sgmtree.svg">
+    ```
   - If you did not save a copy, replace `sgmtree.svg` with `https://krazete.github.io/sgmtree/sgmtree.svg`.
-2. Include your script, include a message event listener.
-  - `window.addEventListener("message", onMessage);`
+2. In your script, include a message event listener.
+  - ```javascript
+    window.addEventListener("message", onMessage);
+    ```
 3. In your message listener, filter requests by origin.
-  - `function onMessage(e) {if (e.origin == window.origin) { /* CODE */ }}`
+  - ```javascript
+    function onMessage(e) {if (e.origin == window.origin) { /* CODE */ }}
+    ```
   - If you did not save a copy, replace `window.origin` with `"https://krazete.github.io"`.
 4. Handle the message data.
-  - `e.data` is an object in the format `{"sp": [], "cc": [], "th": [], "fs": 0, "mandated": false}`.
+  - ```javascript
+    {"sp": [], "cc": [], "th": [], "fs": 0, "mandated": false}
+    ```
   - `sp` and `cc` lists node costs if using only Skill Points and Canopy Coins.
   - `th` lists node costs if using only Theonite.
   - `fs` is the Fighter Score multiplier.
   - `mandated` indicates whether the message was posted as a result of a mandate event.
-5. (Optional) Toggle nodes with a mandate event.
-  - `svgDocument.dispatchEvent(new CustomEvent("mandate", {"detail": {"ids": [], "on": true}}));`
+5. (Optional) Check or uncheck nodes with the mandate event.
+  - ```javascript
+    svgDocument.dispatchEvent(new CustomEvent("mandate", {"detail": {"ids": [], "on": true}}));
+    ```
   - `ids` is the list of node ids to affect.
   - `on` is true if checking nodes and false if unchecking nodes.
 
