@@ -1130,21 +1130,25 @@
             postMessage(true);
         }
 
-        var e0;
-        var scrolled = false;
-        function storeId(e) {
-            e0 = e.touches[0];
+        function initTouchEvents() {
+            var e0;
+            var scrolled = false;
+            window.addEventListener("touchstart", function () {
+                e0 = e.touches[0];
+            });
+            window.addEventListener("touchmove", function () {
+                scrolled = true;
+            });
+            window.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                if (!scrolled) {
+                    updatePaths(e0);
+                }
+                scrolled = false;
+            }, {"passive": false});
         }
 
-        window.addEventListener("touchstart", storeId);
-        window.addEventListener("touchmove", function () {scrolled = true;});
-        window.addEventListener("touchend", function (e) {
-            e.preventDefault();
-            if (!scrolled) {
-                updatePaths(e0);
-            }
-            scrolled = false;
-        }, {"passive": false});
+        initTouchEvents();
         window.addEventListener("click", updatePaths);
         document.addEventListener("mandate", onMandate);
     // ]]>
