@@ -1133,7 +1133,7 @@
         function initTouchEvents() {
             var e0;
             var scrolled = false;
-            window.addEventListener("touchstart", function () {
+            window.addEventListener("touchstart", function (e) {
                 e0 = e.touches[0];
             });
             window.addEventListener("touchmove", function () {
