@@ -13,6 +13,9 @@ var tree0 = {
     "sp": 0,
     "cc": 0,
     "th": 0,
+    "fs": 100,
+    "at": 100,
+    "hp": 100,
     "svg": document.getElementById("svg0"),
     "spElement": document.getElementById("sp0"),
     "ccElement": document.getElementById("cc0"),
@@ -23,6 +26,9 @@ var tree1 = {
     "sp": 0,
     "cc": 0,
     "th": 0,
+    "fs": 100,
+    "at": 100,
+    "hp": 100,
     "svg": document.getElementById("svg1"),
     "spElement": document.getElementById("sp1"),
     "ccElement": document.getElementById("cc1"),
@@ -64,6 +70,9 @@ function setCost(tree) {
         tree.sp = tree.msg.data.sp.reduce(msum, 0);
         tree.cc = tree.msg.data.cc.reduce(msum, 0);
         tree.th = tree.msg.data.th.reduce(msum, 0);
+        tree.fs = 100 + tree.msg.data.fs;
+        tree.at = 100 + tree.msg.data.at;
+        tree.hp = 100 + tree.msg.data.hp;
         tree.spElement.innerHTML = tree.sp.toLocaleString();
         tree.ccElement.innerHTML = tree.cc.toLocaleString();
         tree.thElement.innerHTML = tree.th.toLocaleString();

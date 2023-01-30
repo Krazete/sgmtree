@@ -25,11 +25,12 @@ The SVG file can be embedded in other websites. It communicates data to the pare
   - If you did not save a copy, replace `window.origin` with `"https://krazete.github.io"`.
 4. Handle the message data.
   - ```javascript
-    {"sp": [], "cc": [], "th": [], "fs": 0, "mandated": false}
+    {"sp": [], "cc": [], "th": [], "fs": 0, "at": 0, "hp": 0, "mandated": false}
     ```
   - `sp` and `cc` lists node costs if using only Skill Points and Canopy Coins.
   - `th` lists node costs if using only Theonite.
-  - `fs` is the Fighter Score multiplier.
+  - `fs`, `at`, and `hp` are the total Fighter Score multiplier, Attack multiplier, and Health multiplier.
+    - See [Krazete/sgm#stats](https://github.com/Krazete/sgm#stats) for an explanation of the Fighter Score formula. Using that notation: `TREE_BOOST` would be 1 + `fs` / 100, `ATK_BOOST` would be 1 + `at` / 100, and `HP_BOOST` would be 1 + `hp` / 100.
   - `mandated` indicates whether the message was posted as a result of a mandate event.
 5. (Optional) Check or uncheck nodes with the mandate event.
   - ```javascript
