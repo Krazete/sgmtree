@@ -1,4 +1,4 @@
-# SGM Tree
+# Skullgirls Mobile Skill Tree Calculator
 
 An interactive Skullgirls Mobile skill tree.
 
