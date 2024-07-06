@@ -14,7 +14,7 @@ The SVG file can be embedded in other websites. It communicates data to the pare
     <embed id="sgmtree" src="sgmtree.svg">
     ```
     - If you did not save a copy, replace `sgmtree.svg` with `https://krazete.github.io/sgmtree/sgmtree.svg`.
-2. In your script, listen for a message events.
+2. In your script, listen for message events.
     ```js
     window.addEventListener("message", onMessage);
     ```
