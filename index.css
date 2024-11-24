@@ -75,7 +75,7 @@ input:checked + label {
 
 img {
     height: 30px;
-    vertical-align: middle;
+    vertical-align: -8px;
 }
 
 #sgmnow {
